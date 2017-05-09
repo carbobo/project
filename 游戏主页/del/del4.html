@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
+<style>
+    .box1{
+        width: 200px;
+    height: 200px;
+    background-color: yellow;
+    }
+    .box2{
+        width: 200px;
+    height: 200px;
+    background-color: green;
+        display: none
+    ;
+    }
+</style>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <button>点击</button>
+</body>
+<script>
+    function dian(){
+        document.getElementById("box1").style.display="none";
+        document.getElementById("box2").style.display="block";
+
+    }
+</script>
+</html>

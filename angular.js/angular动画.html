@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular-animate.min.js"></script>
+   <style>
+div {
+  transition: all linear 0.5s;
+  background-color: lightblue;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.ng-hide {
+  height: 0;
+/*   width: 0;
+  background-color: transparent;
+  top:-200px;
+  left: 650px; */
+}
+</style>
+</head>
+<body ng-app="ngAnimate">
+<!-- <h1>隐藏 DIV: <input type="checkbox" ng-model="myCheck"></h1>
+<div class="box1" ng-hide="myCheck"></div>
+ -->
+
+
+<h1>隐藏 DIV: <input type="checkbox" ng-model="myCheck"></h1>
+<div ng-hide="myCheck"></div>
+<script>
+var app = angular.module('myApp', ['ngAnimate']);
+</script>
+
+</body>
+</html>

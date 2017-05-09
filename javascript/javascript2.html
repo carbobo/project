@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/bootstrap.css" rel="stylesheet">
+<style>
+    hr{width:100%;height:3px; background-color: #666;;}
+    body{width:1200px;margin:0 auto; font-family:"Helvetica","Arial";color:#333;margin:1em 10%;}
+    h1{color:#333;background-color: transparent;}
+    a{color:#c60;background-color: transparent;font-weight:bold;text-decoration:none;}
+    li{float: left;padding:1em;list-style:none;}
+
+
+</style>
+</head>
+<body>
+<h1>javaScript美术馆</h1>
+<ul id="imagegallery">
+    <li><a href="images/01.jpg" title="01图片" ">FireWork</a></li>
+    <li><a href="images/02.jpg" title="02图片" ">FireWork</a></li>
+    <li><a href="images/03.jpg" title="03图片" >FireWork</a></li>
+</ul>
+<img src="images/03.jpg" alt="myPic" id="myPic">
+<p id="decoration">555</p>
+<script>
+window.onload = function(){
+ var gallery =document.getElementById("imagegallery");
+         var links = gallery.getElementsByTagName("a");
+    for(var i = 0;i < links.length; i ++){
+            links[i].onclick = function(){
+               return showPic(this);
+
+            }
+        }
+
+    function showPic(whichpic){
+        // 点击哪个元素。得到哪个元素的href属性值
+        var addd = whichpic.getAttribute("href");
+        var myPic = document.getElementById("myPic");
+        myPic.setAttribute("src",addd);
+        var text = whichpic.getAttribute("title");
+       var decoration = document.getElementById("decoration");
+       if(decoration.firstChild.nodeType == 3){
+        description.firstChild.nodeValue = text;
+       }
+       return false;
+
+    }
+    // function prepareGallery(){
+    //     if(!document.getElementsByTagName) return false;
+    //         if(!document.getElementsById) return false;
+    //         if(!document.getElementsById("imagegallery")) return false;
+    //     var gallery =document.getElementById("imagegallery");
+    //     var links = gallery.getElementsByTagName("a");
+    //     for(var i = 0;i < links.length; i ++){
+    //         links[i].onclick = function(){
+    //             showPic(this);
+    //             return false;
+    //         }
+    //     }
+    // }
+
+core dom 核心DOM
+
+
+
+
+
+
+}
+</script>
+</body>
+</html>

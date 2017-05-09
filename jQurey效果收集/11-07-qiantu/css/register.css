@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/**
+ * 注册界面
+ */
+body{background:url(../images/register_login_bg.jpg) repeat 0 0; color:rgb(102,102,102); font-size:14px; font-family:"微软雅黑";}
+.register{width:580px; height:355px; background:#fff; margin:120px auto; padding-top:40px; border-radius:2px;}
+.register .logo{display:block; width:142px; height:50px; background:url(../images/register_login.png) no-repeat 0 0; margin:0 auto;}
+.register .tips{width:340px; height:30px; line-height:30px; text-align:center; color:#999; margin:12px auto 0; cursor:default;}
+.register .tips .hline{float:left; width:50px; height:15px; border-bottom:1px solid #EDEDED;}
+.register .tips .tiptext{float:left; width:240px;}
+.register .register-btn{display:block; width:270px; height:50px; line-height:50px; background:#00B7D6 url(../images/register_login.png) no-repeat 47px -53px; margin:29px auto 0; border-radius:2px; color:#fff; font-size:18px; text-indent:98px;}
+.register .QQ-register:hover{background:#1F9BD9 url(../images/register_login.png) no-repeat 47px -104px;}
+.register .weixin-register{background:#3EBB2C url(../images/register_login1.png) no-repeat 44px -155px; margin-top:15px; text-indent:95px;}
+.register .weixin-register:hover{background:#21a901 url(../images/register_login1.png) no-repeat 44px -206px}
+.register .agree{width:270px; height:30px; line-height:3px; margin:5px auto 0;}
+.register .agree .isagree{float:left; width:16px; height:16px; background:url(../images/register_login.png) no-repeat -17px -375px; margin:7px 10px 0 0; cursor:pointer;}
+.register .agree .txt{float:left; line-height:30px; cursor:default;}
+.register .agree .txt>a:hover{color:#3ebb2b;}
+.register .agree-tip{width:270px; height:30px; line-height:30px; margin:0 auto; visibility:hidden;}
+.register .agree-tip .tipicon{float:left; width:18px; height:18px; background:url(../images/register_login.png) no-repeat -16px -476px; margin:6px 10px 0 0;}
+.register .agree-tip .tiptxt{float:left; color:#FEB216;}
+.register .bottom-text{margin-top:20px; padding-right:15px; text-align:right; cursor:default;}
+.register .bottom-text>a{color:#3ebb2b;}

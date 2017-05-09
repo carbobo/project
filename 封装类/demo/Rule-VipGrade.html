@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+	<link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+	<script src="../js/less.js"></script>
+
+	<title>会员权益-等级</title>
+	<style>
+		.vipgrade .test-card.fixed{
+			min-height: 460px;
+		}
+	</style>
+</head>
+<body>
+	<div class="vipgrade">
+		<div style="padding:20px;background:#fff2e3;" class="ui-shadow-bottom">
+			<div style="padding:0 20px;" class="grid-nav-bar">
+				<div class="grid-nav-bar-item text-top">
+					<img src="../imgs/membergrade_count.png" alt="" width="64px" height="64px"></div>
+				<div class="grid-nav-bar-item text-left" style="padding-left: 20px;padding-right: 40px;line-height: 24px;">
+					<div style="font-weight: 700;">会员等级计算</div>
+					<div>
+						如果是系统对接，则将开关置于开发者模式；需设置会员等级名称和等级折率（规则需和您的系统名称一致），则微信端可做等级名称展示，EZR会员详情可显示该等级会员相关折率；
+					</div>
+					<div>如需使用EZR等级计算，请将开关置于EZR原生，并同步完善会员升/降级等条件。</div>
+				</div>
+				<div style="width: 120px;" class="grid-nav-bar-item">
+					<div class="control-inline ui-onoffswitch ui-onoffswitch-lg">
+						<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="isDisabled2">
+						<label class="onoffswitch-label" for="isDisabled2">
+							<span class="onoffswitch-inner">
+								<span class="onoffswitch-before">EZR原生</span>
+								<span class="onoffswitch-after">开发者模式</span>
+							</span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<!-- end.grid-nav-bar -->
+		</div>
+		<!-- end.ui-shadow-bottom -->
+		<div class="padding-base">
+			<div class="margin-bottom-base">
+				<div class="wrap-title">
+					<span style="font-size: 16px;font-weight: 700" class="wrap-title-cot">统计规则设置</span>
+				</div>
+				<div class="ui-table-outer">
+					<div class="ui-form-horizontal">
+						<div class="ui-form-fields grid-nav-bar">
+							<div style="padding: 0px;width: 90px;" class="ui-form-field-label grid-nav-bar-item">
+								<span class="ui-form-field-label-span">
+									<span  class="color-normal-red-500">*</span>
+									&nbsp;统计条件
+								</span>
+							</div>
+							<div class="ui-form-field-cot grid-nav-bar-item">
+								<div class="ui-form-inline">
+									<div class="ui-form-group" style="width: 160px;">
+										<input type="radio" name="sendinglimit" id="sendinglimit1">
+										<label for="sendinglimit1" style="color:#848583;">全部订单</label>
+									</div>
+									<!-- end.ui-form-group -->
+									<div class="ui-form-group" >
+										<input type="radio" name="sendinglimit" id="sendinglimit2">
+										<label class="color-normal-gray-810" for="sendinglimit2">只统计≥</label>
+										<input type="text" size="12" class="ui-form-control width-70 ">
+										<span style="color:#848583;">折的订单(折扣率0-100)</span>
+									</div>
+									<!-- end.ui-form-group -->
+								</div>
+								<!-- end.ui-form-inline -->
+							</div>
+						</div>
+					</div>
+					<!-- end.ui-form-horizontal -->
+					<div class="ui-form-horizontal">
+						<div class="ui-form-fields grid-nav-bar" style="margin-bottom: 0px;">
+							<div class="ui-form-field-label grid-nav-bar-item" style="padding: 0px;width: 90px;">
+								<span class="ui-form-field-label-span">
+									<span style="color: #f44336">*</span>
+									&nbsp;统计范围
+								</span>
+							</div>
+							<div class="ui-form-field-cot grid-nav-bar-item">
+								<div class="ui-form-inline">
+									<div style="width: 160px;" class="ui-form-group">
+										<input type="radio" id="statisticalrange1" name="statisticalrange">
+										<label class="color-normal-gray-810"  for="statisticalrange1">从入会时间开始统计</label>
+									</div>
+									<!-- end.ui-form-group -->
+									<div class="ui-form-group" style="width: 220px;">
+										<input type="radio" id="statisticalrange2" name="statisticalrange">
+										<label class="color-normal-gray-810" for="statisticalrange2">从最近一次等级变更开始统计</label>
+									</div>
+									<!-- end.ui-form-group -->
+									<div class="ui-form-group">
+										<input type="radio" id="statisticalrange3" name="statisticalrange">
+										<label class="color-normal-gray-810" for="statisticalrange3">只统计最近</label>
+										<div class="ui-select ">
+											<select id="selct" name="selct">
+												<option value="10天">10天</option>
+												<option value="20天">20天</option>
+												<option value="30天">30天</option>
+											</select>
+										</div>
+										<span class="color-normal-gray-810">的订单</span>
+									</div>
+									<!-- end.ui-form-group -->
+								</div>
+								<!-- end.ui-form-inline -->
+							</div>
+						</div>
+					</div>
+					<!-- end.ui-form-horizontal -->
+				</div>
+				<!-- end.ui-table-outer -->
+			</div>
+			<!-- end.margin-bottom-base -->
+			<div class="addnewconsumer">
+				<div style="margin-bottom:10px;">
+					<button class="ui-btn ui-btn-green" type="button">
+						<span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
+						新增消费者等级
+					</button>
+				</div>
+				<div class="newconsumer">
+					<div class="ui-grid-cards-list-2">
+						<div class="ui-grid-cards-list-inner">
+							<div class="ui-grid-cards-item">
+								<div class="test-card fixed">
+									<div class="">
+										<div class="ui-panel-head">
+											<div style="height: 40px;" class="grid-nav-bar">
+												<div class="grid-nav-bar-item text-left">粉丝</div>
+											</div>
+										</div>
+										<div class="ui-panel-body">
+											<div class="ui-form-fields grid-nav-bar">
+												<div class="ui-form-field-label grid-nav-bar-item text-left" style="width: 110px; padding: 0;">
+													<span class="ui-form-field-label-span">
+														<span style="color: #f44336">*</span>
+														&nbsp;升级满足条件
+													</span>
+												</div>
+												<div class="ui-form-field-cot grid-nav-bar-item">
+													<input type="text" class=" ui-form-control width-100" size="12" placeholder="关注微信公众号" disabled=""></div>
+											</div>
+											<!-- end.ui-form-field -->
+											<div class="ui-form-fields grid-nav-bar">
+												<div class="ui-form-field-label grid-nav-bar-item text-left" style="width: 110px; padding: 0;">
+													<span class="ui-form-field-label-span">
+														<span class="color-normal-red-500">*</span>
+														&nbsp;等级有效期
+													</span>
+												</div>
+												<div class="ui-form-field-cot grid-nav-bar-item">
+													<div class="ui-form-inline">
+														<div style="width: 160px;" class="ui-form-group">
+															<input type="radio" id="periodvalidity" name="periodvalidity">
+															<label class="color-normal-gray-810" for="periodvalidity">永久有效</label>
+														</div>
+														<!-- end.ui-form-group -->
+													</div>
+												</div>
+											</div>
+											<!-- end.ui-form-field -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end.ui-grid-cards-item -->
+							<div class="ui-grid-cards-item">
+								<div class="test-card fixed">
+									<div class="">
+										<div class="ui-panel-head">
+											<div style="height: 40px;" class="grid-nav-bar">
+												<div class="grid-nav-bar-item">
+													<input type="text" placeholder="等级名称" size="12" class=" ui-form-control width-100"></div>
+												<div style="width: 55px;" class="grid-nav-bar-item text-right">
+													<div   class="ui-circular  operation-icon square-34" data-toggle="tooltip" data-placement="top" title="删除">
+														<div class="ui-circular-inner">
+															<span class="glyphicon glyphicon-trash"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="ui-panel-body">
+											<div class="ui-form-fields grid-nav-bar">
+												<div style="width: 110px; padding: 0;" class="ui-form-field-label grid-nav-bar-item text-left">
+													<span class="ui-form-field-label-span">
+														<span style="color: #f44336">*</span>
+														&nbsp;升级满足条件
+													</span>
+												</div>
+												<div class="ui-form-field-cot grid-nav-bar-item">
+													<input type="text" disabled="" placeholder="升级手机号" size="12" class=" ui-form-control width-100"></div>
+											</div>
+											<!-- end.ui-form-field -->
+											<div class="ui-form-fields grid-nav-bar">
+												<div style="width: 110px; padding: 0;" class="ui-form-field-label grid-nav-bar-item text-left">
+													<span class="ui-form-field-label-span">
+														<span style="color: #f44336">*</span>
+														&nbsp;等级有效期
+													</span>
+												</div>
+												<div class="ui-form-field-cot grid-nav-bar-item">
+													<div class="ui-form-inline">
+														<div class="ui-form-group" style="width: 160px;">
+															<input type="radio" name="periodvalidity2" id="periodvalidity2">
+															<label class="color-normal-gray-810" for="periodvalidity2">永久有效</label>
+														</div>
+														<!-- end.ui-form-group -->
+													</div>
+												</div>
+											</div>
+											<!-- end.ui-form-field -->
+											<div class="ui-form-fields grid-nav-bar">
+												<div class="text-left" style="padding:0;">会员权益</div>
+												<div style="height: 40px;margin-top:10px;padding:0;" class="grid-nav-bar">
+
+													<div class="grid-nav-bar-item text-left color-normal-gray-810" style="width: 40px;">折扣</div>
+													<div class="grid-nav-bar-item">
+														<input type="text" class=" ui-form-control width-100" size="12" placeholder="享受折扣率（1-100）"></div>
+													<div style="width: 22px;"  class="color-normal-gray-810 grid-nav-bar-item text-right" >%</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end.ui-grid-cards-item -->
+							<div class="ui-grid-cards-item">
+								<div class="test-card fixed">
+									<div class="">
+										<div class="ui-panel-head">
+											<div class="grid-nav-bar" style="height: 40px;">
+												<div class="grid-nav-bar-item">
+													<input type="text" class=" ui-form-control width-100" size="12" placeholder="等级名称"></div>
+												<div class="grid-nav-bar-item text-right" style="width: 55px;">
+													<div class="ui-circular  operation-icon square-34"  data-toggle="tooltip" data-placement="top" title="删除">
+														<div class="ui-circular-inner">
+															<span class="glyphicon glyphicon-trash"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="ui-panel-body">
+											<div class="ui-form-fields grid-nav-bar">
+												<div style="padding:0;" class="text-left">
+													<span style="color: #f44336">*</span>
+													&nbsp;升级满足条件
+												</div>
+												<div class="grid-nav-bar" style="height: 40px;margin-top:10px;padding:0;">
+
+													<div style="height: 40px;margin-top:10px;padding:0;" class="grid-nav-bar">
+													<div class="grid-nav-bar">
+														<div class="grid-nav-bar-item text-left">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+															<span class="color-normal-gray-810" for="sendinglimit2">累计消费</span>&nbsp;
+															<input type="text"  class="ui-form-control" size="12">
+															&nbsp;<span class="color-normal-gray-810">元</span>
+														</div>
+														<!-- end.ui-form-group -->
+															</div>
+														</div>
+														<div class="grid-nav-bar-item color-normal-gray-810">-或-</div>
+														<div class="grid-nav-bar-item text-right">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+																	<span class="color-normal-gray-810">单笔消费</span>&nbsp;
+																	<input type="text" class="ui-form-control" size="12">
+																	&nbsp;<span class="color-normal-gray-810">元</span>
+																</div>
+																<!-- end.ui-form-group -->
+															</div>
+														</div>
+
+													</div>
+												</div>
+												</div>
+											</div>
+											<!-- end.ui-form-field -->
+											<div class="ui-form-fields grid-nav-bar">
+												<div style="padding:0;" class="text-left">
+													<span style="color: #f44336">*</span>
+													&nbsp;等级有效期
+												</div>
+												<div class="grid-nav-bar" style="height: 40px;margin-top:10px;padding:0;">
+													<div class="grid-nav-bar">
+														<div class="grid-nav-bar-item text-left">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+																	<input type="radio"  name="periodvalidity6">
+																	<label class="color-normal-gray-810">永久有效</label>
+																</div>
+															</div>
+														</div>
+														<div class="grid-nav-bar-item text-right">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+																	<input type="radio" id="periodvalidity6" name="periodvalidity6">
+																	<label class="color-normal-gray-810"  for="periodvalidity6">有效期</label>&nbsp;
+																	<input type="text"  class="ui-form-control" size="12">
+																	&nbsp;<span class="color-normal-gray-810">天</span>
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+												<!-- end.ui-form-field -->
+											</div>
+											<!-- end.ui-form-field -->
+											<div class="ui-form-fields grid-nav-bar" style="background: #f9f9f9;padding: 10px 0;">
+												<div class="text-left" style="padding:0;">
+													<span style="color: #f44336">*</span>
+													&nbsp;续会条件
+												</div>
+												<div style="height: 40px;margin-top:10px;padding:0;" class="grid-nav-bar">
+													<div class="grid-nav-bar">
+														<div class="grid-nav-bar-item text-left">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+																	<input type="radio" name="periodvalidity3" id="periodvalidity4">
+																	<label for="periodvalidity4" style="color:#848583;">累计金额</label>&nbsp;
+																	<input type="text" size="12" class="ui-form-control" >
+																	&nbsp;<span style="color:#848583;">元</span>
+																</div>
+
+															</div>
+														</div>
+														<div class="grid-nav-bar-item text-right">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+																	<input type="radio" name="periodvalidity3">
+																	<label  style="color:#848583;">消费</label>&nbsp;
+																	<input type="text" size="12" class="ui-form-control" >
+																	&nbsp;<span style="color:#848583;">元</span>
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+												<!-- end.ui-form-field -->
+											</div>
+											<!-- end.ui-form-field -->
+											<div class="ui-form-fields grid-nav-bar">
+												<div style="padding:0;" class="text-left">会员权益</div>
+												<div class="grid-nav-bar" style="height: 40px;margin-top:10px;padding:0;">
+
+													<div style="width: 40px;color: #848583;" class="grid-nav-bar-item text-left">折扣</div>
+													<div class="grid-nav-bar-item">
+														<input type="text" placeholder="享受折扣率（1-100）" size="12" class=" ui-form-control width-100"></div>
+													<div class="grid-nav-bar-item text-right" style="color: #848583;width: 22px;">%</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- end.ui-grid-cards-item -->
+							</div><!-- end.ui-grid-cards-item -->
+							<div class="ui-grid-cards-item">
+								<div class="test-card fixed">
+									<div class="">
+										<div class="ui-panel-head">
+											<div class="grid-nav-bar" style="height: 40px;">
+												<div class="grid-nav-bar-item">
+													<input type="text" class=" ui-form-control width-100" size="12" placeholder="等级名称"></div>
+												<div class="grid-nav-bar-item text-right" style="width: 55px;">
+													<div class="ui-circular  operation-icon square-34" data-toggle="tooltip" data-placement="top" title="删除">
+														<div class="ui-circular-inner">
+															<span class="glyphicon glyphicon-trash"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="ui-panel-body">
+											<div class="ui-form-fields grid-nav-bar">
+												<div style="padding:0;" class="text-left">
+													<span style="color: #f44336">*</span>
+													&nbsp;升级满足条件
+												</div>
+												<div class="grid-nav-bar" style="height: 40px;margin-top:10px;padding:0;">
+
+													<div style="height: 40px;margin-top:10px;padding:0;" class="grid-nav-bar">
+													<div class="grid-nav-bar">
+														<div class="grid-nav-bar-item text-left">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+															<span for="sendinglimit2" style="color:#848583;">累计消费</span>&nbsp;
+															<input type="text"  class="ui-form-control" size="12">
+															&nbsp;<span style="color:#848583;">元</span>
+														</div>
+														<!-- end.ui-form-group -->
+															</div>
+														</div>
+														<div class="grid-nav-bar-item" style="color:#848583;">-或-</div>
+														<div class="grid-nav-bar-item text-right">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+																	<span style="color:#848583;">单笔消费</span>&nbsp;
+																	<input type="text" class="ui-form-control" size="12">
+																	&nbsp;<span style="color:#848583;">元</span>
+																</div>
+																<!-- end.ui-form-group -->
+															</div>
+														</div>
+
+													</div>
+												</div>
+												</div>
+											</div>
+											<!-- end.ui-form-field -->
+											<div class="ui-form-fields grid-nav-bar">
+												<div style="padding:0;" class="text-left">
+													<span style="color: #f44336">*</span>
+													&nbsp;等级有效期
+												</div>
+												<div class="grid-nav-bar" style="height: 40px;margin-top:10px;padding:0;">
+													<div class="grid-nav-bar">
+														<div class="grid-nav-bar-item text-left">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+																	<input type="radio" id="periodvalidity7" name="periodvalidity7">
+																	<label style="color:#848583;" for="periodvalidity7">永久有效</label>
+																</div>
+															</div>
+														</div>
+														<div class="grid-nav-bar-item text-right">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+																	<input type="radio" id="periodvalidity8" name="periodvalidity7">
+																	<label style="color:#848583;" for="periodvalidity8">有效期</label>&nbsp;
+																	<input type="text" id="" class="ui-form-control" size="12">
+																	&nbsp;<span style="color:#848583;">天</span>
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+												<!-- end.ui-form-field -->
+											</div>
+											<!-- end.ui-form-field -->
+											<div class="ui-form-fields grid-nav-bar" style="background: #f9f9f9;padding: 10px 0;">
+												<div class="text-left" style="padding:0;">
+													<span style="color: #f44336">*</span>
+													&nbsp;续会条件
+												</div>
+												<div style="height: 40px;margin-top:10px;padding:0;" class="grid-nav-bar">
+													<div class="grid-nav-bar">
+														<div class="grid-nav-bar-item text-left">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+																	<input type="radio" name="periodvalidity5" >
+																	<label for="periodvalidity4" style="color:#848583;">累计金额</label>&nbsp;
+																	<input type="text" size="12" class="ui-form-control">
+																	&nbsp;<span style="color:#848583;">元</span>
+																</div>
+
+															</div>
+														</div>
+														<div class="grid-nav-bar-item text-right">
+															<div class="ui-form-inline">
+																<div class="ui-form-group">
+																	<input type="radio" name="periodvalidity3" >
+																	<label style="color:#848583;">消费</label>&nbsp;
+																	<input type="text" size="12" class="ui-form-control">
+																	&nbsp;<span style="color:#848583;">元</span>
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+												<!-- end.ui-form-field -->
+											</div>
+											<!-- end.ui-form-field -->
+											<div class="ui-form-fields grid-nav-bar">
+												<div style="padding:0;" class="text-left">会员权益</div>
+												<div class="grid-nav-bar" style="height: 40px;margin-top:10px;padding:0;">
+
+													<div style="width: 40px;color: #848583;" class="grid-nav-bar-item text-left">折扣</div>
+													<div class="grid-nav-bar-item">
+														<input type="text" placeholder="享受折扣率（1-100）" size="12" class=" ui-form-control width-100"></div>
+													<div class="grid-nav-bar-item text-right" style="color: #848583;width: 22px;">%</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- end.ui-grid-cards-item -->
+							</div><!-- end.ui-grid-cards-item -->
+						</div>
+					</div>
+				</div>
+				<!-- end.newconsumer -->
+			</div>
+			<!-- end.addnewconsumer -->
+		</div>
+		<!-- end.padding-base -->
+	</div>
+	<!-- end.vipgrade -->
+</body>
+<script>
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
+</html>

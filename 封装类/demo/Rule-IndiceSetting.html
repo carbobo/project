@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<!-- 	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	-->
+	<link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+	<script src="../js/less.js"></script>
+	<title>维度维护</title>
+</head>
+<body>
+	<div class="DimensionMaintenance">
+		<div class="ui-panel" style="margin-bottom: -2px;">
+			<div class="ui-panel-head height-auto">
+				<div class="grid-nav-bar">
+					<div class="grid-nav-bar-item text-left">年龄(单位:岁)</div>
+					<div class="grid-nav-bar-item text-right">
+						<div class="ui-circular operation-icon square-34">
+							<div class="ui-circular-inner">
+								<span class="glyphicon glyphicon-menu-down"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui-panel-body">
+				<div class="ui-grid-cards-list-4">
+					<div class="ui-grid-cards-item">
+						<div class="ui-panel">
+							<div class="ui-panel-head height-auto">
+								<div class="grid-nav-bar">
+									<div class="grid-nav-bar-item text-right">
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-trash"></span>
+											</div>
+										</div>
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-plus"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui-panel-body">
+								<div class="ui-form-inline">
+									<div class="ui-form-group">
+										<span> x < </span>&nbsp;
+										<input type="text" class="ui-form-control">
+									</div>
+								</div>
+								<br>
+								<span class="color-light-green-500"><b> < 18岁 </b></span>
+							</div>
+						</div>
+					</div>
+					<div class="ui-grid-cards-item">
+						<div class="ui-panel">
+							<div class="ui-panel-head height-auto">
+								<div class="grid-nav-bar">
+									<div class="grid-nav-bar-item text-right">
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-trash"></span>
+											</div>
+										</div>
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-plus"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui-panel-body">
+								<div class="ui-form-inline">
+									<div class="ui-form-group">
+										<span> 18 < x < 25 </span>
+										<input type="text" class="ui-form-control">
+									</div>
+								</div>
+								<br>
+								<span class="color-light-green-500"><b>18-25岁</b></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-panel" style="margin-bottom: -2px;">
+			<div class="ui-panel-head height-auto">
+				<div class="grid-nav-bar">
+					<div class="grid-nav-bar-item text-left">入会时长(单位:月)</div>
+					<div class="grid-nav-bar-item text-right">
+						<div class="ui-circular operation-icon square-34">
+							<div class="ui-circular-inner">
+								<span class="glyphicon glyphicon-menu-down"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui-panel-body">
+				<div class="ui-grid-cards-list-4">
+					<div class="ui-grid-cards-item">
+						<div class="ui-panel">
+							<div class="ui-panel-head height-auto">
+								<div class="grid-nav-bar">
+									<div class="grid-nav-bar-item text-right">
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-trash"></span>
+											</div>
+										</div>
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-plus"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui-panel-body">
+								<div class="ui-form-inline">
+									<div class="ui-form-group">
+										<span> x &lt; </span>&nbsp;
+										<input type="text" class="ui-form-control" placeholder="维度条件">
+									</div>
+								</div>
+								<br>
+								<span class="color-light-green-500"><b>维度标题</b></span>
+							</div>
+						</div>
+					</div>
+					<div class="ui-grid-cards-item">
+						<div class="ui-panel">
+							<div class="ui-panel-head height-auto">
+								<div class="grid-nav-bar">
+									<div class="grid-nav-bar-item text-right">
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-trash"></span>
+											</div>
+										</div>
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-plus"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui-panel-body">
+								<div class="ui-form-inline">
+									<div class="ui-form-group">
+										<span> 18 &lt; x &lt; 25 </span>
+										<input type="text" class="ui-form-control">
+									</div>
+								</div>
+								<br>
+								<span class="color-light-green-500"><b>18-25岁</b></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-panel" style="margin-bottom: -2px;">
+			<div class="ui-panel-head height-auto">
+				<div class="grid-nav-bar">
+					<div class="grid-nav-bar-item text-left">M累计消费金额(单位:万元)</div>
+					<div class="grid-nav-bar-item text-right">
+						<div class="ui-circular operation-icon square-34">
+							<div class="ui-circular-inner">
+								<span class="glyphicon glyphicon-menu-down"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui-panel-body">
+				<div class="ui-grid-cards-list-4">
+					<div class="ui-grid-cards-item">
+						<p class="text-left color-normal-gray-810" style="margin-bottom:5px;">最近3个月</p>
+						<div class="ui-panel">
+							<div class="ui-panel-head height-auto">
+								<div class="grid-nav-bar">
+									<div class="grid-nav-bar-item text-right">
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-trash"></span>
+											</div>
+										</div>
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-plus"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui-panel-body">
+								<div class="ui-form-inline">
+									<div class="ui-form-group">
+										<span> &lt; </span>&nbsp;
+										<input type="text" class="ui-form-control" placeholder="维度条件">
+									</div>
+								</div>
+								<br>
+								<span class="color-light-green-500"><b>维度标题</b></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui-grid-cards-list-4">
+					<div class="ui-grid-cards-item">
+						<p class="text-left color-normal-gray-810" style="margin-bottom:5px;">最近6个月</p>
+						<div class="ui-panel">
+							<div class="ui-panel-head height-auto">
+								<div class="grid-nav-bar">
+									<div class="grid-nav-bar-item text-right">
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-trash"></span>
+											</div>
+										</div>
+										<div class="ui-circular operation-icon square-34">
+											<div class="ui-circular-inner">
+												<span class="glyphicon glyphicon-plus"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui-panel-body">
+								<div class="ui-form-inline">
+									<div class="ui-form-group">
+										<span> &lt; </span>&nbsp;
+										<input type="text" class="ui-form-control" placeholder="维度条件">
+									</div>
+								</div>
+								<br>
+								<span class="color-light-green-500"><b>维度标题</b></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

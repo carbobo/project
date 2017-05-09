@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/**
+*
+ */
+body{background: #e4e4e4;}
+h3{padding:.38rem 0 .16rem .1rem;}
+
+header {background: #ff4d4d;text-align: center;padding-top:.3rem;height:.62rem;}
+header h2{padding:0 .17rem;}
+header h2 i.iconfont{float: left;font-size: .32rem;cursor:pointer;}
+header h2 b.iconfont{float: right;font-size: .32rem;}
+/*content css start*/
+.content{width:7.5rem;}
+.content li {float:left;margin:.1rem;text-align: center;background: #fff;padding-bottom:.1rem;}
+.content li img{width:3.5rem;height:2.6rem;}
+.content li p:nth-of-type(1){padding: .1rem 0;}
+.content li p:nth-of-type(2){color:#5e5e5e;}
+/*content css end*/
+
+/*kind css start*/
+.kind{padding:0 .2rem;width:7.1rem;}
+.kind li{width:1.66rem;height:.6rem;float:left;background: #fff;margin:.05rem;text-align: center;line-height: .6rem;border-radius:.05rem;}
+/*kind css end*/
+
+.ad{border:1px solid transparent;width:7.1rem;height:1.8rem;margin:.7rem auto!important;background: #fff;}
+.ad img{vertical-align: middle;width:2rem;height:1.8rem;}
+.ad p{display: inline-block;margin-left:.2rem;}
+.ad span{float:right;margin-top:1.4rem;color:#aaa;}
+.btn{width:7.5rem;margin:0 auto;text-align: center;}
+.btn button{width:7.1rem;height:.9rem;background: #ff4d4d;margin-bottom:1rem;font-size:.32rem;font-weight: bold;color:#fff;border-radius:.1rem;border:0;}
+.footer ul li:nth-child(1) a:link,.footer ul li:nth-child(1) a:visited{color:#eb4f38;}

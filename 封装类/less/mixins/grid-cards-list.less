@@ -1,0 +1,33 @@
+//.calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
+//  .col-@{class}-@{index} {
+//    width: percentage((@index / @grid-columns));
+//  }
+//}
+
+.calc-grid-cards-list-item(@index) {
+
+  .ui-grid-cards-list-@{index} {
+    overflow: hidden;
+    .ui-grid-cards-list-inner{
+      &:extend(.clearfix all);
+      margin:-@padding-base-horizontal / 2;
+    }
+    .ui-grid-cards-item{
+      width: percentage((1/@index));
+      padding:@padding-base-horizontal / 2;
+      float:left;
+    }
+  }
+
+}
+
+// Basic looping in LESS
+.loop-grid-cards-list-item(@index) when (@index >= 0) {
+  .calc-grid-cards-list-item(@index);
+  // next iteration
+  .loop-grid-cards-list-item((@index - 1));
+}
+
+.make-grid-cards-list(){
+  .loop-grid-cards-list-item(@grid-columns);
+}

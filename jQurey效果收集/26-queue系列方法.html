@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script src="js/jquery-1.11.3.min.js"></script>
+<style>
+    div{ margin:3px; width:40px; height:40px; position:absolute; left:0px; top:30px; background:green; }
+    div.newcolor { background:blue; }
+    span { color:red; }
+</style>
+</head>
+<body>
+    <button id="show">Show Length of Queue</button>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <span>span</span>
+    <div>div</div>
+
+
+<script>
+
+// queue() 、dequeue()、clearQueue()
+    // $('div').slideUp(1000);
+    // $('div').queue(function() {
+    //   alert('Animation complete.');
+    //   $(this).dequeue();
+    // });
+    // $('div').slideDown(2000);
+
+    // // 等价于：
+    
+    // $('#foo').slideUp(function() {
+    //   alert('Animation complete.');
+    // });
+
+
+// 对自定义函数进行队列操作：
+// 如果queue后不用dequeue(),则后面的动画不会执行。
+  //   $("#start").click(function () {
+  //       $("div").show("slow");
+  //       $("div").animate({left:'+=200'},2000);
+  //       $("div").queue(function () {
+  //         $(this).addClass("newcolor");
+  //         $(this).dequeue();
+  //       });
+  //       $("div").animate({left:'-=200'},500);
+  //       $("div").queue(function () {
+  //         $(this).removeClass("newcolor");
+  //         $(this).dequeue();
+  //       });
+  //       $("div").slideUp();
+  // });
+
+// 设置队列数组来删除队列：
+$("#start").click(function () {
+  $("div").show("slow");
+  $("div").animate({left:'+=200'},5000);
+  $("div").queue(function () {
+    $(this).addClass("newcolor");
+    $(this).dequeue();
+  });
+  $("div").animate({left:'-=200'},1500);
+  $("div").queue(function () {
+    $(this).removeClass("newcolor");
+    $(this).dequeue();
+  });
+  $("div").slideUp();
+});
+
+$("#stop").click(function () {
+  //当前动画执行完，清空后面的队列，不再执行
+  $("div").clearQueue();
+
+  //当前动画立即停止。
+  // $("div").stop(true,true);
+});
+</script>
+</body>
+</html>

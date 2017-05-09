@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+    <script src="../js/less.js"></script>
+    <style type="text/css">
+    .hackle-panel{
+        position: relative;
+        background: #fff;
+    }
+    .hackle-panel:after{
+        content: " ";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 6px;
+        background: url(../imgs/dotbottom.png) repeat-x;
+    }
+    .hackle-panel-list{
+        position: relative;
+        border-bottom: 2px dashed #eeeeee;
+        padding: 20px 0px;
+    }
+    .hackle-panel-list:first-child:before,.hackle-panel-list:first-child:after{
+        display: none;
+    }
+    .hackle-panel-list:before,.hackle-panel-list:after{
+        content: " ";
+        position: absolute; 
+        top: -10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #efefef;
+    }
+    .hackle-panel-list:before{
+        left: -10px;
+    }
+    .hackle-panel-list:after{
+        right: -10px;
+    }
+    .size16{
+        font-size: 16px;
+    }
+    .hackle-panel-list >.grid-nav-bar-item:first-child{
+        width: 70px;
+        vertical-align: top;
+    }
+    .hackle-panel-list >.grid-nav-bar-item:last-child {
+        padding-right: 48px;
+        vertical-align: top;
+    }
+    .hackle-panel-list>.grid-nav-bar-item:nth-child(2) >p{
+        line-height: 40px;
+    }
+    /*弹窗---------*/
+    #privilege-dialog{
+        width: 427px;
+    }
+    .normal-table{
+        width: 100%;
+    }
+    .normal-table td{
+        /*height: 40px;*/
+        line-height: 40px;
+        padding-bottom: 20px;
+        vertical-align: top;
+    }
+    .normal-table td:first-child{
+        width: 80px;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .normal-table select{
+        border-color: #ccc;
+    }
+    .red{
+        color: #ff0000;
+    }
+    .star{
+        vertical-align: -2px;
+    }
+    .coupon-list{
+        border-bottom: 1px solid #e5e6e6;
+        background: #fff;
+        padding:10px 20px;
+    }
+    .coupon-list:nth-child(2n){
+        background: #f9f9f9;
+    }
+    .coupon-list .normal-table td:first-child{
+        /*text-align: left;*/
+        width: 66px;
+    }
+    .height-100{
+        height: 100%;
+    }
+    .coupon-select{
+        width: 100%;
+        display:block;
+        border: 1px solid #ccc;
+        background: url("../imgs/quan_icon.png") no-repeat 10px center;
+        padding-left: 30px;
+        padding-right: 20px;
+        overflow: hidden;
+        display: table;
+        background-color: #fff;
+    }
+    .coupon-select>div{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .coupon-select-cont{
+        padding: 10px;
+        padding-left: 30px;
+        line-height: 1.4;
+    }
+    .coupon-select-ft{
+        padding-right: 10px;
+    }
+    .coupon-select-ft:after{
+        content: " ";
+        display: inline-block;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        height: 6px;
+        width: 6px;
+        border-width: 2px 2px 0 0;
+        border-color: #C8C8CD;
+        border-style: solid;
+        position: relative;
+        top: -2px;
+        top: -1px;
+        margin-left: .3em;
+    }
+    .add-step{
+        display: block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background: #ddefc9;
+        text-align: center;
+        color: #8ac24a;
+        font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+<div style="width: 100%;position: relative;">
+    <div class="ui-layout height-auto ">
+        <div class="ui-layout-head ui-layout-head-fixed">
+
+            <div class="grid-nav-bar">
+
+                <div class="grid-nav-bar-item ui-layout-head-logo">
+                    <img src="../imgs/logo_ezr.png" alt=""/>
+                </div>
+
+                <div class="grid-nav-bar-item">
+                    <div class="grid-nav-bar">
+                        <div class="grid-nav-bar-item"></div>
+                        <div class="grid-nav-bar-item ui-balance">
+                            <span class="glyphicon glyphicon-yen"></span>
+                            余额：800.00
+                        </div>
+                        <div class="grid-nav-bar-item ui-message">
+                            <span class="glyphicon glyphicon-bell"></span>
+                        </div>
+                        <div class="grid-nav-bar-item ui-user-info">
+                            <div class="grid-nav-bar">
+                                <div class="grid-nav-bar-item" style="width: 64px;">
+                                    <img class="img-middle circular" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU0MzhlZTQ0MiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTQzOGVlNDQyIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 40px; height: 40px;">
+                                </div>
+                                <div class="grid-nav-bar-item text-left">
+                                    欢迎您，<br>
+                                    超级管理员(管理员)
+                                </div>
+                                <div class="grid-nav-bar-item" style="width: 64px;">
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="ui-layout-body">
+            <div class="ui-layout-left">
+                <ul class="ui-tree ui-left-menu">
+                    <li>
+                        <h3>
+                    <span class="grid-nav-bar ui-tree-title">
+                        <span class="grid-nav-bar-item text-left">
+                            <span class="glyphicon glyphicon-film"></span>
+                            一级分类
+                        </span>
+                        <span class="grid-nav-bar-item" style="width: 28px;">
+                            <span class="glyphicon glyphicon-menu-down"></span>
+                        </span>
+                    </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <h3>
+                                    <span class="glyphicon glyphicon-plus"></span>二级分类</h3>
+                                <ul>
+                                    <li><a href="javascript:;" class="active">三级分类</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                    <span class="grid-nav-bar ui-tree-title">
+                        <span class="grid-nav-bar-item text-left">
+                            <span class="glyphicon glyphicon-cog"></span>
+                            一级分类
+                        </span>
+                        <span class="grid-nav-bar-item" style="width: 28px;">
+                            <span class="glyphicon glyphicon-menu-down"></span>
+                        </span>
+                    </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <h3>
+                                    <span class="glyphicon glyphicon-plus"></span>二级分类</h3>
+                                <ul>
+                                    <li><a href="javascript:;">三级分类</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-layout-cot">
+
+                <div class="ui-cat-l3">
+                    <div class="grid-nav-bar">
+
+                        <div class="grid-nav-bar-item text-left">
+                            <span class="glyphicon glyphicon-menu-left"></span>
+                            left
+                        </div>
+                        <div class="grid-nav-bar-item">
+                            <div class="ui-btn-group">
+                                <button type="button" class="ui-btn ui-btn-gray ui-active"> 所有模板 </button>
+                                <button type="button" class="ui-btn ui-btn-gray"> 快捷方式 </button>
+                                <button type="button" class="ui-btn ui-btn-gray"> 预置模板 </button>
+                                <button type="button" class="ui-btn ui-btn-gray"> 共享模板 </button>
+                                <button type="button" class="ui-btn ui-btn-gray"> 我的模板 </button>
+                            </div>
+                        </div>
+                        <div class="grid-nav-bar-item text-right">right</div>
+
+                    </div>
+                </div>
+
+                <div class="ui-layout-main">
+                	<div class="ui-grid-cards-list-2">
+                        <div class="ui-grid-cards-list-inner">
+                            <div class="ui-grid-cards-item">
+                                <div class="h4 wrap-title">
+                                    <span class="wrap-title-cot">新老会员占比</span>
+                                </div>
+                                <div class="calc-shadow-bottom hackle-panel">
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon1.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">关注送券</p>
+                                            <span class="color-gray">暂无特权</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right">
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon2.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">关注送券</p>
+                                            <span class="color-gray">暂无特权</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right">
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon3.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">关注送券</p>
+                                            <span class="color-gray">暂无特权</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right">
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-grid-cards-item">
+                                <div class="h4 wrap-title">
+                                    <span class="wrap-title-cot">普通会员</span>
+                                </div>
+                                <div class="calc-shadow-bottom hackle-panel">
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon1_1.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">入会送券</p>
+                                            <span class="color-gray">100元优惠券</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right" >
+                                            <a href="javascript:;" style="margin-right: 20px;">
+                                                <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon2_2.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">入会送券包</p>
+                                            <span class="color-gray">1000元大礼包</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right" >
+                                            <a href="javascript:;" style="margin-right: 20px;">
+                                                <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon3_3.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">入会送积分</p>
+                                            <span class="color-gray">升级即送100积分</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right" >
+                                            <a href="javascript:;" style="margin-right: 20px;">
+                                                <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-grid-cards-item">
+                                <div class="h4 wrap-title">
+                                    <span class="wrap-title-cot">Vip</span>
+                                </div>
+                                <div class="calc-shadow-bottom hackle-panel">
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon1_1.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">升级送券</p>
+                                            <span class="color-gray">100元优惠券</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right" >
+                                            <a href="javascript:;" style="margin-right: 20px;">
+                                                <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon2_2.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">升级送券包</p>
+                                            <span class="color-gray">1000元大礼包</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right" >
+                                            <a href="javascript:;" style="margin-right: 20px;">
+                                                <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon3_3.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">升级送积分</p>
+                                            <span class="color-gray">升级即送1000积分</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right" >
+                                            <a href="javascript:;" style="margin-right: 20px;">
+                                                <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-grid-cards-item">
+                                <div class="h4 wrap-title">
+                                    <span class="wrap-title-cot">金牌会员</span>
+                                </div>
+                                <div class="calc-shadow-bottom hackle-panel">
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon1_1.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">升级送券</p>
+                                            <span class="color-gray">100元优惠券</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right" >
+                                            <a href="javascript:;" style="margin-right: 20px;">
+                                                <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item" ><img src="../imgs/rule_icon2_2.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">升级送券包</p>
+                                            <span class="color-gray">1000元大礼包</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right" >
+                                            <a href="javascript:;" style="margin-right: 20px;">
+                                                <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="grid-nav-bar hackle-panel-list">
+                                        <div class="grid-nav-bar-item"><img src="../imgs/rule_icon3_3.png"></div>
+                                        <div class="grid-nav-bar-item text-left">
+                                            <p class="size16 fw-b">升级送积分</p>
+                                            <span class="color-gray">升级即送1000积分</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item text-right" >
+                                            <a href="javascript:;" style="margin-right: 20px;">
+                                                <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="javascript:;">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-layout-footer">
+            <div class="grid-nav-bar">
+                <div class="grid-nav-bar-item ui-layout-head-logo">
+                    驿氪
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialog_left fadeIn" id="privilege-dialog">
+    <div class="dialog_left_top">
+        <div class="dialog_left_tit fw-b">送电子券包</div>
+        <button class="close wdn" type="button">×</button>
+    </div>
+    <div class="dialog_left_cont ">
+        <div style="margin: 20px;">
+            <table class="normal-table">
+                <tr>
+                    <td><span class="red star">*</span>券包名称</td>
+                    <td>
+                        <input id="ui-form-group-11" size="12" class="ui-form-control width-100" type="text" placeholder="面向消费者显示，最多15个字">
+                    </td>
+                </tr>
+                <tr>
+                    <td>券包总额</td>
+                    <td><input id="ui-form-group-11" size="12" class="ui-form-control width-100" type="text"></td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;"><span class="red star">*</span>券包模板</td>
+                    <td><img src="../imgs/quan.png"></td>
+                </tr>
+            </table>
+            <div class="ui-shadow">
+                <div class="coupon-list">
+                    <div class="h4 wrap-title">
+                        <span class="wrap-title-cot">券1</span>
+                        <a href="javascript:; " class="pull-right"><span class="glyphicon glyphicon-trash"></span></a>
+                    </div>
+                    <table class="normal-table">
+                        <tr>
+                            <td>电子券</td>
+                            <td>
+                                <a href="javascript:;" class="coupon-select">
+                                    <div class="coupon-select-cont">50元无门槛代金券</div>
+                                    <div class="coupon-select-ft"></div>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>有效期</td>
+                            <td class="ui-form-inline">
+                                <span class="size12 color-gray">自赠送日起</span>
+                                <input id="ui-form-group-11" size="12" class="ui-form-control" type="text">
+                                <span class="size12 color-gray">天内有效</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;">使用说明</td>
+                            <td>
+                                <input id="ui-form-group-11" size="12" class="ui-form-control width-100" type="text" style="height: 84px;"> 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="coupon-list">
+                    <div class="h4 wrap-title">
+                        <span class="wrap-title-cot">券2</span>
+                        <a href="javascript:; " class="pull-right"><span class="glyphicon glyphicon-trash"></span></a>
+                    </div>
+                    <table class="normal-table">
+                        <tr>
+                            <td>电子券</td>
+                            <td>
+                                <a href="javascript:;" class="coupon-select">
+                                    <div class="coupon-select-cont">50元无门槛代金券</div>
+                                    <div class="coupon-select-ft"></div>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>有效期</td>
+                            <td class="ui-form-inline">
+                                <span class="size12 color-gray">自赠送日起</span>
+                                <input id="ui-form-group-11" size="12" class="ui-form-control" type="text">
+                                <span class="size12 color-gray">天内有效</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;">使用说明</td>
+                            <td>
+                                <input id="ui-form-group-11" size="12" class="ui-form-control width-100" type="text" style="height: 84px;"> 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <a href="javascript:;" class="add-step">添加电子券</a>
+            </div>
+        </div>
+    </div>
+    <div class="dialog_left_bottom">
+        <button type="button" class="ui-btn ui-btn-default"> 提交 </button>
+        <button type="button" class="ui-btn ui-btn-green"> 关闭 </button>
+    </div>
+</div>
+</body>
+</html>

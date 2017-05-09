@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+    <script src="../js/less.js"></script>
+
+    <title></title>
+    <style>
+        #memberinfo_base .member-head-img { position: relative; }
+        #memberinfo_base .member-sex { position: absolute; bottom: -1px; right: -1px; transform: rotate(45deg); }
+        #memberinfo_consumption { overflow: visible; }
+        #memberinfo_consumption .ui-panel-head { position: relative; padding-left: 94px; }
+        #memberinfo_consumption .ui-panel-head img { position: absolute; top: -10px; left: 17px; }
+    </style>
+</head>
+<body>
+<div style="width: 100%;position: relative;">
+    <div class="ui-layout height-auto ">
+        <div class="ui-layout-head ui-layout-head-fixed">
+
+            <div class="grid-nav-bar">
+
+                <div class="grid-nav-bar-item ui-layout-head-logo">
+                    <img src="../imgs/logo_ezr.png" alt=""/>
+                </div>
+
+                <div class="grid-nav-bar-item">
+                    <div class="grid-nav-bar">
+                        <div class="grid-nav-bar-item"></div>
+                        <div class="grid-nav-bar-item ui-balance">
+                            <span class="glyphicon glyphicon-yen"></span>
+                            余额：800.00
+                        </div>
+                        <div class="grid-nav-bar-item ui-message">
+                            <span class="glyphicon glyphicon-bell"></span>
+                        </div>
+                        <div class="grid-nav-bar-item ui-user-info">
+                            <div class="grid-nav-bar">
+                                <div class="grid-nav-bar-item" style="width: 64px;">
+                                    <img class="img-middle circular" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU0MzhlZTQ0MiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTQzOGVlNDQyIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 40px; height: 40px;">
+                                </div>
+                                <div class="grid-nav-bar-item text-left">
+                                    欢迎您，<br>
+                                    超级管理员(管理员)
+                                </div>
+                                <div class="grid-nav-bar-item" style="width: 64px;">
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="ui-layout-body">
+            <div class="ui-layout-left">
+                <ul class="ui-tree ui-left-menu">
+                    <li>
+                        <h3>
+                    <span class="grid-nav-bar ui-tree-title">
+                        <span class="grid-nav-bar-item text-left">
+                            <span class="glyphicon glyphicon-film"></span>
+                            一级分类
+                        </span>
+                        <span class="grid-nav-bar-item" style="width: 28px;">
+                            <span class="glyphicon glyphicon-menu-down"></span>
+                        </span>
+                    </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <h3>
+                                    <span class="glyphicon glyphicon-plus"></span>二级分类</h3>
+                                <ul>
+                                    <li><a href="javascript:;" class="active">三级分类</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                    <span class="grid-nav-bar ui-tree-title">
+                        <span class="grid-nav-bar-item text-left">
+                            <span class="glyphicon glyphicon-cog"></span>
+                            一级分类
+                        </span>
+                        <span class="grid-nav-bar-item" style="width: 28px;">
+                            <span class="glyphicon glyphicon-menu-down"></span>
+                        </span>
+                    </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <h3>
+                                    <span class="glyphicon glyphicon-plus"></span>二级分类</h3>
+                                <ul>
+                                    <li><a href="javascript:;">三级分类</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-layout-cot">
+
+                <div class="ui-cat-l3">
+                    <div class="grid-nav-bar">
+                        <div class="grid-nav-bar-item text-left">
+                            <span class="glyphicon glyphicon-menu-left"></span>left
+                        </div>
+                        <div class="grid-nav-bar-item" style="font-size: 16px;">会员名</div>
+                        <div class="grid-nav-bar-item text-right">right</div>
+                    </div>
+                </div>
+
+                <div class="ui-cat-l4 ui-shadow-bottom">
+                    <div class="ui-tabs grid-nav-bar width-auto">
+                        <!--<div class="ui-tabs-inner ">-->
+                        <a class="ui-tabs-item ui-border-bottom grid-nav-bar-item active"  href="javascript:;">基础信息</a>
+                        <a class="ui-tabs-item ui-border-bottom grid-nav-bar-item"  href="javascript:;">电子优惠券</a>
+                        <a class="ui-tabs-item ui-border-bottom grid-nav-bar-item"  href="javascript:;">交易历史</a>
+                        <a class="ui-tabs-item ui-border-bottom grid-nav-bar-item"  href="javascript:;">积分历史</a>
+                        <a class="ui-tabs-item ui-border-bottom grid-nav-bar-item"  href="javascript:;">沟通历史</a>
+                        <a class="ui-tabs-item ui-border-bottom grid-nav-bar-item"  href="javascript:;">地址管理</a>
+                        <!--</div>-->
+                    </div>
+                </div>
+
+                <div class="ui-layout-main" style="color: #333531;">
+
+                    <div id="memberinfo_base" class="ui-panel" style="margin-bottom: 20px;">
+                        <div class="ui-panel-head text-center" style="background-color: #ffeded;">
+                            <span class="color-red">该用户在黑名单</span>
+                        </div>
+                        <div class="ui-panel-body">
+                            <div class="grid-nav-bar" style="height: 255px;">
+
+                                <div class="grid-nav-bar-item" style="background: #f9f9f9 url('../imgs/memberinfo_bg.png'); width: 340px;">
+
+                                    <div class="grid-nav-bar" style="height: 120px;">
+                                        <div class="grid-nav-bar-item" style="color:#848583;width:110px;">
+                                            会员折扣<br><span class="h3" style="color:#8bc34a;">90</span>
+                                        </div>
+                                        <div class="grid-nav-bar-item member-head-img">
+                                            <img src="../imgs/memberinfo_head.png" class="ui-circular">
+                                            <img src="../imgs/female.png" alt="性别" class="member-sex">
+                                        </div>
+                                        <div class="grid-nav-bar-item" style="color:#848583;width:110px;">
+                                            当前积分<br><span class="h3" style="color:#8bc34a;">8888</span>
+                                        </div>
+                                    </div>
+                                    <div style="line-height:24px;font-size:16px;margin-top:14px;">
+                                        <span class="member-name">张三</span>
+                                        <span class="wrap-title-cot member-level" style="font-size: 12px;">金卡会员</span>
+                                        <div class="member-shop">上海正大广场店</div>
+
+                                        <div class="ui-circular" style="margin-top: 6px;height: 30px;padding: 0 28px;background-color: #efefef;">
+                                            <div class="ui-circular-inner" style="font-size: 14px;">
+                                                累计消费次数：<span>1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="grid-nav-bar-item">
+
+                                    <div style="padding-left: 20px;">
+                                        <table class="ui-table ui-striped-rows">
+                                            <tbody class="text-left">
+                                            <tr>
+                                                <td class="color-gray">手机</td>
+                                                <td>18916610847</td>
+                                                <td class="color-gray">线下卡号</td>
+                                                <td>ET0005481</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="color-gray">会员卡号</td>
+                                                <td>ET0005481</td>
+                                                <td class="color-gray">相册</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="color-gray">出生日期</td>
+                                                <td>1998-06-22
+                                                    <div class="ui-circular ui-circular-width-auto" style=" background: #eee;">
+                                                        <div class="ui-circular-inner" style="padding: 0 10px; height: 29px;">18岁</div>
+                                                    </div>
+                                                </td>
+                                                <td class="color-gray">所在城市</td>
+                                                <td>中国  上海市  闵行区</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="color-gray">别名</td>
+                                                <td>KNIT123</td>
+                                                <td class="color-gray">邮箱</td>
+                                                <td>123456@qq.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="color-gray">QQ</td>
+                                                <td>123456</td>
+                                                <td class="color-gray">微博</td>
+                                                <td>121324</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="color-gray">常用地址</td>
+                                                <td>上海市徐汇区</td>
+                                                <td colspan="2" class="text-right">
+                                                    <div class="ui-circular square-34" style=" background: #eeeeee;;">
+                                                        <div class="ui-circular-inner">
+                                                            <span class="glyphicon glyphicon-option-horizontal" style="top:3px;left:-1px;"></span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="ui-panel-footer" style="background:url('../imgs/memberinfo_twill.png') repeat-x; border-top: 1px solid #e5e6e6;">
+                            <div class="grid-nav-bar">
+                                <div class="grid-nav-bar-item text-left">
+                                    <div class="ui-circular" style="height: 40px;padding: 0 20px;background: #efefef;">
+                                        <div class="ui-circular-inner">
+                                            hello
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-nav-bar-item">
+                                    <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="memberinfo_consumption" class="ui-grid-cards-list-3 margin-bottom-base">
+                        <div class="ui-grid-cards-list-inner">
+                            <div class="ui-grid-cards-item">
+                                <div class="ui-panel" style="min-height: 192px;">
+                                    <div class="ui-panel-head" style="background: #f9f9f9; border-bottom: 1px solid #e5e6e6;">
+                                        <img src="../imgs/memberinfo_icon01.png">最近消费
+                                    </div>
+
+                                    <div class="ui-panel-body" style="padding: 20px;">
+
+                                        <div class="grid-nav-bar" style="margin-bottom: 6px;">
+                                            <div class="grid-nav-bar-item text-left" style="line-height: 24px;">
+                                                <span class="color-gray">最近消费门店</span><br>
+                                                <span>上海浦东昌里直营店</span>
+                                            </div>
+                                        </div>
+                                        <div class="grid-nav-bar">
+                                            <div class="grid-nav-bar-item text-left" style="line-height: 24px;">
+                                                <span class="color-gray">最近消费时间</span><br>
+                                                <span>2015.07.29</span>
+                                            </div>
+                                            <div class="grid-nav-bar-item text-left" style="line-height: 24px;">
+                                                <span class="color-gray">最近消费金额</span><br>
+                                                <span>200</span>
+                                            </div>
+                                        </div>
+
+                                    </div> <!--ui-panel-body-->
+
+                                </div> <!--ui-panel-->
+                            </div> <!--ui-grid-cards-item-->
+
+                            <div class="ui-grid-cards-item">
+                                <div class="ui-panel" style="min-height: 192px;">
+                                    <div class="ui-panel-head" style="background: #f9f9f9; border-bottom: 1px solid #e5e6e6;">
+                                        <img src="../imgs/memberinfo_icon02.png">平均消费
+                                    </div>
+
+                                    <div class="ui-panel-body" style="padding: 20px;">
+
+                                        <div class="grid-nav-bar" style="margin-bottom: 6px;">
+                                            <div class="grid-nav-bar-item text-left" style="width: 50%; line-height: 24px;">
+                                                <span class="color-gray">平均消费</span><br><span>1.2</span>
+                                            </div>
+                                            <div class="grid-nav-bar-item text-left" style="line-height: 24px;">
+                                                <span class="color-gray">平均消费折扣</span><br><span>90%</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid-nav-bar">
+                                            <div class="grid-nav-bar-item text-left" style="line-height: 24px;">
+                                                <span class="color-gray">平均件单价</span><br><span>100</span>
+                                            </div>
+                                            <div class="grid-nav-bar-item text-left" style="line-height: 24px;">
+                                                <span class="color-gray">平均客单价</span><br><span>300</span>
+                                            </div>
+                                        </div>
+                                    </div>  <!-- ui-panel-body -->
+                                </div> <!-- ui-panel -->
+                            </div> <!-- ui-grid-cards-item -->
+
+                            <div class="ui-grid-cards-item">
+                                <div class="ui-panel" style="min-height: 192px;">
+                                    <div class="ui-panel-head" style="background: #f9f9f9; border-bottom: 1px solid #e5e6e6;">
+                                        <img src="../imgs/memberinfo_icon03.png">累计消费
+                                    </div>
+
+                                    <div class="ui-panel-body" style="padding: 20px;">
+
+                                        <div class="grid-nav-bar">
+                                            <div class="grid-nav-bar-item text-left">
+                                                <span class="color-gray">累计消费次数</span><br><span>600</span>
+                                            </div>
+                                            <div class="grid-nav-bar-item text-left">
+                                                <span class="color-gray">累计消费金额</span><br><span>8,000,000</span>
+                                            </div>
+                                        </div>
+
+                                    </div> <!-- ui-panel-body -->
+                                </div> <!-- ui-panel -->
+                            </div> <!-- ui-grid-cards-item -->
+                        </div>
+                    </div>
+
+                    <div class="margin-bottom-base">
+                        <div class="wrap-title"><span class="wrap-title-cot" style="font-size: 16px;">拓展资料</span></div>
+                        <div class="ui-table-outer">
+                            <table class="ui-table ui-striped-rows">
+                                <tbody class="text-left">
+                                <tr>
+                                    <td class="text-center color-gray" style="width: 66px;">身高</td>
+                                    <td>170cm</td>
+                                    <td class="text-center color-gray" style="width: 66px;">体重</td>
+                                    <td>44kg</td>
+                                    <td class="text-center color-gray" style="width: 66px;">血型</td>
+                                    <td>B型</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e5e6e6;">
+                                    <td class="text-center color-gray">星座</td>
+                                    <td>狮子座</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="memberinfo_enrollment" class="margin-bottom-base">
+                        <div class="wrap-title"><span class="wrap-title-cot" style="font-size: 16px;">入会信息</span></div>
+
+                        <div class="grid-nav-bar padding-base" style="background: #fff; height: 104px;">
+                            <div class="grid-nav-bar-item text-left" style="padding-left: 82px; background: url('../imgs/memberinfo_time.png') no-repeat left center;">
+                                <span class="color-gray">入会时间</span><br><span>2015-09-09 12:00</span>
+                            </div>
+                            <div class="grid-nav-bar-item text-left" style="padding-left: 82px; background: url('../imgs/memberinfo_shop.png') no-repeat left center;">
+                                <span class="color-gray">入会门店</span><br><span>上海正大广场店</span>
+                            </div>
+                            <div class="grid-nav-bar-item text-left" style="padding-left: 82px; background: url('../imgs/memberinfo_person.png') no-repeat left center;">
+                                <span class="color-gray">推荐会员姓名 | ID</span><br><span>张三 | HQ001</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="margin-bottom-base">
+                        <div class="wrap-title"><span class="wrap-title-cot" style="font-size: 16px;">级别变更历史</span></div>
+                        <div class="ui-table-outer">
+                            <table class="ui-table ui-striped-rows">
+                                <thead class="color-gray" style="font-size: 14px;">
+                                <tr>
+                                    <th style="font-weight: normal;">变更时间</th>
+                                    <th style="font-weight: normal;">变更等级</th>
+                                    <th style="font-weight: normal;">变更后等级</th>
+                                    <th style="font-weight: normal;">变更原因</th>
+                                </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e5e6e6;">
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="wrap-title"><span class="wrap-title-cot" style="font-size: 16px;">会员描述</span></div>
+                        <div class="ui-shadow">
+                            <div class="text-left text-middle-parent padding-base">
+                                <span class="text-middle">
+                                    会员描述详细内容
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui-layout-footer">
+                <div class="grid-nav-bar">
+                    <div class="grid-nav-bar-item ui-layout-head-logo">
+                        驿氪
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+        position: absolute;
+        top:0;bottom:0;left:0;right:0;
+        width:500px;
+        height:500px;
+        margin: auto;
+    }
+
+    /*div{*/
+        /*width: 500px;height: 500px;*/
+        /*position: absolute;*/
+        /*left:50%;top: 50%;*/
+        /*margin-left: -250px;*/
+        /*margin-top: -250px;*/
+        /*background: yellow;*/
+    /*}*/
+</style>
+<body>
+<div></div>
+</body>
+<script>
+    var a= new Array;
+    a[0]=parseInt(Math.random()*9);
+    a[1]=parseInt(Math.random()*9);
+    a[2]=parseInt(Math.random()*9);
+    a[3]=parseInt(Math.random()*9);
+    if (a[0]!=a[1]&a[0]!=a[2]&a[0]!=a[3]&a[1]!=a[2]&a[1]!=a[3]&a[2]!=a[3]){
+        document.write(a);
+
+    }
+
+</script>
+</html>

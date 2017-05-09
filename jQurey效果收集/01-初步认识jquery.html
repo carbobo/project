@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+    .top { width: 1200px; height:100px; border:1px solid red; margin:0 auto;}
+    .top .left { width:300px; height:80px; background-color: orange; float: left;}
+    .top .right { width:300px; height:80px; background-color: orange; float: right;}
+    .nav ul li { width:500px; height:50px; background: gray; margin:7px;}
+</style>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+     $(function(){  // 当网页（dom树）加载完毕
+        //选择器
+        // $(document)
+        // $("#top")
+        // $(".top").css({background:'black'});
+        // $(".top").eq(0).css({background:'black'});  // 匹配结果中索引为0的元素
+        // $(".top").first().css({background:'black'});  // 匹配结果中索引为0的元素
+        // $(".top").first().css({background:'black'}).next().html('11111');  // 链式操作
+        $(".top2")[0].innerHTML = "6666";  // 可以通过加[下标]，把jquery对象转换为原生js对象
+        $(".top2").click(function(){
+
+        });
+
+        $("img").attr({src:'images/1.gif'});
+        $(".top2").
+
+     });
+</script>
+</head>
+<body>
+    <div class="top">
+        <div class="left">
+            <p>left-p</p>
+        </div>
+        <div class="right">
+            <p>right-p </p>
+        </div>
+    </div>
+    <div class='top2'>
+        <img src="load.gif" alt="">
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#">11111</a></li>
+            <li><a href="#">11111</a></li>
+            <li><a href="#">11111</a></li>
+            <li><a href="#">11111</a></li>
+            <li><a href="#">11111</a></li>
+            <li><a href="#">11111</a></li>
+            <li><a href="#">11111</a></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

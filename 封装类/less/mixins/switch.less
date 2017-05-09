@@ -1,0 +1,260 @@
+.calc-onoffswitch(@prefix, @list) {
+
+  .iter(length(@list));
+  .iter(@i) when (@i > 0) {
+    .iter(@i - 1);
+    @pair:  extract(@list, @i);
+    @key:   extract(@pair, 1);
+    @width:   extract(@pair, 2);
+    @height: extract(@pair, 3);
+    @before-color: extract(@pair, 4);
+    @after-color: extract(@pair, 5);
+    @ab-height: extract(@pair, 6);
+    @ab-width: extract(@pair, 7);
+    @ab-fz: extract(@pair, 8);
+
+    .@{prefix}.@{prefix}-@{key} {
+
+//      @{attribute}: @value;
+      width: @width*1px;
+      .onoffswitch-before, .onoffswitch-after {
+        height: @ab-height + 3 * 1px;
+        line-height: @ab-height*1px; ;
+        font-size: @ab-fz * 1px;
+      }
+      .onoffswitch-switch{
+        width: @ab-width*1px;
+        height: @ab-width*1px;
+        right: @width - @ab-width - 7  * 1px;
+      }
+      .onoffswitch-before {
+        background-color: @before-color*1px;
+        padding-right:@ab-width*1px;
+      }
+      .onoffswitch-after {
+        background-color: @after-color*1px;
+        padding-left:@ab-width*1px;
+      }
+
+    }
+  }
+}
+
+
+//.calc-onoffswitch(@width, @height, @before-color, @after-color, @ab-height, @ab-width){
+//
+//}
+
+
+.make-onoffswitch(){
+
+  .ui-onoffswitch {
+    -moz-user-select: none;
+    position: relative;
+    //  width: 50px;
+    .onoffswitch-checkbox{
+      display: none;
+    }
+    .onoffswitch-label {
+      border: 2px solid #e4e4e4;
+      border-radius: 20px;
+      cursor: pointer;
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+    .onoffswitch-inner {
+      display: block;
+      margin-left: -100%;
+      transition-duration: 0.3s;
+      transition-property: margin;
+      transition-timing-function: ease-in;
+      width: 200%;
+    }
+    .onoffswitch-before, .onoffswitch-after {
+
+      text-align: center !important;
+      box-sizing: border-box;
+      color: #fff;
+      float: left;
+//      font-size: 10px;
+      //    height: 18px;
+      line-height: 1.8;
+      padding: 0;
+      width: 50%;
+    }
+    .onoffswitch-before {
+      //    background-color: #53d76a;
+      border-radius: 200px;
+      color: #fff;
+      padding-left: 6px;
+    }
+    .onoffswitch-after {
+      //    background-color: #eee;
+      color: #999;
+      padding-right: 6px;
+      text-align: right;
+    }
+    .onoffswitch-switch {
+
+      background: #fff none repeat scroll 0 0;
+      border: 2px solid #e4e4e4;
+      border-radius: 1000px;
+      bottom: 0;
+      margin: 2px;
+      position: absolute;
+      //    right: 28px;
+      top: 0;
+      //    width: 15px;
+      transition-duration: 0.3s;
+      transition-property: all;
+      transition-timing-function: ease-in;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+      margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch{
+      right: 0;
+    }
+  }
+  .calc-onoffswitch(ui-onoffswitch, @switch);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//.onoffswitch .onoffswitch-label {
+//  border: 2px solid #e4e4e4;
+//  border-radius: 20px;
+//  cursor: pointer;
+//  display: block;
+//  overflow: hidden;
+//  position: relative;
+//}
+//.onoffswitch .onoffswitch-inner {
+//  display: block;
+//  margin-left: -100%;
+//  transition-duration: 0.3s;
+//  transition-property: margin;
+//  transition-timing-function: ease-in;
+//  width: 200%;
+//}
+//.onoffswitch .onoffswitch-inner .onoffswitch-before, .onoffswitch .onoffswitch-inner .onoffswitch-after {
+//  box-sizing: border-box;
+//  color: #fff;
+//  float: left;
+//  font-size: 10px;
+//  height: 18px;
+//  line-height: 1.8;
+//  padding: 0;
+//  width: 50%;
+//}
+//.onoffswitch .onoffswitch-inner .onoffswitch-before {
+//  background-color: #53d76a;
+//  border-radius: 20px;
+//  color: #fff;
+////  content: "ON";
+//  padding-left: 6px;
+//}
+//.onoffswitch .onoffswitch-inner .onoffswitch-after {
+//  background-color: #eee;
+//  color: #999;
+////  content: "OFF";
+//  padding-right: 6px;
+//  text-align: right;
+//}
+//.onoffswitch .onoffswitch-switch {
+//  background: #fff none repeat scroll 0 0;
+//  border: 2px solid #e4e4e4;
+//  border-radius: 15px;
+//  bottom: 0;
+//  margin: 2px;
+//  position: absolute;
+//  right: 28px;
+//  top: 0;
+//
+//  transition-duration: 0.3s;
+//  transition-property: all;
+//  transition-timing-function: ease-in;
+//  width: 15px;
+//
+//}
+//.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+//  margin-left: 0;
+//}
+
+//.onoffswitch .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch{
+//  right: 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//.onoffswitch.onoffswitch-blank .onoffswitch-inner::before, .onoffswitch.onoffswitch-blank .onoffswitch-inner::after {
+//  content: "";
+//}
+//.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+//  margin-left: 0;
+//}
+//.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+//  right: 0;
+//}
+//
+//.onoffswitch.onoffswitch-lg{
+//  width: 120px;
+//}
+//.onoffswitch.onoffswitch-lg .onoffswitch-inner::before{
+//  content: "EZR原生";
+//  padding-right: 20px;
+//}
+//.onoffswitch.onoffswitch-lg .onoffswitch-inner::after{
+//  content: "开发者模式";
+//  padding-right: 10px;
+//}
+//.onoffswitch.onoffswitch-lg .onoffswitch-inner::before, .onoffswitch.onoffswitch-lg .onoffswitch-inner::after{
+//  font-size: 14px;
+//  height: 35px;
+//  line-height: 35px;
+//}
+//.onoffswitch.onoffswitch-lg .onoffswitch-inner::before,
+//.onoffswitch.onoffswitch-lg .onoffswitch-inner::after {
+//  background: #8bc34a;
+//  color: #fff;
+//}
+//.onoffswitch.onoffswitch-lg .onoffswitch-switch{
+//  width: 30px;
+//}
+//.onoffswitch.onoffswitch-lg .onoffswitch-switch{
+//  right: 82px;
+//}
+//.onoffswitch .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch{
+//  right: 0;
+//}

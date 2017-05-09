@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .box { width:300px; height:200px; border:1px solid red;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        box
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+     <script>
+        //$符冲突
+        // function $(selector){
+        //     return document.querySelector(selector);
+        // }
+        // $(".box").innerHTML = "111";
+        // $(".box").css({color:'red'});  
+        
+
+
+        // 解决冲突 
+        // jQuery.noConflict(); //声明只能用jQuery
+        // var j = jQuery.noConflict();  // 用j代替$
+
+        jQuery.noConflict();
+
+        function $(selector){
+            return document.querySelector(selector);
+        }
+        $(".box").innerHTML = "111";
+        $(".box").css({color:'red'}); 
+        // changeBg();
+     </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div { width:300px; height:1200px; background-color: #aaa; margin:10px; padding:5px;}
+    </style>
+    
+</head>
+<body>
+    <div class="box0">
+        div0
+    </div>
+    <div class="box0">
+        div1
+    </div>
+   <div class="box0"><a id="div2"></a>
+        div2
+    </div>
+    <div class="box0">
+        div3
+    </div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    $(window).load(function(){
+        $(":target").html('aaa');
+    });
+    </script>
+</body>
+</html>

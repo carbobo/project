@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function(){
+        $("input:eq(0)").click(function(){
+            var status = $(this).prop('checked');
+            $('input:gt(0)').prop('checked',status);
+        });
+    });    
+</script>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" >全选<br><br>
+        您的爱好：
+        <input type="checkbox" value="swim" name="hobby"> <label>swim</label>
+        <input type="checkbox" value="song" name="hobby"><label>song</label>
+        <input type="checkbox" value="sports" name="hobby"><label>sports</label>
+        <input type="checkbox" value="food" name="hobby"><label>food</label>
+        <input type="checkbox" value="travel" name="hobby">  <label>travel</label>
+    </form>
+    
+</body>
+</html>

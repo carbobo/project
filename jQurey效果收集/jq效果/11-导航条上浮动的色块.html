@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="jquery-1.9.1.min.js"></script>
+<script>
+   $(function(){
+      $(".nav li").mouseenter(function(){
+          var i=$(this).index();
+          $(".nav i").animate({left:i*100});
+      });
+   });
+</script>
+<link href="" rel="stylesheet">
+<style>
+    * { margin:0 ; padding:0;}
+    body { font-family: "microsoft yahei";}
+    ul,li { list-style:none;}
+    .nav { width:600px; height:50px; border:1px solid black; position: relative;}
+    .nav ul { font-size:0;}
+    .nav li { display: inline-block; font-size:14px; width:98px; height:50px;border:1px solid blue;}
+    .nav i { position: absolute;top:0; left:0; width:100px;height:50px; background:orange; z-index:-1;}
+</style>
+</head>
+<body>
+  <div class="nav">
+      <ul>
+        <li>文本</li>
+        <li>文本</li>
+        <li>文本</li>
+        <li>文本</li>
+        <li>文本</li>
+        <li>文本</li>
+      </ul>
+      <i></i>
+  </div>
+</body>
+</html>

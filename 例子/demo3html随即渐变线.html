@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <canvas width="800" height="450" style="border:1px solid red"></canvas>
+    <script>
+        var context = document.getElementsByTagName('canvas')[0].getContext("2d");
+        var lastX = context.canvas.width*Math.random();
+        var lastY = context.canvas.height*Math.random();
+        var hue = 0;
+        // line函数绘制一条线
+        function line(){
+            context.save();
+            context.translate(context.canvas.width/2,context.canvas.height/2);
+            context.scale(.9,.9);
+            context.translate(-context.canvas.width/2, -context.canvas.height/2);
+            // 开始一条路径，或者重置当前路径
+            context.beginPath();
+            // lineWidth 设置或返回当前线条的宽度
+            context.lineWidth = 5 + Math.random()*10;
+            context.moveTo(lastX,lastY);
+            lastX = context.canvas.width*Math.random();
+            lastY = context.canvas.height*Math.random();
+            // bezierCurveTo()为一个画布的当前子路径添加一条三次贝塞尔曲线
+            context.bezierCurveTo(
+                context.canvas.width*Math.random(),context.canvas.height*Math.random(),
+                context.canvas.width*Math.random(),context.canvas.height*Math.random(),
+                lastX,lastY);
+            hue = hue + 10* Math.random();
+            // strokeStyle设置或返回绘图笔触的颜色，渐变或模式。
+            //
+            context.strokeStyle = "hsl('+hue+',50%,50%)";
+            context.shadowColor = "white";
+            context.shadowBlur = 10;
+            context.stroke();
+            context.restore();
+        }
+        setInterval(line,50);
+        function background(){
+            context.fillStyle = "rgba(50,80,0,0.1)";
+            context.fillRect(50, 50, context.canvas.width, context.canvas.height);
+            setInterval(background,40);
+        }
+    </script>
+</body>
+</html>

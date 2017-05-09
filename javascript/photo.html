@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+    *{margin:0; padding:0;}
+    body{margin:1em 10%;background-image: url(images/background.jpg);background-attachment: fixed;background-position:top left;background-repeat:repeat-x;max-width:80em;}
+    #header{background-image:url(images/guitarist.jpg);background-repeat:no-repeat;background-position:bottom right;border-width:.1em;border-style:solid;border-bottom-width:0;}
+    #navigation ul{width:100%;overflow:hidden;border-left:.1em solid #99a;}
+    #navigation li{display:inline;}
+    #navigation li a{display:block;float: left; padding:.5em 2em;border-right:.1em solid ;}
+
+    a:link{color:#445;background-color:#eb6;}
+    a:visited{color:#445;background-color:#eb6;}
+    a:hover{color:#667;background-color:#fb5;}
+    a:active{color:#778;background-color:#ec8;}
+    #header{color:#ec8; background-color:#334; border-color:#667;}
+    #navigation{color:#445;background-color:#789;border-color:#667;}
+    #content{color:#223;background-color:#edc;border-color:#667;}
+    #navigation ul{border-color:#99a;}
+    #navigation a:link,#navigation a:visited{color:#eef;background-color:transparent;border-color:#99a;}
+    #navigation a:hover{color:#445;background-color:#eb6;}
+    #navigation a:active{color:#667;background-color:#ec8;}
+    #header img{width:500px;height:400px;}
+    #content{line-height:1.8em;}
+    #content p{margin:1em 0;}
+    #navigation a.here:link, #navigation a.here:visited, #navigation a.here:hover, #navigation a.here:active {color:#eef;background-color:#799;}
+
+</style>
+</head>
+<body>
+<div id="header">
+<img src="images/logo.jpg" alt="">
+</div>
+<div id="navigation">
+<ul>
+    <li><a href="index.html" class="">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="photo.html">Photo</a></li>
+    <li><a href="live.html">Live</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div id="content">
+    <h1>Lorem Ipsum Dolor</h1>
+    <p id="indro">Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
+</div>
+<script>
+    // global代码
+    function addLoadEvent(func){
+        var oldonload = window.onload;
+        if(typeof window.onload != "function"){
+            window.onload = func;
+        }else{
+            window.onload = function(){
+                oldonload();
+                func();
+            }
+        }
+    }
+    // inserAfter函数
+     function insertAfter(newElement ,targetElement){
+        var parent = targetElement.parentNode;
+        if(parent.lastChild == targetElement){
+
+            parent.appendChild(newElement);
+        }else{
+            parent.insertBefore(newElement,targetElement.nextSibling);
+          }
+     }
+     function addClass(element,value){
+        if(!element.className){
+            element.className = value;
+        }else{
+            newClassName = element.className;
+            newClassName += "";
+            newClassName +=value;
+            element.className = newClassName;
+        }
+     }
+
+     function highlightPage(){
+        if (!document.getElementById) return false;
+        if(!document.getElementsByTagName) return false;
+        if(!document.getElementById("navigation")) return false;
+        var nav = document.getElementById("navigation");
+        var links = nav.getElementsByTagName("a");
+        for(var i = 0;i < links.length; i ++){
+            var linkurl = links[i].getAttribute("href");
+            var currenturl = window.location.href;
+            if(currenturl.indexOf(linkurl) != -1){
+                links[i].className = "here";
+            }
+        }
+     }
+     addLoadEvent(highlightPage);
+</script>
+</body>
+</html>

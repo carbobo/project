@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function(){
+        setInterval(function(){
+            $(".demo ul").animate({top:-30},1000,function(){
+                $(this).find("li").first().appendTo(this);
+                $(this).css({top:0});
+            });
+        },2000);
+    });
+</script>
+<link href="" rel="stylesheet">
+<style>
+    * { margin:0 ; padding: 0}
+    ul,li { list-style: none}
+    .demo {width:250px; height:30px; border:1px solid red; margin-top:400px; margin-left:300px; /*overflow:hidden;*/ position: relative;}
+    .demo ul { position: absolute; top:0; left:0;}
+    .demo li { height:30px; line-height: 30px;}
+</style>
+</head>
+<body>
+    <div class="demo">
+        <ul>
+            
+            <li>刘先生8469859789786982</li>
+            <li>吴先生8469859789786983</li>
+            <li>李先生8469859789786984</li>
+            <li>孙先生8469859789786985</li>
+            <li>李先生8469859789786981</li>
+        </ul>
+    </div>
+</body>
+</html>

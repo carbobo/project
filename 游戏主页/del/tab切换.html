@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="css/reset.css">
+<body>
+<style>
+    .tabChange{
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+    .tabChange .tabTitle{
+        font-size: 0;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    .tabChange .tabTitle .title{
+        display: inline-block;
+        width: 166px;
+        font-size: 16px;
+        text-align: center;
+        border-left: 1px solid #ccc;
+        margin-left: -1px;
+        cursor: pointer;
+    }
+    .tabChange .tabTitle .title:hover{
+        background: #e8e6e6;
+    }
+    .tabChange .showBox{
+        height: 300px;
+        width: 100%;
+        position: relative;
+        margin-top: 20px;
+    }
+    .tabChange .showBox div{
+        position: absolute;
+        top: 0;
+        left:0;
+        display: none;
+
+    }
+    .tabChange .showBox .show{
+        display: block;
+    }
+    .ccc{
+        background-color: #ccc;;
+    }
+</style>
+<div class="tabChange">
+    <div class="tabTitle" id="tabTitle">
+        <div class="title ccc">标题1</div>
+        <div class="title">标题2</div>
+        <div class="title">标题3</div>
+    </div>
+    <div class="showBox" id="showBox">
+        <div class="show">内容显示1111111111111111111</div>
+        <div>内容显示2222222222222222222</div>
+        <div >内容显示3333333333333333333</div>
+    </div>
+</div>
+</body>
+<script>
+    window.onload=function(){
+        var tabTitle= document.getElementById("tabTitle");
+        var showBox= document.getElementById("showBox");
+        var tit= tabTitle.getElementsByTagName("div");
+        var show1=showBox.getElementsByTagName("div");
+
+        for(var i=0;i<tit.length;i++){
+            tit[i].index=i;
+            tit[i].onclick=function(){
+                for(var j=0;j<tit.length;j++){
+                    show1[j].className="";
+                    tit[j].className="title";
+                }
+                show1[this.index].className="show";
+                tit[this.index].className +=" ccc";
+
+            }
+        }
+
+    }
+</script>
+</html>

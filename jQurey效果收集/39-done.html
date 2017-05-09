@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>webrx-title</title>
+<meta name="description" content="简介">
+<meta name="keywords" content="关键字">
+<script src="jquery-1.11.3.min.js"></script>
+<script >
+$(function(){
+
+	//该实例需要在服务器端，结合后台调试
+	$("input:submit").click(function(){
+		// $.ajax({
+		// 	type:"GET",//方法 POST
+		// 	url:"server_3.php",//请求地址
+		// 	data:"",//发送服务器数据
+		// 	dataType:"json",//text,html,xml,script,json,jsonp; 服务器返回的数据类型
+		// 	success:function(data){//请求成功后回调函数 data 是响应体
+		// 		$("#name").val(data.name);//设置文本
+		// 		$("#pass").val(data.pass);
+		// 	}//success
+			
+			
+		// 	})//ajax
+		
+
+		//ajax实现的另一种形式,done()相当于success(),fail()相当于error()
+		 $.ajax('server_3.php')
+		 .done(function(data){
+		 	var data = JSON.parse(data);
+		 	$("#name").val(data.name);
+			$("#pass").val(data.pass);
+		 })
+		 .fail(function(){
+		 	alert('获取数据失败');
+		 });		
+		})//click
+	
+	
+	})//read
+</script>
+</head>
+
+<body>
+用名：<input id="name"  type="text"><br/>
+
+密码:<input id="pass"  type="password"><br/>
+<input type="submit" value="获取服务器信息" >
+</body>
+</html>

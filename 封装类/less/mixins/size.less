@@ -1,0 +1,59 @@
+//.calc-square-size(@square-size){
+//  .-(@i: length(@square-size)) when (@i > 0) {
+//      @name: extract(@square-size, @i);
+//      &.square-@{name}{ width:@size;height: @size;}
+////    @name: extract(@colors, @i);
+////    &.@{name} {background: @@name}
+//  .-((@i - 1));
+//  } .-;
+//}
+
+//.calc-square-size(@square-size) {
+//  .-(@i: length(@square-size)) when (@i > 0) {
+//  @name: extract(@square-size, @i);
+//  &.square-@{name} {width:@@name*1px;}
+//  .-((@i - 1));
+//} .-;
+//}
+
+//.calc-square-size(@square-size){
+//  .for(@square-size); .-each(@name) {
+//    &.square-@{name} {width:@name*1px;height: @name*1px;}
+//  }
+//}
+//
+//.calc-width-size(@width-size){
+//  .for(@width-size); .-each(@width) {
+//  &.width-@{width} {width:@width*1px;}
+//}
+//}
+
+
+
+
+
+
+.calc-square-size(@i: length(@square-size)) when ( @i > 0 ) {
+   .calc-square-size(@i - 1);
+    @size: extract(@square-size, @i);
+   .square-@{size}{
+       width:@size*1px;
+       height: @size*1px;
+    }
+}
+
+
+
+
+
+
+.calc-width-size(@i: length(@width-size)) when ( @i > 0 ) {
+  .calc-width-size(@i - 1);
+  @size: extract(@width-size, @i);
+  .width-@{size}{
+    width:@size*1px;
+  }
+}
+
+
+

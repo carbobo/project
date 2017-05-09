@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .nav { width:300px; height:300px;background-color:orange; }
+    </style>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    $(function(){
+          // trigger用法
+          
+
+          //demo1:------------------自动触发指定事件
+          
+          // $('[name=bookName]').trigger('focus');
+
+          //demo2:------------------给一个事件传递参数
+          // $(".nav").click( function (event, a, b) {
+          // // // 一个普通的点击事件时，a和b是undefined类型
+          // // // 如果用下面的语句触发，那么a指向"foo",而b指向"bar"
+          //   alert(a);
+          //   alert(b);
+          // } ).trigger("click", ["foo", "bar"]);
+
+
+          //demo3:自动触发事件并传参
+            // $(".nav").on("myEvent", function (event, message1, message2) {
+            //     alert(message1 + ' ' + message2);
+            // });
+
+            
+            // $(".nav").trigger("myEvent", ["Hello","World!"]);
+
+          //triggerHandler(type, [data])
+          // demo4:------------------------------------这个特别的方法将会触发指定的事件类型上所有绑定的处理函数。但不会执行浏览器默认动作，也不会产生事件冒泡。
+          // $("button").click(function(){  // 获取输入焦点
+          //     $("input").trigger("focus");
+          // });
+
+            $("button").click(function(){   //未获取输入焦点
+              $("input").triggerHandler("focus");
+            });
+
+            $("input").focus(function(){
+              $("<span>Focused!</span>").appendTo("body").fadeOut(1000);
+            });
+
+
+    });
+    </script>
+</head>
+<body>
+    <button>button</button>
+    <div class="nav">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <form action="">
+        搜索：<input type="text" name="bookName">
+    </form>
+</body>
+</html>

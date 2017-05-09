@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html ng-app="myNoteApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+ <script src="http://apps.bdimg.com/libs/angular-route/1.3.13/angular-route.js"></script>
+</head>
+<body ng-app='routingDemoApp'>
+<!-- <div ng-app="">
+    <p><input type="text" ng-model="name" ></p>
+    <h1>Hello {{name}}</h1>
+</div> -->
+
+<!-- demo2 为啥出不来
+<div ng-app="" ng-init="quantity=1;cost=5">
+
+<p>总价： <span ng-bind="quantity*cost"></span></p>
+</div>
+angular字符串 -->
+<!-- <div ng-app="" ng-init="firstName='John';lastName='Doe'">
+
+<p>姓名{{ firstName + " " + lastName }}</p>
+
+</div>
+<div ng-app="" ng-init="firstName='John';lastName='Doe'">
+<p>姓名: {{ firstName + " " + lastName }}</p></div>
+
+
+<div data-ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">
+<p>姓为 {{ person.lastName }}</p>
+
+
+
+
+<div ng-app="">
+     <p>姓名：<input type="text" ng-model="name"></p>
+     <p>你输入的为： {{name}}</p>
+</div> -->
+
+<!-- <div ng-app="" ng-init="a=1;b=2">
+    <h2>价格计算器</h2>
+    <input type="number" ng-model="a">
+    <input type="number" ng-model="b">
+    <p><b>总价：</b>{{a*b}}</p>
+
+</div> -->
+
+
+<!--
+<div ng-app="" ng-init="names=['Jani','Hege','Kai']">
+  <p>使用 ng-repeat 来循环数组</p>
+  <ul>
+    <li ng-repeat="x in names">
+      {{ x }}
+    </li>
+  </ul>
+</div> -->
+
+<!-- ng-repeat 指令用在一个对象数组上：
+<div ng-app="" ng-init="names=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+
+<p>循环对象：</p>
+
+  <h5 ng-repeat="x    in names">
+    {{ x.name + ', ' + x.country }}
+  </h5>
+
+
+</div> -->
+<!-- <div ng-app="myApp" ng-controller="myCtrl">
+    名字: <input ng-model="name">
+</div> -->
+
+<!-- <script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.name = "波波";
+});
+</script>
+<div ng-app="myApp" ng-controller="myCtrl">
+    名字: <input ng-model="name">
+    <h1>你输入了: {{name}}</h1>
+</div> -->
+
+<!-- <form ng-app="" name="myForm">
+    Email:
+    <input type="email" name="myAddress" ng-model="text">
+    <span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱地址</span>
+</form> -->
+<!-- 控制器（应用程序被控制器控制）
+<div ng-app="myFirstApp" ng-controller="personCtrl">
+
+名: <input type="text" ng-model="firstName"><br>
+姓: <input type="text" ng-model="lastName"><br>
+<br>
+姓名: {{fullName()}}
+
+</div>
+
+<script>
+var app = angular.module('myFirstApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+    $scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    }
+});
+</script> -->
+
+<!-- $location服务(angularJS内建服务),返回当前页面的URL地址!
+AngularJS 会一直监控应用，处理事件变化， AngularJS 使用 $location 服务比使用 window.location 对象更好
+<div ng-app = "myApp" ng-controller = "myUrl">
+<p>当前页面的URL地址</p>
+<i>{{myUrl}}</i>
+</div>
+<script>
+  var app = angular.module("myApp",[]);
+      app.controller("myUrl",function($scope,$location){
+          $scope.myUrl = $location.absUrl();
+      });
+</script> -->
+<!-- $timeout服务一段时间之后 -->
+<!-- <div ng-app="myApp" ng-controller="myCtrl">
+  <p>两秒后显示信息:</p>
+  <h1>{{myHeader}}</h1>
+</div>
+<p>$timeout 访问在规定的毫秒数后执行的函数</p>
+<script>
+  var app = angular.module("myApp",[]);
+      app.controller("myCtrl",function($scope,$timeout){
+          $scope.myHeader = "hello world";
+          $timeout(function(){
+            $scope.myHeader = "How are you today?";
+          },2000);
+  })
+</script> -->
+<!-- 强大的$interval服务！！
+<div ng-app="myApp" ng-controller="myCtrl">
+<p>现在时间是：</p>
+<h1>{{theTime}}</h1>
+</div>
+<p>$interval 访问指定的周期来调用函数</p>
+<script>
+  var app = angular.module("myApp",[]);
+  app.controller("myCtrl",function($scope,$interval){
+    $scope.theTime = new Date().toLocaleTimeString();
+    把 Date 对象的时间部分转换为字符串，并返回结果。
+    $interval(function(){
+      $scope.theTime = new Date().toLocaleTimeString();
+    },1000);
+  });
+</script> -->
+
+
+<!-- <div ng-app="myApp" ng-controller="siteCtrl">
+
+<ul>
+  <li ng-repeat="x in names">
+    {{ x.Name + ', ' + x.Country }}
+  </li>
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('siteCtrl', function($scope, $http) {
+  $http({
+    method: 'GET',
+    url: 'http://www.runoob.com/try/angularjs/data/sites.php'
+  }).then(function successCallback(response) {
+      $scope.names = response.data.sites;
+    }, function errorCallback(response) {
+      // 请求失败执行代码
+  });
+
+});
+</script> -->
+
+<!-- <div ng-app = "myApp" ng-controller ="myCtrl">
+<select ng-model="selectedCar"ng-options="y.brand for (x,y) in cars"></select>
+  <p>你选择的是{{selectedCar.brand}}</p>
+  <p>型号是{{selectedCar.model}}</p>
+  <p>颜色是{{selectedCar.color}}</p>
+</div>
+<script>
+var app = angular.module("myApp",[]);
+app.controller("myCtrl",function($scope){
+  $scope.cars = {
+    car01:{brand:"Ford",model:"MUstang",color:"red"},
+    car02:{brand:"Fitt",model:"500",color:"white"},
+    car03:{brand:"Volvo",model:"800",color:"yellow"},
+  }
+})
+</script> -->
+<!-- <div ng-app = "myApp" ng-controller = "myCtrl">
+  <button ng-click = "num = num +1">点我</button>
+  <p>{{ num }}</p>
+</div>
+  <script>
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl",function($scope){
+      $scope.num = 5;
+    })
+  </script>
+ -->
+ <!-- <div ng-app = "myApp" ng-controller = "myCtrl">
+    <p>{{ x1 }}</p>
+    <p>{{ x2 }}</p>
+ </div>
+ <script>
+   var app = angular.module("myApp",[]);
+   app.controller("myCtrl",function($scope){
+    $scope.x1 = "ZPP";
+    $scope.x2 = angular.lowercase($scope.x1);
+   })
+ </script> -->
+<!--  <div ng-app="myApp" ng-controller="myCtrl">
+<p>{{ x1 }}</p>
+<p>{{ x2 }}</p>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.x1 = "JOHN";
+    $scope.x2 = angular.lowercase($scope.x1);
+});
+</script> -->
+<!--  <div ng-app = "myApp" ng-controller = "myCtrl">
+  <p>{{x1}}</p>
+  <p>{{x2}}</p>
+</div>
+<script>
+  var app = angular.module("myApp",[]);
+  app.controller("myCtrl",function($scope){
+    $scope.x1 = "zpp";
+    $scope.x2 = angular.uppercase($scope.x1);
+  })
+</script> -->
+ <!-- <h2>AngularJS 简单应用</h2>
+
+      <div ng-app = "mainApp" ng-controller = "CalcController">
+         <p>输入一个数字: <input type = "number" ng-model = "number" /></p>
+         <button ng-click = "square()">X<sup>2</sup></button>
+         <p>结果: {{result}}</p>
+      </div>
+      <script>
+         var mainApp = angular.module("mainApp", []);
+
+         mainApp.config(function($provide){
+            $provide.provider('MathService', function() {
+               this.$get = function() {
+                  var factory = {};
+
+                  factory.multiply = function(a, b) {
+                     return a * b;
+                  }
+                  return factory;
+               };
+            });
+         });
+
+         mainApp.value("defaultInput", 5);
+
+         mainApp.factory('MathService', function() {
+            var factory = {};
+
+            factory.multiply = function(a, b) {
+               return a * b;
+            }
+            return factory;
+         });
+
+         mainApp.service('CalcService', function(MathService){
+            this.square = function(a) {
+               return MathService.multiply(a,a);
+            }
+         });
+
+         mainApp.controller('CalcController', function($scope, CalcService, defaultInput) {
+            $scope.number = defaultInput;
+            $scope.result = CalcService.square($scope.number);
+
+            $scope.square = function() {
+               $scope.result = CalcService.square($scope.number);
+            }
+         });
+
+      </script> -->
+
+
+
+<!--      <h2>AngularJS 路由应用</h2>
+<ul>
+    <li><a href="#/">首页</a></li>
+    <li><a href="#/computers">电脑</a></li>
+    <li><a href="#/printers">打印机</a></li>
+    <li><a href="#/blabla">其他</a></li>
+</ul>
+
+<div ng-view></div>
+<script>
+    angular.module('routingDemoApp',['ngRoute'])
+    .config(['$routeProvider', function($routeProvider){
+        $routeProvider
+        .when('/',{template:'这是首页页面'})
+        .when('/computers',{template:'这是电脑分类页面'})
+        .when('/printers',{template:'这是打印机页面'})
+        .otherwise({redirectTo:'/'});
+    }]);
+</script> -->
+
+
+
+<div ng-controller="myNoteCtrl">
+<h2>我的笔记</h2>
+<p><textarea ng-model="message" cols="80" rows="10"></textarea></p>
+<p>
+<button ng-click="save()">保存</button>
+<button ng-click="clear()">清除</button>
+</p>
+<p>还可输入字符：<span ng-bind="left()"></span></p>
+</div>
+<script>
+  var app = angular.module("myNoteApp", []);
+  app.controller("myNoteCtrl", function($scope) {
+    $scope.message = "";
+    $scope.left  = function() {return 100 - $scope.message.length;};
+    $scope.clear = function() {$scope.message = "";};
+    $scope.save  = function() {alert("Note Saved");};
+});
+</script>
+
+</body>
+</html>

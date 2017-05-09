@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+    div { width:100px; height:200px; border:1px solid black;}
+    .red { background:red;}
+</style>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function(){
+        $("li").click(function(){
+            alert(1);
+        });
+
+        //clone(true):保留原有元素的事件
+        $("li:first").clone(true).appendTo(".nav");
+    });    
+
+</script>
+</head>
+<body>
+    
+    <ul class="nav">
+        <li><a href="#">菜单1</a></li>
+        <li><a href="#">菜单1</a></li>
+        <li><a href="#">菜单1</a></li>
+    </ul>
+
+<!-- 
+
+    <div class="box">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+    </div> -->
+</body>
+</html>

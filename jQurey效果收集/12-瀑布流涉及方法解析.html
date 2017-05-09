@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1 { width:100px; height:100px; padding:10px; border:1px solid red; margin:20px;}
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        box1
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    //demo1:-------------------------- $().outerWidth()
+        // console.log($(".box1").outerWidth());  //width+padding+border
+        // console.log($(".box1").outerWidth(true));  //width+padding+border+margin
+
+
+    //demo2: each()-----------------参考13-each方法.html
+    
+
+    //demo3:------------------------ Math.min.apply(null, boxArr)
+        // var boxArr = [23,89,120,12,78];
+
+        // //apply允许在调用函数时，以数组的形式传入多个参数
+        // var result = Math.min.apply(null,boxArr);
+        // console.log(result);
+
+    //demo4: -----------------------$.inArray()、$.isArray()
+    
+        // var boxArr = [23,89,120,12,78];
+        // var num = 56;
+
+        //$.inArray()返回数据在数组中的索引
+        // var result = $.inArray(89,boxArr);
+        // console.log(result);
+
+        // $.isArray()用于检测数据是否为数组
+        // var result = $.isArray(boxArr);
+        // var result = $.isArray(num);
+        // console.log(result);
+        
+    
+    //demo5:offset()、position()的使用-----------------参考 14-尺寸.html
+    
+
+    //demo6:------------------------json数据的处理作为$对象处理
+    var person = {data:[{name:'alice',age:34},{name:'john',age:100},{name:'rose',age:88}]};
+    $.each(person.data,function(index,value){
+        // console.log('value----' + value);
+        // console.log('value.name----' + value.name);
+        console.log('value.name----' + $(value).attr('name'));
+    });
+    
+        
+    </script>
+
+</body>
+</html>

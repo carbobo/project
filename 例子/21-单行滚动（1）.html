@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function(){
+        
+        setInterval(function(){
+            var clone=$(".demo p").eq(0).clone();
+            $(".demo p").eq(0).slideUp(500,function(){
+                 $(".demo p").eq(0).remove();
+                 $(".demo").append(clone);
+             });
+
+        },3000);
+     });
+</script>
+<link href="" rel="stylesheet">
+<style>
+    * { margin:0 ; padding: 0}
+    .demo {width:250px; height:30px; border:1px solid red; margin-top:400px; margin-left:300px; overflow:hidden;}
+    .demo p { height:30px; line-height: 30px;}
+    .demo p b { margin:0 10px;}
+</style>
+</head>
+<body>
+    <div class="demo">
+        <p>贾男生<b>13888884949</b> 1小时前</p>
+        <p>真女生<b>13888884949</b> 1小时前</p>
+        <p>哈哈哈<b>13888884949</b> 1小时前</p>
+        <p>李先生<b>13888884949</b> 1小时前</p>
+        <p>孙小利<b>13888884949</b> 1小时前</p>
+    </div>
+</body>
+</html>

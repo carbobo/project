@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    
+    #content{
+margin:10px;
+}
+#content li{
+float:left;
+width:300px;
+margin:13px;
+}
+#content dl{
+background:white;
+-webkit-box-shadow: #666 0px 0px 5px;
+-moz-box-shadow: #666 0px 0px 5px;
+box-shadow: #666 0px 0px 5px;
+margin-bottom:20px;
+}
+#content dt{
+background:#111;
+color:#eee;
+font-size:16px;
+line-height:30px;
+height:30px;
+overflow:hidden;
+padding:5px;
+}
+#content dd{
+font-size:14px;
+color:#333;
+padding:10px;
+}
+#content dl div{
+height:25px;
+}
+#content dl div span{
+margin-left:150px;
+margin-bottom:10px;
+font-size:14px;
+color:#333;
+}
+#content a{
+color:#eee;
+}
+#content a:hover{
+color:yellow;
+}
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+var ajaxHandle='<{:U("Index/Typeshow/ajax","","")}>'; //这个是JS提交AJAX数据的后台方法的地址
+var link='<{:U("Index/Show/index","","")}>'; //这个是AJAX返回给HTML数据中链接需要用到的地址
+var type=1; //定义类型：Android，iPhone，windowsphone，other
+var page=1; //初始化页数
+</script>
+
+<div id='content'>
+<ul>
+<li>
+<!--这里的数据都从ajax异步获取
+<dl>
+<dt><{$v['title']}></dt>
+<dd><{$v['intro']}></dd>
+</dl>
+-->
+</li>
+<li></li>
+<li></li>
+</ul>
+</div>
+
+
+<script>
+    //瀑布流效果
+//初始化变量ajaxover来判断ajax发送给HTML的数据是否加载完毕；这样可以避免滚动条滚动到底部连续发送ajax请求
+var ajaxover=true;
+
+//DOM加载完成时便执行一次ajax获取数据
+$(document).ready(function(){
+loadMore();
+});
+
+//滚动条触发事件；scroll是JQ内置事件
+$(window).bind('scroll',function () {
+// 当滚动到最底部以上100像素时， 加载新内容
+if ($(document).height() - $(this).scrollTop() - $(this).height()<100){
+if (ajaxover) { //当ajaxover为真的时候，才执行loadMore()函数
+loadMore();
+}else {
+return false;
+}
+
+}
+});
+
+//ajax异步读取数据；遍历后台获得的数据，每次遍历时对每个li的高度进行遍历判断，得出最矮那个，将数据插入那里面
+function loadMore() {
+ajaxover=false; //当执行loadMore()函数的时候，就将ajaxover改为false，这样下面的ajax没执行完的时候不会再执行loadMore
+$.ajax({
+url : ajaxHandle,
+dataType : 'json',
+type:'post',
+data:{'page':page,'type':type},
+success:function(content){
+if(content.length>0){
+//遍历返回的数据(一个二维数组)
+for (var i = 0; i < content.length; i++) {
+//定义变量，对li遍历时进行排序用
+var $row,iHtight,iTempHeight;
+// 找出当前高度最小的列, 新内容添加到该列
+iHeight = -1;
+$('#content li').each(function(){
+iTempHeight = Number( $(this).height() );  //Number()将取出的高度转换为数值类型进行比较
+if(iHeight==-1 || iHeight>iTempHeight) {
+iHeight = iTempHeight;
+$row = $(this);  //对高度进行排序后，将最矮的那个保存到变量中
+}
+});
+
+//组装输出到HTML的数据
+var item='<dl>';
+//这里的a链接不能直接使用U()方法；DOM加载完成后再加进去的链接是无法解析的；link是在HTML中定义的用于解析的链接link='& lt;{:U("Index/Show/index","","")}>';这样就能获得提交方法的地址了
+item+='<dt>'+'<a href="'+link+'/id/'+content[i]['id']+'">'+content[i]['title']+'</a></dt>';
+item+='<dd>'+content[i]['intro']+'</dd>';
+item+='<hr/>';
+item+='<div><span>'+content[i]['date']+'</span></div>';
+item+='</dl>';
+
+$row.append(item); //将数据插入到最矮的那个中
+}
+}else {
+$(window).unbind('scroll'); //移除滚动条绑定的事件；这样就会在得不到数据的时候终止滚动条事件，不会进行无意义的ajax请求了
+}
+ajaxover=true; //ajax返回给HTML的数据全部完成之后再将ajaxover设置为true；注意是写在success的函数里
+}
+});
+page++; //每加载一次页数加一（原理类似分页）
+}
+</script>
+</body>
+</html>

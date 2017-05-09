@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- <script src="js/jquery-1.11.3.min.js"></script>
+<script>
+   $(function(){
+    //隐藏翻页按钮
+      $(".banner div").hide();
+    // 克隆第一幅图片添加到图片盒子末尾
+      $(".banner .banner-img").children("li").eq(0).clone().appendTo($(".banner .banner-img"));
+    var W = $(".banner").width();
+    var len = $(".banner .banner-img li").size();
+        $(".banner .banner-img").width(len*W);
+
+    //封闭轮播动画
+    var i=0,t;
+    function move(){
+        if (i == len){
+            $(".banner-img").css({left:0});
+            i = 1;
+        }
+        setTimeout(function(){
+            if (i == len-1){
+            $(".banner-btn li").eq(0).addClass("current").siblings().removeClass("current");
+            }else{
+                $(".banner-btn li").eq(i).addClass("current").siblings().removeClass("current");
+            }
+        },500);
+
+        $(".banner-img").animate({left:-i*W},1200);
+    }
+      t=setInterval(function(){
+          i++;
+          move();
+       },2000);
+
+});
+</script> -->
+<link href="" rel="stylesheet">
+<style>
+    * { margin:0 ; padding:0;}
+    body { font-family: "microsoft yahei";}
+    ul,li { list-style:none;}
+    .banner {
+      width:1200px;
+      height:600px;
+      border:1px solid black;
+      overflow: hidden;
+      position: relative;
+      margin:0 auto;
+      margin-top:50px;
+    }
+    .banner .banner-img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 0;
+    }
+   .banner .banner-img li {
+      width:1200px;
+      display: inline-block;
+   }
+ /*   .banner .banner-img li img {
+      width:1200px;
+      height:600px;
+   } */
+   .banner .banner-btn {
+      position: absolute;
+      left:0;
+      bottom:10px;
+      width:100%;
+      text-align: center;
+   }
+   .banner .banner-btn li {
+      display: inline-block;
+      width:30px;
+      height:10px;
+      border-radius:5px;
+      background-color: orange;
+      margin:0 10px;
+      cursor:pointer;
+   }
+   .banner .banner-btn .current {
+      background:red;
+   }
+   .banner .prev,.banner .next {
+      position: absolute;
+      top:50%;
+      width:40px;
+      height: 40px;
+      border-radius:4px;
+      background:rgba(0,0,0,.5);
+      margin-top:-20px;
+      font-size:30px;
+      color:#fff;
+      text-align: center;
+      line-height:40px;
+      cursor:pointer;
+   }
+   .banner .prev {
+      right:10px;
+   }
+   .banner .next {
+      left:10px;
+   }
+
+</style>
+</head>
+<body>
+  <div class="banner">
+      <ul class="banner-img">
+        <li><a href="#"><img src="images/tu0.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/tu1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/tu2.jpg" alt=""></a></li>
+      </ul>
+      <ul class="banner-btn">
+        <li class="current"></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="prev">&gt;后退</div>
+      <div class="next">&lt;前进</div>
+  </div>
+</body>
+</html>
+<script>
+    //var ab = document.getElementsByName("li");
+    alert(111111)
+</script>

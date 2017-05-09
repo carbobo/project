@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+<script>
+// rotoo对象有名字，有身高，还会跑，有点像小明，干脆就根据它来“创建”小明得了！
+//     var robot = {
+//     name: 'Robot',
+//     height: 1.6,
+//     run: function () {
+//         console.log(this.name + ' is running...');
+//     }
+// };
+// var xiaoming = {
+//     name: '小明'
+// };
+
+// // xiaoming.__proto__ = robot;
+// xiaoming.create(robot);
+// xiaoming.name; // '小明'
+// // alert(xiaoming.height)
+// xiaoming.run(); // 小明 is running...
+
+
+
+// demo2
+// 原型对象
+// var Student = {
+//     name: 'Robot',
+//     height: 1.2,
+//     run: function () {
+//         console.log(this.name + ' is running...');
+//     }
+// };
+
+// function createStudent(name) {
+//     // 基于Student原型创建一个新对象:
+//     var s = Object.create(Student);
+//     // 初始化新对象:
+//     s.name = name;
+//     return s;
+// }
+
+// var xiaoming = createStudent('小明');
+// xiaoming.run(); // 小明 is running...
+
+
+// 构造函数创建对象
+ // function student(name){
+ //    this.name = name;
+ //    this.hello = function(){
+ //        alert("hello,"+this.name+"!")
+ //    }
+ // }
+ // xiaoming = new student("xiaoming");
+ // xiaoming.hello();
+
+ // 高级构造函数创建对象，新实例不需要new关键字
+ function Student(props) {
+    this.name = props.name || '匿名'; // 默认值为'匿名'
+    this.grade = props.grade || 1; // 默认值为1
+}
+Student.prototype.hello = function () {
+    alert('Hello, ' + this.name + '!');
+};
+function createStudent(props) {
+    return new Student(props || {})
+}
+var xiaoming = createStudent({
+    name: '小明'
+    // 可以传递很多属性。
+});
+alert(xiaoming.grade)
+</script>
+</body>
+</html>

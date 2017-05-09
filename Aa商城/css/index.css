@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Marte (iqianduan@126.com)
+ * @date    2017-03-28 17:31:21
+ * @version $Id$
+ */
+// @media screen and (min-width:320px) and (max-width:800px){
+//     body{
+//         width:768px;
+//     }
+// }
+/*  公用 */
+.tool li{display:inline-block;width:23%;}
+.tool li:nth-child(1) a{margin-left:15%;}
+.tool li:nth-child(2) a{margin-left:15%;}
+.tool li:nth-child(3) a{margin-left:30%;}
+.tool li:nth-child(4) a{margin-left:61%;}
+.tool li a{display:block;width:50%;text-align:center;}
+/*  公用结束 */
+.top{margin-top: -20px;}
+.top>h3{height:60px;width:100%;line-height:60px;text-align:center;font-size:24px;background-color:green;color:#fff;}
+.header .top-search .input-group{width:100%;}
+.header .top-search .form-group{width:100%;}
+.classify .row1 .item1{display:inline-block;width:32%;}
+.classify .row1 .item1:nth-child(2){text-align:center;}
+.classify .row1 .item1:nth-child(2) .inner {margin:0 auto;}
+.classify .row1 .item1:nth-child(3) .inner{margin-left:60%;}
+.classify .row1 .item1 .inner{width:50%;text-align:center;}
+.classify .row1{margin:25px 0;padding:0 15px;}
+.classify .row1 a{display: block;margin-top:5px;font-weight:bold;}
+.classify .con>h4{position: relative;text-indent:15px;font-size:14px;}
+.classify .con>h4 .info{display: block;position: absolute;left:0;top:0;width:6px;height:15px;background-color:green; }
+.classify .con2 .video li{display:inline-block;width:31%;}
+.classify .con2 .video li a{display: block;width:100px;height:100px;}
+.classify .con2 .video li:nth-child(2) a{margin:0 auto;}
+.classify .con2 .video li:nth-child(5) a{margin:0 auto;}
+.classify .con2 .video li:nth-child(3) a{margin-left:60%;}
+.classify .con2 .video li:nth-child(6) a{margin-left:60%;}
+.classify .con2 .video img{width:100%;height:100%;}
+.classify .con2 video{border:1px solid  red;height:100px;width:100px;}
+.classify .con3 .resource li{height:80px;background-color:#f3f3f3;padding:12px 10px;margin:15px 0;}
+.classify .con3 .resource li .left p{font-size:16px;}
+.classify .con3 .resource li .left i{ display:block; font-size: 12px;color: #949494;text-indent:20px;}
+.classify .con3 .resource li .right{line-height:60px;color:green;}
+.classify .con3 .resource li .right em{padding-left:10px;}

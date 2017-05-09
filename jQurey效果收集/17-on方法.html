@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .nav { width:1300px; height:300px;background-color:orange; }
+    </style>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    $(function(){
+        //总结： bind,live,delegate用on替代
+        //       unbind,die,undelegate用off替代
+        // .bind()是直接绑定在元素上
+
+        // .live()则是通过冒泡的方式来绑定到元素上的。更适合列表类型的，绑定到document DOM节点上。和.bind()的优势是支持动态数据。
+
+        // .delegate()则是更精确的小范围使用事件代理，性能优于.live()
+
+        // .on()则是最新的1.9版本整合了之前的三种方式的新事件绑定机制
+        
+
+        //bind功能和on不设置子选择器时一样。可用on替代bind
+        
+        //下面三种方法基本等价
+            // $(".nav").on("click",function(){});
+            // $(".nav").click(function(){});   //但新添加的元素不会绑定事件（不支持动态数据）
+            // $(".nav").bind("click",function(){});
+
+        //绑定多个事件
+
+        // $().on("click blur",function(){})
+
+        //-------------- 只有ul发生改变
+        // $("ul").on("click",function(){
+        //     $(this).css("background","red");
+        // });
+
+
+        //---------------ul中当前li发生改变 （事件代理/事件委托）
+            // $("ul").on("click","li",function(){
+            //     $(this).css("background","red");
+            // });
+      
+
+            // $('button').click(function(){
+            //     $("ul").append($("<li>new</li>"));
+            // });
+
+        //---------------绑定多个事件处理程序
+        // $(".nav").on({
+        //     click:function(){
+        //         alert('click');
+        //     },
+        //     mouseenter:function(){
+        //         alert('mouseenter');
+        //     },
+        //     mouseleave:function(){
+        //         alert('mouseleave');
+        //     }
+        // });
+
+        //-------------------可用off移除指定事件
+        
+        // $("button").on("click",function(){
+
+        //     $(".nav").off(); //移除所有
+        //     // $(".nav").off("click");
+        // });
+        
+
+        //----------------unbind基本和off()一样
+        // $("button").on("click",function(){
+        //     $(".nav").unbind("click");
+        // });
+
+
+        //-----------------data:当一个事件被触发时要传递event.data给事件处理函数
+        function myHandler(event) {
+            alert(event.data.foo);
+        }
+        $(".nav").on("click", {foo: "bar"}, myHandler);
+
+
+        //---------------one:只绑定一次，执行即移除
+            // $(".nav").one('click',function(){
+            //     alert('click');
+            // });
+            
+            
+
+        //----------------------------模拟hover事件
+        // $(obj).on("mouseover mouseout",function(event){  
+        //     if(event.type == "mouseover"){   
+        //         //鼠标悬浮 
+        //     }else if(event.type == "mouseout"){   
+        //         //鼠标离开 
+        //     } 
+        // });
+
+    });
+    </script>
+</head>
+<body>
+    <button>移除指定事件</button>
+    <div class="nav">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+</html>

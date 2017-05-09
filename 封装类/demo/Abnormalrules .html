@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+	<script src="../js/less.js"></script>
+	<title></title>
+	<style>
+		.w-70 {
+			width: 70px !important;
+		}
+	</style>
+</head>
+<body>
+<div class="AbnormalRules" >
+		<div class="ui-panel" style="margin-bottom: 20px;">
+			<div class="ui-shadow-bottom" style="padding:20px;background:#fff2e3;">
+					<div class="grid-nav-bar">
+						<div class="grid-nav-bar-item text-top checkstartimg" style="width:64px;">
+							<img width="64px" height="64px" alt="" src="http://static.ezrpro.com/assets/images/integral02.png">
+						</div>
+						<div style="padding-left: 20px;padding-right: 40px;line-height: 24px;" class="grid-nav-bar-item text-left">
+							<div style="font-weight: 700;">会员异常消费预警规则</div>
+							<div>开启功能，可监控会员的异常消费情况，避免恶意晋级</div>
+						</div>
+						<div class="grid-nav-bar-item" style="width: 120px;">
+							<div class="checkstart control-inline ui-onoffswitch ui-onoffswitch-lg">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox">
+								<label class="onoffswitch-label" for="isDisabledset1">
+                                            <span class="onoffswitch-inner">
+                                                <span class="onoffswitch-before">启用</span>
+                                                <span class="onoffswitch-after">未启用</span>
+                                            </span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- end.grid-nav-bar -->
+				</div>
+			<div class="ui-panel-body text-center">
+				<div class="ui-form-horizontal">
+					<div class="ui-form-fields grid-nav-bar">
+						<div class="ui-form-field-label grid-nav-bar-item">
+							<span class="ui-form-field-label-span">单笔消费金额</span>
+						</div>
+						<div class="ui-form-field-cot grid-nav-bar-item">
+							<div class="ui-form-inline">
+								<div class="ui-form-group">
+									<span class="color-normal-gray-810">≥</span>&nbsp;
+									<input type="text" class="ui-form-control w-70" size="12">&nbsp;<span class="color-normal-gray-810">元</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui-form-horizontal">
+					<div class="ui-form-fields grid-nav-bar">
+						<div class="ui-form-field-label grid-nav-bar-item">
+							<span class="ui-form-field-label-span">或 累计消费金额</span>
+						</div>
+						<div class="ui-form-field-cot grid-nav-bar-item">
+							<div class="ui-form-inline">
+								<div class="ui-form-group">
+									<div class="ui-input-group">
+										<input type="text" placeholder="" class="ui-form-control w-70" style="margin-right: 0px;">
+										<div class="ui-select ">
+											<select>
+												<option value="">请选择</option>
+												<option value="Y">年</option>
+												<option value="M">月</option>
+												<option value="D">日</option>
+											</select>
+										</div>
+									</div>
+									&nbsp;<span class="color-normal-gray-810">≥</span>&nbsp;
+									<input type="text" class="ui-form-control w-70" size="12">&nbsp;<span class="color-normal-gray-810">元</span>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui-form-horizontal">
+					<div class="ui-form-fields grid-nav-bar">
+						<div class="ui-form-field-label grid-nav-bar-item">
+							<span class="ui-form-field-label-span">或 累计消费笔数</span>
+						</div>
+						<div class="ui-form-field-cot grid-nav-bar-item">
+							<div class="ui-form-inline">
+								<div class="ui-form-group">
+									<div class="ui-input-group">
+										<input type="text" style="margin-right: 0px;" class="ui-form-control w-70" placeholder="">
+										<div class="ui-select ">
+											<select>
+												<option value="">请选择</option>
+												<option value="Y">年</option>
+												<option value="M">月</option>
+												<option value="D">日</option>
+											</select>
+										</div>
+									</div>
+									&nbsp;<span class="color-normal-gray-810">≥</span>&nbsp;
+									<input type="text" size="12" class="ui-form-control w-70">&nbsp;<span class="color-normal-gray-810">笔</span>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui-form-horizontal text-center">
+					<button type="button" class="ui-btn ui-btn-green w-120"> 保存</button>
+				</div>
+			</div>
+		</div>
+
+	<div class="ui-panel">
+		<div class="ui-shadow-bottom" style="padding:20px;background:#fff2e3;">
+			<div class="grid-nav-bar">
+				<div class="grid-nav-bar-item text-top checkstartimg" style="width:64px;">
+					<img width="64px" height="64px" alt="" src="http://static.ezrpro.com/assets/images/integral02.png">
+				</div>
+				<div style="padding-left: 20px;padding-right: 40px;line-height: 24px;" class="grid-nav-bar-item text-left">
+					<div style="font-weight: 700;">会员异常消费积分预警规则</div>
+					<div>开启功能，可监控会员的异常消费积分，避免恶意积分</div>
+				</div>
+				<div class="grid-nav-bar-item" style="width: 120px;">
+					<div class="checkstart control-inline ui-onoffswitch ui-onoffswitch-lg">
+						<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="isDisabledset1">
+						<label class="onoffswitch-label" for="isDisabledset1">
+                                            <span class="onoffswitch-inner">
+                                                <span class="onoffswitch-before">启用</span>
+                                                <span class="onoffswitch-after">未启用</span>
+                                            </span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<!-- end.grid-nav-bar -->
+		</div>
+		<div class="ui-panel-body text-center">
+			<div class="ui-form-horizontal">
+				<div class="ui-form-fields grid-nav-bar">
+					<div class="ui-form-field-label grid-nav-bar-item">
+						<span class="ui-form-field-label-span">单笔消费金额</span>
+					</div>
+					<div class="ui-form-field-cot grid-nav-bar-item">
+						<div class="ui-form-inline">
+							<div class="ui-form-group">
+								<span class="color-normal-gray-810">≥</span>&nbsp;
+								<input type="text" class="ui-form-control w-70" size="12">&nbsp;<span class="color-normal-gray-810">元</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui-form-horizontal">
+				<div class="ui-form-fields grid-nav-bar">
+					<div class="ui-form-field-label grid-nav-bar-item">
+						<span class="ui-form-field-label-span">或 累计消费金额</span>
+					</div>
+					<div class="ui-form-field-cot grid-nav-bar-item">
+						<div class="ui-form-inline">
+							<div class="ui-form-group">
+								<div class="ui-input-group">
+									<input type="text" placeholder="" class="ui-form-control w-70" style="margin-right: 0px;">
+									<div class="ui-select ">
+										<select>
+											<option value="">请选择</option>
+											<option value="Y">年</option>
+											<option value="M">月</option>
+											<option value="D">日</option>
+										</select>
+									</div>
+								</div>
+								&nbsp;<span class="color-normal-gray-810">≥</span>&nbsp;
+								<input type="text" class="ui-form-control w-70" size="12">&nbsp;<span class="color-normal-gray-810">元</span>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui-form-horizontal">
+				<div class="ui-form-fields grid-nav-bar">
+					<div class="ui-form-field-label grid-nav-bar-item">
+						<span class="ui-form-field-label-span">或 累计消费笔数</span>
+					</div>
+					<div class="ui-form-field-cot grid-nav-bar-item">
+						<div class="ui-form-inline">
+							<div class="ui-form-group">
+								<div class="ui-input-group">
+									<input type="text" style="margin-right: 0px;" class="ui-form-control w-70" placeholder="">
+									<div class="ui-select ">
+										<select>
+											<option value="">请选择</option>
+											<option value="Y">年</option>
+											<option value="M">月</option>
+											<option value="D">日</option>
+										</select>
+									</div>
+								</div>
+								&nbsp;<span class="color-normal-gray-810">≥</span>&nbsp;
+								<input type="text" size="12" class="ui-form-control w-70">&nbsp;<span class="color-normal-gray-810">笔</span>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui-form-horizontal text-center">
+				<button type="button" class="ui-btn ui-btn-green w-120"> 保存</button>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

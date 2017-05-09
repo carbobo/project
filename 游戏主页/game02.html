@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>my game</title>
+</head>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/common.css">
+<style>
+    .mainPart .cont{
+    width: 800px;
+    height: 600px;
+    border:1px solid #333;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.intro{
+    height: 600px;
+    width: 300px;
+    margin-right: 30px;
+    margin-top: 50px;
+    border: 1px solid #333;
+}
+.intro p{
+    text-indent: 20px;
+    margin-top: 20px;
+}
+
+#calculator{
+        margin: 15px auto;
+        width:330px;
+        height:400px;
+        border: 1px solid lightgray;
+        background-color:darkgrey;
+        padding:15px;
+    }
+
+    /*LOGO*/
+    .LOGO{
+        height:20px;
+
+    }
+    .LOGO .name{
+        float:left;
+        line-height:30px;
+    }
+
+    /*screen*/
+    #shuRu{
+        margin-top:15px;
+    }
+    .screen{
+        margin-top:5px;
+        width:300px;
+        height:40px;
+        text-align: right;
+        padding-right:10px;
+        font-size:20px;
+    }
+    #keys{
+        border:1px solid lightgray;
+        height:223px;
+        margin-top:25px;
+        padding:8px;
+    }
+    #keys .last{
+        margin-right:0px;
+    }
+    .footer{
+        margin-top:20px;
+        height:20px;
+    }
+    .footer .link{
+        float:right;
+    }
+
+    #keys .buttons{
+        float:left;
+        width: 42px;
+        height: 36px;
+        text-align:center;
+        background-color:lightgray;
+        margin: 0 17px 20px 0;
+    }
+</style>
+<body>
+<div class="topBar">
+    <div class="wrapper clearfix">
+        <div class="topBarC1 fl">
+            <span class="goIndex fl">
+                <a href="#">GAME首页</a>
+            </span>
+            <i class="space fl"></i>
+            <div class="topBarNav fl">
+                <a class="a1" href="#">网站导航</a>
+                <div class="topBarDrop">
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">找游戏</a></div>
+                        <div class="topBarNavSub">
+                            <a href="#">近期热门</a>
+                            <a href="#">最新入库</a>
+                            <a href="#">最新测试</a>
+                        </div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">看新闻</a></div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">看视频</a></div>
+                        <div class="topBarNavSub"><a href="#">游戏直播</a></div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">抢号</a></div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">领福利</a></div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">逛论坛</a></div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">看囧图</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="topBarC2 fl">
+            <span class="topBarProduct"><a href="">新网游</a></span>|
+            <span class="topBarProduct"><a href="">激活码/礼包</a></span>|
+            <span class="topBarProduct"><a href="">手机客户端</a></span>|
+            <span class="topBarProduct"><a href="">今日开服</a></span>|
+            <span class="topBarProduct"><a href="">热门页游</a></span>
+        </div>
+        <div class="topBarC3 fl">
+            <div class="topBarHot por">
+                <a class="topBarHotT" href="">热门游戏</a>
+                <div class="topBarDrop">
+                    <ul class="topBarHotList">
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">英雄联盟</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">DNF</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">穿越火线</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">炉石传说</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">梦幻西游</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">剑灵</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">天龙八部</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">剑网3</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">神武2</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="topBarC4 fl">
+            <div class="topBarUser">
+                <a href="">登录</a>
+                <a href="">注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---ad-->
+<div class="ad  clearfix">
+    <div class="wrapper">
+        <h1 class="fl">game</h1>
+       <div class="adPic fr">
+            <img src="img/gameImg032.jpg" alt="">
+        </div>
+    </div>
+
+</div>
+<!---nav-->
+<div class="nav">
+    <div class="wrapper hi">
+        <div class="navCont clearfix">
+            <div class="navTitle"><a href="#">首页</a></div>
+            <div class="navTitle"><a href="#">精品</a></div>
+            <div class="navTitle"><a href="#">射击</a></div>
+            <div class="navTitle"><a href="#">塔防</a></div>
+            <div class="navTitle"><a href="#">休闲</a></div>
+            <div class="navTitle"><a href="#">动作</a></div>
+            <div class="navTitle"><a href="#">冒险</a></div>
+            <div class="navTitle"><a href="#">益智</a></div>
+            <div class="navTitle"><a href="#">策略</a></div>
+            <div class="navTitle"><a href="#">敏捷</a></div>
+            <div class="navTitle"><a href="#">体育</a></div>
+            <div class="navTitle"><a href="#">RPG</a></div>
+            <div class="navTitle"><a href="#">中文</a></div>
+            <div class="navTitle"><a href="#">过关</a></div>
+            <div class="navTitle"><a href="#">双人</a></div>
+            <div class="navTitle"><a href="#">女生</a></div>
+            <div class="navTitle"><a href="#">装扮</a></div>
+            <div class="navTitle"><a href="#">儿童</a></div>
+            <div class="navTitle"><a href="#">热门原创</a></div>
+            <div class="navTitle"><a href="#">手机游戏</a></div>
+        </div>
+    </div>
+</div>
+<!---search-->
+<div class="search wrapper clearfix">
+    <div class="cont1">
+        <form class="clearfix">
+            <input class="txt fl" type="text" placeholder="输入你感兴趣的内容">
+            <input class="btn fl" type="button" value="搜索">
+        </form>
+    </div>
+    <div class="cont2 clearfix">
+        <div class="teshu">热门：</div>
+        <div>EXO</div>
+        <div>TFboys</div>
+        <div>橙光游戏</div>
+        <div>英雄联盟</div>
+        <div>地下城与勇士</div>
+    </div>
+    <div class="cont3 fr">
+        <input class="btn2 bl" type="button" value="上传游戏">
+        <input class="btn2 gr" type="button" value="保存网址">
+    </div>
+</div>
+
+<div class="mainPart wrapper clearfix">
+        <div class="cont fl">
+            <h3>听说你需要一个工具？</h3>
+           <div id="calculator">
+    <div class="LOGO">
+        <span class="name">简单的计算器</span>
+    </div>
+    <div id="shuRu">
+        <!--screen输入栏-->
+        <div class="screen">
+            <input type="text" id="screenName" name="screenName" class="screen">
+        </div>
+    </div>
+    <div id="keys">
+        <!-- j -->
+        <!--第一排-->
+        <input type="button" id="7" onclick="jsq(this.id)" value="7" class="buttons">
+        <input type="button" id="8" onclick="jsq(this.id)" value="8" class="buttons">
+        <input type="button" id="9" onclick="jsq(this.id)" value="9" class="buttons">
+        <input type="button" id="Back" onclick="tuiGe()" value="Back" class="buttons">
+        <input type="button" id="C" onclick="clearNum()" value="C" class="buttons" style="margin-right:0px">
+        <!--第二排-->
+        <input type="button" id="4" onclick="jsq(this.id)" value="4" class="buttons">
+        <input type="button" id="5" onclick="jsq(this.id)" value="5" class="buttons">
+        <input type="button" id="6" onclick="jsq(this.id)" value="6" class="buttons">
+        <input type="button" id="*" onclick="jsq(this.id)" value="X" class="buttons">
+        <input type="button" id="/" onclick="jsq(this.id)" value="/" class="buttons" style="margin-right:0px">
+        <!--第三排-->
+        <input type="button" id="1" onclick="jsq(this.id)" value="1" class="buttons">
+        <input type="button" id="2" onclick="jsq(this.id)" value="2" class="buttons">
+        <input type="button" id="3" onclick="jsq(this.id)" value="3" class="buttons">
+        <input type="button" id="+" onclick="jsq(this.id)" value="+" class="buttons">
+        <input type="button" id="-" onclick="jsq(this.id)" value="-" class="buttons" style="margin-right:0px">
+        <!--第四排-->
+        <input type="button" id="0" onclick="jsq(this.id)" value="0" class="buttons">
+        <input type="button" id="00" onclick="jsq(this.id)" value="00" class="buttons">
+        <input type="button" id="." onclick="jsq(this.id)" value="." class="buttons">
+        <input type="button" id="%" onclick="jsq(this.id)" value="%" class="buttons">
+        <input type="button" id="eva" onclick="eva()" value="=" class="buttons" style="margin-right:0px">
+    </div>
+   
+</div>
+</body>
+        </div>
+        <div class="intro fr">
+            <h3>玩法介绍</h3>
+            <p>
+                这是一个仅提供帮助的小工具。
+            </p>
+        </div>
+</div>
+
+
+
+
+
+<!-- 返回顶部 -->
+<div class="top" id="top">
+            返回顶部
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="footerCont">
+        再次感谢，没有任何的赞助。
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    var num = 0;  // 定义第一个输入的数据
+    function jsq(num) {
+        //获取当前输入
+        if(num=="%"){
+            document.getElementById('screenName').value=Math.round(document.getElementById('screenName').value)/100;
+        }else{
+            document.getElementById('screenName').value += document.getElementById(num).value;
+        }
+    }
+    function eva() {
+        //计算输入结果
+        document.getElementById("screenName").value = eval(document.getElementById("screenName").value);
+    }
+    function clearNum() {
+        //清0
+        document.getElementById("screenName").value = null;
+        document.getElementById("screenName").focus();
+    }
+    function tuiGe() {
+        //退格
+        var arr = document.getElementById("screenName");
+        arr.value = arr.value.substring(0, arr.value.length - 1);
+    }
+
+</script>
+</html>

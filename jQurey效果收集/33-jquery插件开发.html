@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    $(function(){
+
+
+    // jQuery插件开发分为两种： 
+
+    // demo1:------------------------------------- 类级别 
+    // 类级别你可以理解为拓展jquery类，最明显的例子是$.ajax(...),相当于静态方法。 
+    // 开发扩展其方法时使用$.extend方法，即jQuery.extend(object); 
+    
+   
+    // $.extend({ 
+    //     add:function(a,b){return a+b;} , 
+    //     minus:function(a,b){return a-b;}, 
+    //     ran:function(min,max){
+    //        return  Math.floor(Math.random()*(max+1-min))+min;
+    //     }
+    // });  
+
+    // // var i = $.add(3,2); 
+    // // var j = $.minus(3,2); 
+    // // console.log(i + '----' + j)
+    // console.log($.ran(30,100))
+
+
+
+    // demo2:-----------------------------------------对象级别 
+    // 对象级别则可以理解为基于对象的拓展，如$("#table").changeColor(...); 这里这个changeColor呢，就是基于对象的拓展了。 
+    // 开发扩展其方法时使用$.fn.extend方法，即jQuery.fn.extend(object); 
+
+    $.fn.extend({ 
+
+        check:function(){ 
+            return $(this).each(function(){ 
+                this.checked=true; 
+            }); 
+        }, 
+        uncheck:function(){ 
+            return $(this).each(function(){ 
+                this.checked=false; 
+            }); 
+        } 
+    });
+
+    // $(".all").click(function(){
+    //     $('[type=checkbox]:gt(1)').check();
+    // });
+
+    // $(".clearAll").click(function(){
+    //     $('[type=checkbox]:gt(1)').uncheck();
+    // });
+
+
+
+    // demo3--------------------------------------------扩展 
+    // 复制代码 代码如下:
+
+        $.math = { 
+        add:function(a,b){return a+b;} , 
+        minus:function(a,b){return a-b;}, 
+        voidMethod:function(){ alert("void"); } 
+        }; 
+        var i = $.math.add(3,2); 
+        var m = $.math.minus(3,2); 
+        $.math.voidMethod(); 
+        console.log(i + '-----' + m);
+
+
+ });
+    </script>
+</head>
+<body>
+    <input type="checkbox" class="all">全选
+    <input type="checkbox" class="clearAll">取消全选
+    <input type="checkbox">游泳
+    <input type="checkbox">写作
+    <input type="checkbox">唱歌
+    <input type="checkbox">旅游
+    <input type="checkbox">美食
+</body>
+</html>

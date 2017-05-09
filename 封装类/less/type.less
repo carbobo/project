@@ -1,0 +1,150 @@
+.text-left{
+  text-align: left !important;
+}
+
+.text-right{
+  text-align: right !important;
+}
+
+.width-auto{
+  width: auto !important;
+}
+
+.width-100{
+  width:100% !important;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-top{
+  vertical-align: top!important;
+}
+
+.text-middle-parent{
+  display: table;
+  width:100%;
+}
+
+.text-middle{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.img-middle{
+  vertical-align: middle;
+}
+
+.ui-circular, .circular{
+  border-radius: 1000px;
+  display: inline-table;
+  vertical-align: middle;
+}
+.ui-circular-inner{
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+.ui-circular-width-auto .ui-circular-inner{
+  padding:0 20px;
+}
+
+.color-red{
+  color:@brand-red;
+}
+
+.w-64{
+  width: 64px;
+  height: 64px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+//  line-height: @headings-line-height;
+  padding:0;
+  margin:0;
+}
+
+h1, .h1 { font-size: @font-size-h1; }
+h2, .h2 { font-size: @font-size-h2; }
+h3, .h3 { font-size: @font-size-h3; }
+h4, .h4 { font-size: @font-size-h4; }
+h5, .h5 { font-size: @font-size-h5; }
+h6, .h6 { font-size: @font-size-h6; }
+
+.wrap-title{
+  padding:@padding-base-horizontal;
+  padding-left:0;
+}
+
+.wrap-title-cot{
+  border-left:@wrap-title-border-width solid @wrap-title-border-color;
+  padding-left:@padding-base-horizontal;
+  margin-left:(@padding-base-horizontal/2);
+}
+//
+//.ui-shadow{
+//  .shadow()
+//}
+body{
+  font-family: @font-family-base;
+  font-size:@font-size-base * 1px;
+}
+
+ul, li{
+  padding:0;
+  margin:0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color:@gray-light;
+}
+
+//margin padding
+.margin-bottom-base{
+  margin-bottom: @margin-base-vertical;
+}
+
+.margin-right-base{
+  margin-right: @margin-base-vertical;
+}
+
+//20px;
+.padding-base{
+  padding: @margin-base-vertical;
+}
+
+.clear-padding{
+  padding:0 !important;
+}
+.clear-shadow{
+  box-shadow: none !important;
+  margin:0 !important;
+}
+
+//常用颜色
+//.light-green-500{
+//  color: @light-green-500;
+//}
+
+
+.operation-icon{
+  // background-color: none;
+  cursor: pointer;
+}
+
+.operation-icon:hover{
+  background-color: @operation-hover-bg-color;
+}
+
+
+
+
+//test
+//.ui-panel-sheet{
+//    background-color:  lighten(@gray-base, 13.5%);
+//  //  background-color: #eee;
+//}

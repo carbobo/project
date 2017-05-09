@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+	<link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+	<script src="../js/less.js"></script>
+
+
+	<title>会员营销-活动监控</title>
+
+</head>
+<body>
+<div class="activitymonitor">
+	<div class="text-right" style="margin-bottom:10px;">
+		<div class="ui-form-inline">
+			<div class="ui-select">
+	            <select>
+	                <option value="1" tag="1">活动开始时间：近-远</option>
+	                <option value="2" tag="2">活动开始时间：远-近</option>
+	                <option value="3" tag="3">活动结束时间：近-远</option>
+	                <option value="4" tag="4">活动结束时间：远-近</option>
+	            </select>
+	        </div>
+	        <div class="ui-select">
+	            <select>
+					<option value="请选择优惠券">请选择优惠券</option>
+					<option value="折扣券">折扣券</option>
+					<option value="代金券">代金券</option>
+					<option value="礼品券">礼品券</option>
+	            </select>
+	        </div>
+	        <div class="ui-input-group">
+	        	<input type="text" placeholder="请输入名称" class="ui-form-control">
+	        	<button class="ui-btn ui-btn-green" type="button" >
+	        		<span aria-hidden="true" class="glyphicon glyphicon-search"></span>
+	        	</button>
+	        </div>
+	    </div>
+	</div>
+	<div>
+		<div class="ui-table-outer" >
+			<table class="ui-table ui-striped-rows">
+				<thead>
+				<tr>
+					<th class="text-center">券类型</th>
+					<th class="text-center">活动名称</th>
+					<th class="text-center">活动对象</th>
+					<th class="text-center">活动时间</th>
+					<th class="text-center">操作</th>
+				</tr>
+				</thead>
+				<tbody class="text-center">
+				<tr>
+					<td>折扣券</td>
+					<td>8折优惠券</td>
+					<td title="名称名称名称名称名称名">名称名称名称名称名称名称名称名称名称名称名称名称</td>
+					<td>2016.07.01-永久</td>
+					<td>
+						<div class="ui-circular operation-icon square-36"  data-toggle="tooltip" data-placement="top" title="查看详情">
+							<div class="ui-circular-inner">
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>代金券</td>
+					<td>满500减50</td>
+					<td title="名称名称名称名称名称名">名称名称名称名称名称名称名称名称名称名称名称名称</td>
+					<td>2016.07.01-永久</td>
+					<td>
+						<div class="ui-circular operation-icon square-36"  data-toggle="tooltip" data-placement="top" title="查看详情">
+							<div class="ui-circular-inner">
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>礼品券</td>
+					<td>满500减50</td>
+					<td title="名称名称名称名称名称名">名称名称名称名称名称名称名称名称名称名称名称名称</td>
+					<td>2016.07.01-永久</td>
+					<td>
+						<div class="ui-circular operation-icon square-36"  data-toggle="tooltip" data-placement="top" title="查看详情">
+							<div class="ui-circular-inner">
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+	    </div>
+	</div>
+</div>
+
+
+
+<!-- Modal -->
+<div id="privilege-dialog" class="dialog_left fadeIn" style="width: 500px;">
+	<div class="dialog_left_top">
+		<div class="dialog_left_tit fw-b">优惠券名称</div>
+		<button type="button" class="close wdn ui-circular operation-icon square-34" >×</button>
+	</div>
+	<div class="dialog_left_cont " style="background: #f9f9f9;">
+		<div class="" style="padding:20px 0;background:#fff;">
+			<div class="grid-nav-bar" style="height: 64px;">
+				<div class="grid-nav-bar-item text-right">
+					<div style="background: #ddefc9;" class="ui-circular square-120">
+						<div class="ui-circular-inner">
+							<span class="color-normal-gray-810">活动收入(元)</span>
+							<br/>
+							<span class="h3 color-light-green-500" style="color: #8bc34a">1000</span>
+						</div>
+					</div>
+				</div>
+				<div class="grid-nav-bar-item" style="width: 100px;"></div>
+				<div class="grid-nav-bar-item text-left">
+					<div style="background: #ddefc9;" class="ui-circular square-120">
+						<div class="ui-circular-inner">
+							<span class="color-normal-gray-810">活动收入(元)</span>
+							<br/>
+							<span class="h3 color-light-green-500" style="color: #8bc34a">1000</span>
+						</div>
+					</div>
+				</div>
+			</div><!-- end.grid-nav-bar -->
+			<div class="padding-base">
+				<table class="ui-table ui-striped-rows">
+					<thead>
+					<tr>
+						<th></th>
+						<th class="text-center">人数</th>
+						 <th class="text-center">占比</th>
+						<th class="text-center">操作</th>
+					</tr>
+					</thead>
+					<tbody class="text-center">
+					<tr>
+						<td class="text-left" style="width: 100px;">
+							<span class="glyphicon glyphicon-send"></span>
+							发送
+						</td>
+						<td  data-bind="text:SendTotal">人</td>
+						 <td>10%</td>
+						<td>
+
+						</td>
+					</tr>
+					<tr>
+						<td class="text-left" style="width: 100px;">
+							<span class="glyphicon glyphicon-download-alt"></span>
+							已领取
+						</td>
+						<td data-bind="text:GetTotal">人</td>
+						 <td>10%</td>
+						<td>
+							<div class="ui-circular operation-icon square-34"  data-toggle="tooltip" data-placement="top" title="查看趋势" data-bind="click:$parent.switchTrend" tag="2">
+								<div class="ui-circular-inner" tag="2" data-bind="text:GetRatio">
+									<span class="glyphicon glyphicon-stats"></span>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-left" style="width: 100px;">
+							<span class="glyphicon glyphicon-oil"></span>
+							核销
+						</td>
+						<td data-bind="text:SellTotal">人</td>
+						 <td>10%</td>
+						<td>
+							<div class="ui-circular operation-icon square-34" data-toggle="tooltip" data-placement="top" title="查看趋势" tag="3" data-bind="click:$parent.switchTrend">
+								<div class="ui-circular-inner" tag="3" data-bind="text:SellRatio">
+									<span class="glyphicon glyphicon-stats"></span>
+								</div>
+							</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div><!--end.ui-table-outer -->
+		</div><!--end.ui-panel-body -->
+		<div class="padding-base">
+			<div class="ui-shadow-bottom">
+				<div class="ui-tabs-outer">
+					<div class="ui-tabs grid-nav-bar width-auto">
+						<!--<div class="ui-tabs-inner ">-->
+						<a href="javascript:;" class="ui-tabs-item ui-border-top grid-nav-bar-item active">收入趋势</a>
+						<a href="javascript:;" class="ui-tabs-item ui-border-top grid-nav-bar-item">领用趋势</a>
+						<a href="javascript:;" class="ui-tabs-item ui-border-top grid-nav-bar-item">使用趋势</a>
+						<!--</div>-->
+					</div>
+				</div>
+				<div class="ui-tabs-cot ui-shadow padding-base">
+					tab cot
+				</div>
+			</div><!--end.ui-shadow-bottom -->
+		</div><!--end.ui-panel-body -->
+	</div>
+	<div class="dialog_left_bottom">
+		<button class="ui-btn ui-btn-green w-120" type="button"> 关闭 </button>
+	</div>
+</div>
+
+</body>
+<script>
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	});
+
+</script>
+</html>

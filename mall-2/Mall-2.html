@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mall-2</title>
+    <style>
+        *{margin: 0;padding: 0;font-family:"Times New Roman","微软雅黑",Arial, Helvetica, sans-serif!important; font-size: 12px;font-style: normal; line-height: 22px;
+            font-weight: normal; font-variant: normal;}
+        ul,li{list-style: none;}
+        a{text-decoration: none;}
+        a:link{color:#000;}
+        a:visited{color: #000;}
+        .container{margin: 10px auto;width: 95%;}
+        .clear:after{clear: both;content: "";display: block;}
+        .clear{zoom: 1;}
+        /* tab 切换的css*/
+        .container .ul1{width: 100%;margin:10px auto;height: 30px;}
+        .container .ul1 li{text-align: center;width: 32%;padding: 1% 0;float: left;border: 1px solid #242424;background: #fff;}
+        .container .ul1 li a{color: #000;}
+        .container .ul1 .borNone{background: #242424;}
+        .container .ul1 .borNone a{color: #fff;}
+        /*对应显示的css*/
+        .container .con{width: 95%;margin:0 0 0 7px;}
+        .container .con ul{display: none;}
+        .container .con .show{display: block;width: 100%;}
+        /*每个li显示的内容*/
+        .container .con li{height: 55px;line-height: 55px;margin-bottom: 10px;width: 100%;border: 1px solid #969696;border-radius: 10px;}
+        .container .con li div{float: left;margin: 0 3px;line-height: 50px;height: 50px;}
+        /*数字的css*/
+        .container .con li .num{width: 9%;text-align: center;background: #000;color: #fff;margin: 5px 1px 0 6px;height: 45px;line-height: 45px;}
+        /*小图片的css*/
+        .container .con li div img{vertical-align: middle;width: 40px;}
+        /*下载*/
+        .container .con li .down{float: right;}
+        .container .con li .down img{}
+        .container .con li .down a{}
+        /*尾部*/
+        .con-footer{width: 95%;}
+        .con-footer .txt{color: #fff;text-indent: 20px;background: #242424;padding: 5px 0;width: 99%;margin: 0 0 0 9px;}
+        .con-footer div+div{text-align: center;}
+    </style>
+</head>
+<body>
+<div>
+    <div class="container clear">
+        <!--tab 切换-->
+        <div class="clear" style="margin: 10px 0 10px 5px;">
+            <ul class="ul1">
+                <!-- 、、、、、、排行 -->
+                <li  class="borNone"><a href="#">排行</a></li>
+                <!--。。。。。。分类-->
+                <li><a href="#">分类</a></li>
+                <!--。。。。。。推荐-->
+                <li><a href="#">推荐</a></li>
+            </ul>
+        </div>
+        <!--显示的内容-->
+        <div class="con">
+            <div>
+                <!--第一个ul显示的内容-->
+                <ul class="show">
+                    <li class="clear">
+                        <div class="num">1</div>
+                        <div><img src="img/01.png" alt=""></div>
+                        <div class="count">
+                            <span class="span1">分类--</span>
+                            <span class="span2">221346下载&nbsp;1M</span>
+                        </div>
+                        <div class="down">
+                            <a href="#">下载</a>
+                            <img src="img/02.png" alt="">
+                        </div>
+                    </li>
+                    <li class="clear">
+                        <div class="num">2</div>
+                        <div><img src="img/01.png" alt=""></div>
+                        <div class="count">
+                            <span class="span1">计算器</span>
+                            <span class="span2">2人下载&nbsp;1M</span>
+                        </div>
+                        <div class="down">
+                            <a href="#">下载</a>
+                            <img src="img/02.png" alt="">
+                        </div>
+                    </li>
+                    <li class="clear">
+                        <div class="num">3</div>
+                        <div><img src="img/01.png" alt=""></div>
+                        <div class="count">
+                            <span class="span1">计算器</span>
+                            <span class="span2">63464人下载&nbsp;1M</span>
+                        </div>
+                        <div class="down">
+                            <a href="#">下载</a>
+                            <img src="img/02.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <!--第二个ul-->
+                <ul>
+                    <li class="clear">
+                        <div class="num">4</div>
+                        <div><img src="img/01.png" alt=""></div>
+                        <div class="count">
+                            <span class="span1">分类</span>
+                            <span class="span2">2213464下载&nbsp;1M</span>
+                        </div>
+                        <div class="down">
+                            <a href="#">下载</a>
+                            <img src="img/02.png" alt="">
+                        </div>
+                    </li>
+                    <li class="clear">
+                        <div class="num">5</div>
+                        <div><img src="img/01.png" alt=""></div>
+                        <div class="count">
+                            <span class="span1">分类</span>
+                            <span class="span2">2人下载&nbsp;1M</span>
+                        </div>
+                        <div class="down">
+                            <a href="#">下载</a>
+                            <img src="img/02.png" alt="">
+                        </div>
+                    </li>
+                    <li class="clear">
+                        <div class="num">6</div>
+                        <div><img src="img/01.png" alt=""></div>
+                        <div class="count">
+                            <span class="span1">计算器-2</span>
+                            <span class="span2">2人下载&nbsp;1M</span>
+                        </div>
+                        <div class="down">
+                            <a href="#">下载</a>
+                            <img src="img/02.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <!--第三个ul-->
+                <ul>
+                    <li class="clear">
+                        <div class="num">1</div>
+                        <div><img src="img/01.png" alt=""></div>
+                        <div class="count">
+                            <span class="span1">计算</span>
+                            <span class="span2">221346人下载&nbsp;1M</span>
+                        </div>
+                        <div class="down">
+                            <a href="#">下载</a>
+                            <img src="img/02.png" alt="">
+                        </div>
+                    </li>
+                    <li class="clear">
+                        <div class="num">1</div>
+                        <div><img src="img/01.png" alt=""></div>
+                        <div class="count">
+                            <span class="span1">阅读</span>
+                            <span class="span2">2人下载&nbsp;1M</span>
+                        </div>
+                        <div class="down">
+                            <a href="#">下载</a>
+                            <img src="img/02.png" alt="">
+                        </div>
+                    </li>
+                    <li class="clear">
+                        <div class="num">1</div>
+                        <div><img src="img/01.png" alt=""></div>
+                        <div class="count">
+                            <span class="span1">计算器</span>
+                            <span class="span2">人下载&nbsp;1M</span>
+                        </div>
+                        <div class="down">
+                            <a href="#">下载</a>
+                            <img src="img/02.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   <!--  <div class="con-footer">
+        <div class="txt">商城正在建设中.....</div>
+        <div><img src="img/03.png" alt=""></div>
+    </div> -->
+</div>
+</body>
+</html>3
+<script>
+    var con = document.getElementsByClassName("con")[0];
+    var aUl = con.getElementsByTagName("ul");
+
+    var ul1 = document.getElementsByClassName("ul1")[0];
+    var aLi = ul1.getElementsByTagName("li");
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].index = i;
+        aLi[i].onclick = function(){
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].className = "";
+                aUl[i].style.display = "none";
+            }
+            aLi[this.index].className = "borNone";
+            aUl[this.index].style.display = "block";
+        }
+    }
+</script>

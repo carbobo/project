@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*********header css start*********/
+header{width:7.5rem;height:4.12rem;background: url(../images/header.png);background-size:cover;color:#fff;}
+header h2{padding:0 .4rem 0 .2rem;}
+header h2 a{display:inline-block;width:1.5rem;height:1.5rem;border-radius:50%;overflow:hidden;margin-top:.6rem;margin-bottom:.8rem;}
+header h2 img{width:1.5rem;height:1.5rem;/*padding:.6rem 0 .8rem;*/vertical-align:middle;}
+header h2 p{display: inline-block;width:2.25rem;padding-right: .4rem;vertical-align:top;margin-top:1rem;}
+header h2 i.iconfont{float:right;margin-top:1.2rem;font-size: .32rem;cursor:pointer;}
+header nav {padding:.28rem 0 .16rem;font-size: .282rem;background: rgba(0,0,0,.4)}
+header nav li{float: left;width:1.84rem;text-align: center;border-right:1px solid #fff;}
+header nav li:last-child{border-right:none;}
+/*********header css end*********/
+
+/*********content css start*********/
+.content{background: #f1efe3;padding:.2rem 0 1.2rem;width:7.5rem;}
+.content li{background: #f1efe3;height:1.1rem;margin-bottom:.2rem;background: #fff;padding:0 .5rem 0 .4rem;line-height: 1.1rem;}
+.content li span{float: right;color:#aaa;}
+.content li i.iconfont{margin-top:1.2rem;font-size: .32rem;color:#EB4F38;}
+/*********content css end********/
+/*footer样式*/
+
+.footer ul li:nth-child(5) a:link,.footer ul li:nth-child(5) a:visited{color:#eb4f38;;}
+
+

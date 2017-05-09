@@ -1,0 +1,26 @@
+// Base class
+.ui-panel {
+  margin-bottom: @line-height-computed;
+  background-color: @panel-bg;
+//  border: 1px solid transparent;
+//  .box-shadow(0 1px 1px rgba(0,0,0,.05));
+  .calc-shadow();
+}
+
+// Panel contents
+.ui-panel-body {
+  padding: @panel-body-padding;
+  &:extend(.clearfix all);
+}
+
+.ui-panel-head{
+  padding: @panel-heading-padding;
+  background:@panel-head-bg;
+  border-bottom: 1px solid @panel-head-border-bottom-color;
+  .clearfix();
+}
+
+.ui-panel-footer{
+  padding: @panel-footer-padding;
+  background:@gray-lighter;
+}

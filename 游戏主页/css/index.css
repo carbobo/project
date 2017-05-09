@@ -1,0 +1,187 @@
+/*name:dx ;*/
+/*last-time:2017.4.25*/
+
+
+/*------subNav------*/
+
+.subNavCont{
+    height: 150px;
+    padding-top: 20px;
+    padding-left: 10px;
+    border:1px solid #e9e9e9;
+    padding-bottom: 10px;
+
+}
+.subNavCont ul{
+    width: 396px;
+    float: left;
+    overflow: hidden;
+}
+
+.subNavCont ul .subNavTit{
+    float: left;
+    border:1px solid #ccc;
+    padding: 2px;
+}
+.subNavCont .teshu{
+    color: #fff;
+    background: #0086d1;
+
+}
+.subNavCont ul li{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+.subNavCont ul li a{
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.subNavCont .gr{color: greenyellow;}
+.subNavCont .re{color: red;}
+.subNavCont .bl{color: deepskyblue;}
+
+/*------scroll-----*/
+.scroll .cont{
+    width: 1000px;
+    height: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.scroll .scrollBox{
+    width: 3000px;
+    left: 0px;
+}
+.scroll .cont .box{
+    width: 1000px;
+    height: 200px;
+    float: left;
+}
+.scroll .box .scrollGame{
+    width: 65px;
+    height: 90px;
+    margin: 0 6px 5px 5.5px;
+    float: left;
+}
+.left,.right{
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: #0086d1;
+}
+.left{
+    left: 70px;
+    top: 75px;
+}
+.right{
+    right: 70px;
+    top: 75px;
+
+}
+.scroll .scrollGame img{
+    width: 65px;
+    height: 65px;
+} 
+.scroll .scrollGame .txt{
+    font-size: 14px;
+    text-align: center;
+}
+/*-------container*/
+.container .tabChange{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.container .tabChange .tabTitle{
+    font-size: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.container .tabChange .tabTitle .title{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    margin-left: -1px;
+    cursor: pointer;
+}
+.container .tabChange .tabTitle .title:hover{
+    background: #e8e6e6;
+}
+.container .tabChange .showBox{
+    height: 300px;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+.container .tabChange .showBox div{
+    position: absolute;
+    top: 0;
+    left:0;
+    display: none;
+
+}
+.container .tabChange .showBox .show{
+    display: block;
+}
+.ccc{
+    background-color: #ccc;;
+}
+
+.container .contRight .part1{
+    height: 300px;
+    width: 800px;
+    margin-top: 20px;
+    font-size: 0;
+}
+
+.contRight .part1 li{
+    font-size: 16px;
+    display: inline-block;
+    width: 80px;
+    padding-right: 10px;
+    margin-left: 10px;
+    height: 80px;
+margin-bottom: 20px;
+
+}
+.contRight .part1 img{
+    vertical-align: middle;
+}
+.contRight .part1 h4{
+    text-align: center;
+}
+
+/*更多*/
+.maro{
+    font-size: 0;
+}
+.more ul {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 65px;
+    width: 100px;
+}
+.more>ul>li>a{
+    font-size: 14px;
+    text-align: center;
+}
+.cont .contGuess{
+    margin-bottom:20px;font-size:18px;border:2px solid #ccc; width:80px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.cont .contGuess:hover{
+    background: #bbb;
+}
+img:hover{
+    transform: scale(1.2, 1.2);
+  transition: .3s transform;
+}

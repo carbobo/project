@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery安装</title>
+    <link rel="stylesheet" href="02.css">
+</head>
+<body>
+<div id="test"></div>
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script> -->
+<script>
+    // var test = document.getElementById('test');
+    // $(document) => $() 指的是在使用ready的时候
+    $(document).ready(function($) {
+        // $(document).click(function() {
+        //     console.log("test");
+        // });
+
+        $("#test").hover(function() {
+            console.log("test");
+        });
+        $("#test").hover(function() {console.log("in");},function() {console.log("out");});
+
+        
+        function myConsole(txt) {
+            console.log(txt);
+        }
+    });
+</script>
+</body>
+</html>

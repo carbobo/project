@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Marte (iqianduan@126.com)
+ * @date    2017-03-31 08:50:23
+ * @version $Id$
+ */
+/*   顶层nav样式 */
+.wrapper{
+    width:1200px;margin:0 auto;
+}
+.bk{outline:1px solid red;}
+body{
+    font-size: 12px;
+    font-family: Arial;
+}
+ a{
+    color:#999;
+}
+.show {
+    border: 1px dotted skyblue !important;
+}
+.redColor{
+    color: #C40000 !important;
+}
+.top{
+
+background-color: #f2f2f2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e7e7e7;
+}
+nav.top span, nav.top a{
+    color: #999;
+    margin: 0px 10px 0px 10px;
+    font-size: 12px;
+}
+nav.top span.glyphicon{
+    font-size:14px;
+}
+nav.top a:hover{
+    color: #C40000;
+}
+
+/* tguky顶部搜索*/
+div.searchDiv{
+    background-color: #C40000;
+    width: 400px;
+    margin: 50px auto;
+    padding: 1px;
+    height: 40px;
+    display: block;
+}
+div.searchDiv input{
+ height:36px;width:275px;
+ border:1px solid transparent;
+ text-indent: 5px;
+}
+div.searchDiv button{
+ width:114px;
+ height:100%;
+ font-size:16px;
+ background-color: #c40000;
+ border:none;
+ color:#fff;font-weight: bold;
+}
+img.logo{
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    z-index:-1;
+}
+div.searchDiv span a{
+    padding:5px 5px 0 0;
+    color: #999;
+}
+
+div.searchDiv .serach-blow{
+    margin-top: 5px;
+}
+/* 商品分类和轮播样式 */
+.header .header-main{
+    font-size:16px;
+    border:1px solid red;
+    background-color: #DD2727;
+}
+.header .header-item{
+    height:50px;
+    width:200px;
+    line-height:50px;
+    margin-left:8px;
+background-color: #C60A0A;
+
+}
+
+.header .header-item span{
+    padding-right: 8px;
+}
+.header .header-main a{
+    color:#fff;
+}
+.header .header-list{
+    margin-left:45px;
+    height:50px;
+    line-height:50px;
+}
+.header .header-list a{
+    margin-right: 25px;
+}
+.header .header-list a span{
+    margin-right:5px;
+}

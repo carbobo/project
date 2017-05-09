@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            // text()方法的回调函数，n自动代表每个元素的索引，txt自动获取每个元素的文本内容
+             $(".box li").text(function(n,txt){
+                return "这里的文本是:" + txt + "----" + n;
+             });
+
+             
+        });
+    </script>
+</head>
+<body>
+<div class="box">
+    
+    <ul>
+        <li>aa</li>
+        <li>bb</li>
+        <li>cc</li>
+        <li>dd</li>
+        <li>ee</li>
+    </ul>
+</div>
+</body>
+</html>

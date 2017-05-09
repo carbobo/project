@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+    <script src="../js/less.js"></script>
+    <title>分销订单弹窗</title>
+
+</head>
+<body>
+<button  id="export-data" >
+    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+</button>
+
+<!-- Modal -->
+<div id="dialog1" class="dialog_left fadeIn">
+    <div class="dialog_left_top">
+        <div class="dialog_left_tit fw-b">未付款</div>
+        <button class="close" type="button">×</button>
+    </div>
+    <div style="padding: 20px 10px;" class="dialog_left_cont ">
+        <div class="dialog_left_cont_wrap">
+
+
+
+            <!-- 弹窗内容-->
+            <div>
+                <div class="wrap-title">
+                    <span style="font-size: 16px; font-weight:700;" class="wrap-title-cot">拓展资料</span>
+                </div>
+                <div class="ui-table-outer clear-padding clear-shadow">
+                    <table class="ui-table ui-striped-rows">
+                        <tbody class="text-left">
+                        <tr>
+                            <td style="width: 100px;" class="text-left color-gray">订单编号</td>
+                            <td>312432535454</td>
+                            <td style="width: 100px;" class="text-left color-gray">实付金额</td>
+                            <td>￥1000.00</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px;"  class="text-left color-gray">订单金额</td>
+                            <td>￥1220.00</td>
+                            <td style="width: 100px;" class="text-left color-gray">分销人/工号</td>
+                            <td>DF132</td>
+                        </tr>
+                        <tr >
+                            <td style="width: 100px;" class="text-left color-gray">分销状态</td>
+                            <td>未生效</td>
+                            <td style="width: 100px;" class="text-left color-gray">下单人</td>
+                            <td>胡歌</td>
+                        </tr>
+                        <tr >
+                            <td style="width: 100px;" class="text-left color-gray">下单时间</td>
+                            <td>2016-09-09 16:20</td>
+                            <td style="width: 80px;" class="text-left color-gray">分销佣金</td>
+                            <td>￥22.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="wrap-title">
+                    <span style="font-size: 16px; font-weight:700;" class="wrap-title-cot">分销商品</span>
+                </div>
+                <div class="ui-table-outer clear-padding clear-shadow">
+                    <table class="ui-table ui-striped-rows">
+                        <tr>
+                            <td>
+                                <div  class="grid-nav-bar">
+                                    <div style="width:64px;"  class="grid-nav-bar-item text-top">
+                                        <img src="../imgs/img_03.png" alt="" class="square-64" style="margin-right: 10px;"></div>
+                                    <div class="grid-nav-bar-item text-left text-top">
+                                        圆领花色呢大衣圆领花色呢大衣圆领花色呢大衣圆领花色呢大衣圆领花色呢大衣
+                                        <br>
+                                        <span class="color-normal-gray-810">实付：￥600.00</span>
+                                        <br>
+                                            <span class="color-normal-gray-810">
+                                                购买数：1（
+                                                <span class="color-light-green-500">佣金￥19.90</span>
+                                                ）
+                                            </span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div  class="grid-nav-bar">
+                                    <div style="width:64px;"  class="grid-nav-bar-item text-top">
+                                        <img src="../imgs/img_03.png" alt="" class="square-64" style="margin-right: 10px;"></div>
+                                    <div class="grid-nav-bar-item text-left text-top">
+                                        圆领花色呢大衣圆领花色呢大衣圆领花色呢大衣圆领花色呢大衣圆领花色呢大衣
+                                        <br>
+                                        <span class="color-normal-gray-810">实付：￥600.00</span>
+                                        <br>
+                                            <span class="color-normal-gray-810">
+                                                购买数：1（
+                                                <span class="color-light-green-500">佣金￥19.90</span>
+                                                ）
+                                            </span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 弹窗内容 end-->
+
+
+
+        </div>
+    </div>
+    <div class="dialog_left_bottom">
+        <button class="ui-btn ui-btn-green btn-no w-120 btn-no" type="button">关闭</button>
+    </div>
+    <!--Modal end-->
+</div>
+</body>
+
+<script>
+    /*弹窗*/
+    $("#export-data").click(function(){
+        var _$this = $(this),
+                dID = _$this.data("id");
+        if(!dID){
+            var guid = (new Date()).getTime();
+            _$this.data("id", guid);
+            var obj =$('#dialog1');
+            var agt = {modalTit:"未付款", modalSave:"提交", modalCancel:"关闭"};
+            var myModalR = ER.ModalRight(obj,agt);
+            myModalR.callback = function(){
+                /*提交回调函数*/
+                //alert("确定!!");
+            }
+            myModalR.callbackCancel = function(){
+                /*取消回掉函数*/
+                //alert("取消");
+            }
+        }else{
+            $('#dialog1').addClass('fadeIn');
+        }
+    })
+</script>
+</html>

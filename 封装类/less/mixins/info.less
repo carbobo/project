@@ -1,0 +1,19 @@
+.calc-info(@color, @bgcolor){
+  height: @ui-info-height;
+  color:@color;
+  background: @bgcolor;
+}
+
+.make-info(){
+
+  .ui-warning{
+    .calc-info(@ui-warning-color, @ui-warning-bgcolor);
+  }
+  .ui-instructions{
+    .calc-info(@ui-instructions-color, @ui-instructions-bgcolor);
+  }
+  .ui-prompt{
+    .calc-info(@ui-prompt-color, @ui-prompt-bgcolor);
+  }
+
+}

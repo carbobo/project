@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .container { width:300px; height:400px; border:2px solid black; position: relative;}
+    .box {  width:300px; background-color: orange; height:400px; position: absolute;  left:0; bottom:0;}
+    </style>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            //  $("button").eq(1).click(function(){
+            //         $(".box").hide(2000);
+            //  });
+
+            //  $("button").eq(0).click(function(){
+            //         $(".box").show(2000);
+            //  });
+             
+
+            // $("button").eq(1).click(function(){
+            //         $(".box").hide(2000,function(){
+            //             alert('动画结束');
+            //         }); 
+ 
+            // });
+
+            // $("button").eq(1).click(function(){
+            //         $(".box").fadeOut(2000,function(){
+            //             alert('已淡出');
+            //         });
+            //  });
+
+
+
+             $("button").eq(1).click(function(){
+                    $(".box").slideUp(2000);
+             });
+
+             $("button").eq(0).click(function(){
+                    $(".box").slideDown(2000);
+             });
+     });
+    </script>
+</head>
+<body >
+    <button >show</button>  <button>hide</button>
+    <div class="container">
+        
+        <div class="box">  
+             内容
+        </div>
+        
+    </div>
+</body>
+</html>

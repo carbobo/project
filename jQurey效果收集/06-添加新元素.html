@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .box { border:1px solid red; width:300px;}
+    .box .red { border:1px solid red;}
+    </style>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            // $(".box").append($('<i>qqqq</i>'));
+            
+            $(".box").append($(".red").clone());
+            // $(".box").prepend($('<i>qqqq</i>'));
+            // $(".box").after($('<i>qqqq</i>'));
+            // $(".box").before($('<i>qqqq</i>'));
+            // $(".box").before($('<i>qqqq</i>'));
+            // 
+            // $(".red").removeClass("red gray");
+            
+            
+            // $(".red").hover(function(){
+            //     $(this).css("border","1px solid red");
+            // },function(){
+            //     $(this).css("border","");
+
+            // });
+
+            // $(".blue").hover(function(){
+            //     $(this).toggleClass("red");
+            // });
+
+            // alert($(".box").css("width"))
+            
+            // $(".box").css({"background-color":'red'});
+            // $(".box").css({backgroundColor:'red'});
+            // $(".box").hover(function(){
+            //     $(this).css({width:'+=100px'});
+            // });
+            //
+            
+            // alert($(window).width());
+            // bodyStr = 'body'; 
+            // alert($(bodyStr).width(600));
+
+        });
+    </script>
+</head>
+<body style="border:1px solid red;">
+<div class="red"> 888</div>
+<div class="box">  
+    box-start 
+    <ul>
+        <li class="blue gray">aaqqqqq</li>
+        <li>bb</li>
+        <li>cc</li>
+        <li>dd</li>
+        <li>ee</li>
+    </ul>
+    box-end
+</div>
+</body>
+</html>

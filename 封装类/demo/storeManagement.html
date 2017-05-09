@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+    <script src="../js/less.js"></script>
+    <title>门店管理</title>
+</head>
+<body style="color: #333531;">
+
+    <div class="ui-shadow-bottom" style="padding:0 40px;height:40px;background:#fff2e3;position:relative;">
+        <div class="grid-nav-bar clearfix">
+            <div class="grid-nav-bar-item text-left">
+                共 <span style="color:#ff8f00; vertical-align: top;">50</span> 消费者还未分配门店
+            </div>
+            <div class="grid-nav-bar-item text-right">
+                <span style="color: #ff8f00;">立即分配</span>
+                <span class="glyphicon glyphicon-menu-right" style="top:4px;"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui-shadow-bottom">
+
+        <div class="text-center" style="background:#ccc; padding-top: 20px; background:#f9f9f9;">门店维护流程</div>
+
+        <div class="ui-panel-body margin-bottom-base" style="padding: 20px; background:#f9f9f9;">
+            <div class="grid-nav-bar" style="display: flex; display: -webkit-flex;">
+
+                <div class="grid-nav-bar-item" style="flex:1;">
+                    <div class="grid-nav-bar" style="background: url('../imgs/storeManagement_next.png') no-repeat right 20px center">
+                        <div class="grid-nav-bar-item"><img src="../imgs/storeManagement01.png"></div>
+                        <div class="grid-nav-bar-item text-left" style="padding-left:20px; padding-right: 40px;">
+                            <strong style="line-height: 30px;">新增门店</strong>
+                            <p style="margin:0;line-height:18px;color:#848583;">可通过数据导入页面excel批量导入门店信息或在当前页面手工新增门店</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-nav-bar-item" style="flex:1;">
+                    <div class="grid-nav-bar" style="background: url('../imgs/storeManagement_next.png') no-repeat right 20px center">
+                        <div class="grid-nav-bar-item"><img src="../imgs/storeManagement01.png"></div>
+                        <div class="grid-nav-bar-item text-left" style="padding-left:20px; padding-right: 40px;">
+                            <strong style="line-height: 30px;">生成门店经纬度</strong>
+                            <p style="margin:0;line-height:18px;color:#848583;">对已经添加的门店详细地址生成经纬度信息，请确保地址准确</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-nav-bar-item" style="flex:1;">
+                    <div class="grid-nav-bar">
+                        <div class="grid-nav-bar-item"><img src="../imgs/storeManagement01.png"></div>
+                        <div class="grid-nav-bar-item text-left" style="padding-left:20px;">
+                            <strong style="line-height: 30px;">同步到微信</strong>
+                            <p style="margin:0;line-height:18px;color:#848583;">将门店信息同步到微信，增加门店推广渠道，如需获取微信审核通知，可配置通知的管理员</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+    <div style="padding: 0 20px;">
+
+        <!--下拉框组-->
+        <div class="grid-nav-bar margin-bottom-base" style="padding:0 20px;">
+            <div class="grid-nav-bar-item pull-right">
+                <div class="ui-select" style="margin-right: -1px;">
+                    <select name="selct" id="city">
+                        <option value="1">城市</option>
+                    </select>
+                </div><div class="ui-select">
+                <select name="selct" id="all">
+                    <option value="1">全部</option>
+                </select>
+            </div><div class="ui-select" style="margin-left: 10px;">
+                <select name="selct" id="acount_status">
+                    <option value="1">账户状态</option>
+                </select>
+            </div><div class="ui-select" style="margin-left: 10px;">
+                <select name="selct" id="store_status">
+                    <option value="1">门店状态</option>
+                </select>
+            </div><div class="ui-select" style="margin-left: 10px;">
+                <select name="selct" id="check_status">
+                    <option value="1">门店状态</option>
+                </select>
+            </div>
+                <div class="ui-input-group" style="display: inline-table; margin-left: 10px;">
+                    <input type="text" class="ui-form-control" placeholder="门店名称/代码"/>
+                    <button type="button" class="ui-btn ui-btn-green">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!--按钮组-->
+        <div class="grid-nav-bar margin-bottom-base" style="padding: 0 20px;">
+            <div class="grid-nav-bar-item pull-left">
+                <button type="button" class="ui-btn ui-btn-green">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  新建门店
+                </button><button type="button" class="ui-btn ui-btn-green" style="margin-left: 10px;">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 默认开卡门店
+                </button>
+            </div>
+
+            <div class="grid-nav-bar-item pull-right">
+                <button type="button" class="ui-btn ui-btn-green">
+                    生成门店经纬度
+                </button><button type="button" class="ui-btn ui-btn-green" style="margin-left: 10px;">
+                    同步到微信
+                </button><button type="button" class="ui-btn ui-btn-green" style="margin-left: 10px;">
+                    微信消息通知
+                </button><button type="button" class="ui-btn ui-btn-green" style="margin-left: 10px;">
+                    导出门店
+                </button>
+            </div>
+        </div>
+
+        <!--默认开卡门店-->
+        <div class="margin-bottom-base" style="padding: 0 20px;">
+            <div class="wrap-title">
+                <span class="wrap-title-cot" style="font-weight: bold;">默认开卡门店</span><span style="color:#848583; padding-left: 20px;">微信自主关注的粉丝会自动分配到设置的默认门店</span>
+            </div>
+            <div class="ui-table-outer">
+                <table class="ui-table ui-striped-rows">
+                    <thead class="color-gray" style="font-size: 14px;">
+                    <tr>
+                        <th style="font-weight: normal;">门店代码</th>
+                        <th style="font-weight: normal; width: 10%;">门店名称</th>
+                        <th style="font-weight: normal;">所属城市</th>
+                        <th style="font-weight: normal; width: 27%;">门店地址</th>
+                        <th style="font-weight: normal;">账户状态</th>
+                        <th style="font-weight: normal;">审核状态</th>
+                        <th style="font-weight: normal; width: 18.5%;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="text-center">
+                    <tr style="border-bottom: 1px solid #e5e6e6;">
+                        <td>YK0001</td>
+                        <td>驿氪虹许店</td>
+                        <td>上海 - 闵行</td>
+                        <td>上海市闵行区虹许路560号尼克花园</td>
+                        <td>已启用</td>
+                        <td>审核中</td>
+                        <td style="color: #e6e6e5;">
+                            <a href="javascript:;" style="color: #333531;">编辑</a> |
+                            <a href="javascript:;" style="color: #333531;">迁移消费者</a> |
+                            <a href="javascript:;" style="color: #333531;">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <!--默认开卡门店结束-->
+
+        <!--其他门店-->
+        <div class="margin-bottom-base" style="padding: 0 20px;">
+            <div class="wrap-title">
+                <span class="wrap-title-cot" style="font-weight: bold;">其他门店</span>
+            </div>
+            <div class="ui-table-outer">
+                <table class="ui-table ui-striped-rows">
+                    <thead class="color-gray" style="font-size: 14px;">
+                    <tr>
+                        <th style="font-weight: normal;">门店代码</th>
+                        <th style="font-weight: normal; width: 10%;">门店名称</th>
+                        <th style="font-weight: normal;">所属城市</th>
+                        <th style="font-weight: normal; width: 27%;">门店地址</th>
+                        <th style="font-weight: normal;">账户状态</th>
+                        <th style="font-weight: normal;">审核状态</th>
+                        <th style="font-weight: normal; width: 18.5%;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="text-center">
+                    <tr style="border-bottom: 1px solid #e5e6e6;">
+                        <td>M4</td>
+                        <td>门店4</td>
+                        <td>山东 - 泰安</td>
+                        <td>山东省泰安市泰山区</td>
+                        <td>未启用</td>
+                        <td>审核通过</td>
+                        <td style="color: #e6e6e5;">
+                            <a href="javascript:;" style="color: #333531;">编辑</a> |
+                            <a href="javascript:;" style="color: #333531;">迁移消费者</a> |
+                            <a href="javascript:;" style="color: #333531;">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--其他门店结束-->
+
+        <!--分页-->
+        <div class="margin-bottom-base" style="padding: 0 20px;">
+            <nav style="display: flex; display:-webkit-flex; justify-content:center;">
+                        <ul class="ui-pagination" style="margin: 0;">
+                            <li>
+                                <a href="#" aria-label="Previous"><span aria-hidden="true">上一页</span></a>
+                            </li>
+                            <li class="active">
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">1</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">2</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">3</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">4</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">5</a>
+                            </li>
+                            <li>
+                                <a style="width:40px;height:40px;line-height:32px;border:none;padding:0;text-align:center;margin-left:0;margin-right:1px;background:#efefef;">...</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">100</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Next"><span aria-hidden="true">下一页</span></a>
+                            </li>
+                        </ul>
+
+                        <div class="ui-form-inline" style="margin-left: 30px;">
+                            <div class="ui-form-group" style="color: #848583;">
+                                <label for="page">跳转到</label><input id="page" class="ui-form-control" type="text" style="width: 40px; height: 40px;padding: 0;text-align: center; margin:0 10px;"/>页
+                            </div>
+                        </div>
+            </nav>
+        </div>
+        <!--分页结束-->
+
+    </div>
+</body>
+</html>

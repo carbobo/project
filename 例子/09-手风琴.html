@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * { margin:0; padding:0;}
+    .nav { width:100px;border:1px solid black;}
+    .nav>ul>li li {height:30px;border:1px solid lightgray;}
+    .nav a { display: block; height:30px; background-color: orange;border:1px solid black;text-align: center;line-height: 30px;}
+    </style>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            $(".nav").children("ul").find("ul").hide().prev().click(function(e){
+                e.preventDefault();
+                $(this).next().slideDown();
+                $(this).parent().siblings().children('ul').slideUp();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#">项目1</a>
+                <ul>
+                    <li>项目1-01</li>
+                    <li>项目1-02</li>
+                    <li>项目1-03</li>
+                </ul>
+            </li>
+            <li><a href="#">项目2</a>
+                <ul>
+                    <li>项目2-01</li>
+                    <li>项目2-02</li>
+                    <li>项目2-03</li>
+                </ul>
+            </li>
+            <li><a href="#">项目3</a>
+                <ul>
+                    <li>项目3-01</li>
+                    <li>项目3-02</li>
+                    <li>项目3-03</li>
+                </ul>
+            </li>
+            <li><a href="#">项目4</a>
+                <ul>
+                    <li>项目4-01</li>
+                    <li>项目4-02</li>
+                    <li>项目4-03</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+<script>
+// 能力检测
+    function getElement(id){
+        if(document.getElementById){
+            return document.getElementById(id);
+        }else if(document.all){
+            return document.all[id];// 兼容ie5以及以下
+        }else{
+            throw new Error("No way to retrive element!")
+        }
+    }
+
+</script>
+</body>
+</html>

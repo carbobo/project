@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{margin:0; padding:0;}
+    .nav { width:300px; height:300px;background-color:orange; padding:20px; margin:50px; border:15px solid red;}
+    .f2 { position: relative;}
+    .f2 .in{ width:100px; height:200px; background:gray;border:10px solid blue; margin-top:35px;}
+    .f2 div p{ width:10px; height:20px; background:gray;border:10px solid red;margin:30px; position: absolute; top:30px; left:30px;}
+    .btn { position: fixed;right:50%; bottom:50%;}
+    .left { width:50px; height:20px; border:1px solid gray;}
+    </style>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    $(function(){
+        $("button").click(function(){
+          // offset().top 是元素边框距离文档顶部的距离
+          // 无单位
+          // 和祖先元素是否定位无关
+            // var top = $(".in").offset().top;
+          
+          
+            // position()
+            // (1)当前元素绝对定位: 返回值为top、left的样式值
+            // （2）当前元素是正常文档流： 返回值为盒子模型距离父元素内边框的偏移值。 
+            var top = $(".in").position().top;
+            alert(top);
+        });
+    });
+    </script>
+</head>
+<body>
+   <div class="nav f1">
+      
+   </div>
+   <div class="nav f2">
+        <div class="left">left</div>
+        <div class="in">
+            <p class="inner">ddddd</p>
+        </div>
+   </div>
+   <div class="nav f3"></div>
+   <div class="nav f4"></div>
+   <div class="btn">
+      <button>show</button>
+   </div>
+</body>
+</html>

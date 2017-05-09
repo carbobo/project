@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .box { width:300px; height:200px; border:1px solid red;}
+    </style>
+</head>
+<body>
+    <ul id="list">
+                <li class="item1">fsda</li>
+                <li class="item2">ewre</li>
+                <li class="item3">qewe</li>
+                <li class="item4">xvc</li>
+                <li class="item5">134</li>
+     </ul>
+　　
+    <script src="js/jquery-1.11.3.min.js"></script>
+     <script>
+
+        $("#list").on("click",function(e){
+            console.log(e.target); // 事件源
+            console.log(e.currentTarget);  //绑定事件的元素
+            console.log(e.which);
+        });
+
+
+        $(document).keyup(function(e){
+            console.log(e.which);
+        });
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>my game</title>
+</head>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/common.css">
+<style>
+    .mainPart .cont{
+    width: 800px;
+    height: 600px;
+    border:1px solid #333;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.intro{
+    height: 600px;
+    width: 300px;
+    margin-right: 30px;
+    margin-top: 50px;
+    border: 1px solid #333;
+}
+.intro p{
+    text-indent: 20px;
+    margin-top: 20px;
+}
+</style>
+<body>
+<div class="topBar">
+    <div class="wrapper clearfix">
+        <div class="topBarC1 fl">
+            <span class="goIndex fl">
+                <a href="#">GAME首页</a>
+            </span>
+            <i class="space fl"></i>
+            <div class="topBarNav fl">
+                <a class="a1" href="#">网站导航</a>
+                <div class="topBarDrop">
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">找游戏</a></div>
+                        <div class="topBarNavSub">
+                            <a href="#">近期热门</a>
+                            <a href="#">最新入库</a>
+                            <a href="#">最新测试</a>
+                        </div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">看新闻</a></div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">看视频</a></div>
+                        <div class="topBarNavSub"><a href="#">游戏直播</a></div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">抢号</a></div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">领福利</a></div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">逛论坛</a></div>
+                    </div>
+                    <div class="topBarNavItem">
+                        <div class="topBarNavMain"><a href="#">看囧图</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="topBarC2 fl">
+            <span class="topBarProduct"><a href="">新网游</a></span>|
+            <span class="topBarProduct"><a href="">激活码/礼包</a></span>|
+            <span class="topBarProduct"><a href="">手机客户端</a></span>|
+            <span class="topBarProduct"><a href="">今日开服</a></span>|
+            <span class="topBarProduct"><a href="">热门页游</a></span>
+        </div>
+        <div class="topBarC3 fl">
+            <div class="topBarHot por">
+                <a class="topBarHotT" href="">热门游戏</a>
+                <div class="topBarDrop">
+                    <ul class="topBarHotList">
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">英雄联盟</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">DNF</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">穿越火线</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">炉石传说</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">梦幻西游</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">剑灵</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">天龙八部</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">剑网3</span>
+                            </a>
+                        </li>
+                        <li class="topBarHotItem">
+                            <a href="">
+                            <span class="topBarHotListImg">
+                                <img src="" alt="">
+                            </span>
+                                <span class="topBarHotListTxt">神武2</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="topBarC4 fl">
+            <div class="topBarUser">
+                <a href="">登录</a>
+                <a href="">注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---ad-->
+<div class="ad  clearfix">
+    <div class="wrapper">
+        <h1 class="fl">game</h1>
+        <div class="adPic fr">
+            <img src="img/gameImg032.jpg" alt="">
+        </div>
+    </div>
+
+</div>
+<!---nav-->
+<div class="nav">
+    <div class="wrapper hi">
+        <div class="navCont clearfix">
+            <div class="navTitle"><a href="#">首页</a></div>
+            <div class="navTitle"><a href="#">精品</a></div>
+            <div class="navTitle"><a href="#">射击</a></div>
+            <div class="navTitle"><a href="#">塔防</a></div>
+            <div class="navTitle"><a href="#">休闲</a></div>
+            <div class="navTitle"><a href="#">动作</a></div>
+            <div class="navTitle"><a href="#">冒险</a></div>
+            <div class="navTitle"><a href="#">益智</a></div>
+            <div class="navTitle"><a href="#">策略</a></div>
+            <div class="navTitle"><a href="#">敏捷</a></div>
+            <div class="navTitle"><a href="#">体育</a></div>
+            <div class="navTitle"><a href="#">RPG</a></div>
+            <div class="navTitle"><a href="#">中文</a></div>
+            <div class="navTitle"><a href="#">过关</a></div>
+            <div class="navTitle"><a href="#">双人</a></div>
+            <div class="navTitle"><a href="#">女生</a></div>
+            <div class="navTitle"><a href="#">装扮</a></div>
+            <div class="navTitle"><a href="#">儿童</a></div>
+            <div class="navTitle"><a href="#">热门原创</a></div>
+            <div class="navTitle"><a href="#">手机游戏</a></div>
+        </div>
+    </div>
+</div>
+<!---search-->
+<div class="search wrapper clearfix">
+    <div class="cont1">
+        <form class="clearfix">
+            <input class="txt fl" type="text" placeholder="输入你感兴趣的内容">
+            <input class="btn fl" type="button" value="搜索">
+        </form>
+    </div>
+    <div class="cont2 clearfix">
+        <div class="teshu">热门：</div>
+        <div>EXO</div>
+        <div>TFboys</div>
+        <div>橙光游戏</div>
+        <div>英雄联盟</div>
+        <div>地下城与勇士</div>
+    </div>
+    <div class="cont3 fr">
+        <input class="btn2 bl" type="button" value="上传游戏">
+        <input class="btn2 gr" type="button" value="保存网址">
+    </div>
+</div>
+
+<div class="mainPart wrapper clearfix">
+        <div class="cont fl">
+            <h3>听说你智商很高？</h3>
+        <center><form name=lightsform>
+<table style="width:150px;text:center;" colspec="l20 l20 l20 l20 l20" border=7>
+<tr>
+<td><input type=checkbox value=0 onClick="check(value)"></td>
+<td><input type=checkbox value=1 onClick="check(value)"></td>
+<td><input type=checkbox value=2 onClick="check(value)"></td>
+<td><input type=checkbox value=3 onClick="check(value)"></td>
+<td><input type=checkbox value=4 onClick="check(value)"></td>
+</tr>
+<tr>
+<td><input type=checkbox value=5 onClick="check(value)"></td>
+<td><input type=checkbox value=6 onClick="check(value)"></td>
+<td><input type=checkbox value=7 onClick="check(value)"></td>
+<td><input type=checkbox value=8 onClick="check(value)"></td>
+<td><input type=checkbox value=9 onClick="check(value)"></td>
+</tr>
+<tr>
+<td><input type=checkbox value=10 onClick="check(value)"></td>
+<td><input type=checkbox value=11 onClick="check(value)"></td>
+<td><input type=checkbox value=12 onClick="check(value)"></td>
+<td><input type=checkbox value=13 onClick="check(value)"></td>
+<td><input type=checkbox value=14 onClick="check(value)"></td>
+</tr>
+<tr>
+<td><input type=checkbox value=15 onClick="check(value)"></td>
+<td><input type=checkbox value=16 onClick="check(value)"></td>
+<td><input type=checkbox value=17 onClick="check(value)"></td>
+<td><input type=checkbox value=18 onClick="check(value)"></td>
+<td><input type=checkbox value=19 onClick="check(value)"></td>
+</tr>
+<tr>
+<td><input type=checkbox value=20 onClick="check(value)"></td>
+<td><input type=checkbox value=21 onClick="check(value)"></td>
+<td><input type=checkbox value=22 onClick="check(value)"></td>
+<td><input type=checkbox value=23 onClick="check(value)"></td>
+<td><input type=checkbox value=24 onClick="check(value)"></td>
+</tr>
+</table>
+<br>
+<table border=1>
+<tr>
+<td><a href="javascript:level1()">level 1</a></td>
+<td><a href="javascript:level2()">level 2</a></td>
+</tr>
+<tr>
+<td><a href="javascript:level3()">level 3</a></td>
+<td><a href="javascript:level4()">level 4</a></td>
+</tr>
+<tr>
+<td><a href="javascript:level5()">level 5</a></td>
+<td><input type="reset" value="clear"></td>
+</tr>
+</table>
+</form>
+</center>
+        </div>
+        <div class="intro fr">
+            <h3>玩法介绍</h3>
+            <p>想办法让所有的对号消失吧</p>
+        </div>
+</div>
+
+
+
+
+
+<!-- 返回顶部 -->
+<div class="top" id="top">
+            返回顶部
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="footerCont">
+        再次感谢，没有任何的赞助。
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+   function fillall() {
+for (var i = 0; i < 24; i++) {
+document.lightsform.elements[i].checked=1;
+   }
+}
+function clearall() {
+for (var i = 0; i < 24; i++) {
+document.lightsform.elements[i].checked=0;
+   }
+}
+function level1() {
+clearall();
+document.lightsform.elements[10].checked=1;
+document.lightsform.elements[12].checked=1;
+document.lightsform.elements[14].checked=1;
+}
+function level2() {
+clearall();
+document.lightsform.elements[12].checked=1;
+document.lightsform.elements[16].checked=1;
+document.lightsform.elements[17].checked=1;
+document.lightsform.elements[18].checked=1;
+document.lightsform.elements[20].checked=1;
+document.lightsform.elements[21].checked=1;
+document.lightsform.elements[22].checked=1;
+document.lightsform.elements[23].checked=1;
+document.lightsform.elements[24].checked=1;
+}
+function level3() {
+fillall();
+document.lightsform.elements[4].checked=0;
+document.lightsform.elements[6].checked=0;
+document.lightsform.elements[7].checked=0;
+document.lightsform.elements[8].checked=0;
+document.lightsform.elements[11].checked=0;
+document.lightsform.elements[12].checked=0;
+document.lightsform.elements[13].checked=0;
+document.lightsform.elements[16].checked=0;
+document.lightsform.elements[17].checked=0;
+document.lightsform.elements[18].checked=0;
+document.lightsform.elements[24].checked=0;
+}
+function level4() {
+clearall();
+document.lightsform.elements[2].checked=1;
+document.lightsform.elements[6].checked=1;
+document.lightsform.elements[8].checked=1;
+document.lightsform.elements[10].checked=1;
+document.lightsform.elements[12].checked=1;
+document.lightsform.elements[14].checked=1;
+document.lightsform.elements[16].checked=1;
+document.lightsform.elements[18].checked=1;
+document.lightsform.elements[22].checked=1;
+ }
+function level5() {
+clearall();
+document.lightsform.elements[11].checked=1;
+document.lightsform.elements[16].checked=1;
+document.lightsform.elements[21].checked=1;
+}
+function checkall() {
+var win=1;
+for (var i = 0; i < 24; i++) {
+if (document.lightsform.elements[i].checked==1) {
+win=0;
+   }
+}
+if (win==1){
+alert("\nYou Won!!\n")
+   }
+}
+function check(v){
+q=5;
+w=1;
+row=parseInt(v/q)+w;
+if (isNaN(row)) {
+row=1;
+}
+intv = parseInt(v);
+a=eval(intv+q);
+b=eval(intv-q);
+c=eval(intv+w);
+d=eval(intv-w);
+if (a<0 || a>24){
+a=25;
+}
+if (b<0 || b>24){
+b=25;
+}
+if (c<0 || c>24){
+c=25;
+}
+if (d<0 || d>24){
+d=25;
+}
+kc = (parseInt(c/q)+w)
+kd = (parseInt(d/q)+w)
+kv = row;
+if (kc != kv){
+c=25;
+}
+if (kd != kv){
+d=25;
+}
+if (v==5) d=25; // correction for strange bug
+ 
+if (document.lightsform.elements[a].checked == 1) { 
+document.lightsform.elements[a].checked=0;
+} 
+else {
+document.lightsform.elements[a].checked=1;
+}
+if (document.lightsform.elements[b].checked == 1) { 
+document.lightsform.elements[b].checked=0;
+} 
+else {
+document.lightsform.elements[b].checked=1;
+}
+if (document.lightsform.elements[c].checked == 1) { 
+document.lightsform.elements[c].checked=0;
+} 
+else {
+document.lightsform.elements[c].checked=1;
+}
+if (document.lightsform.elements[d].checked == 1) { 
+document.lightsform.elements[d].checked=0;
+} 
+else {
+document.lightsform.elements[d].checked=1;
+}
+checkall();
+}
+</script>
+</html>

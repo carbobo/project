@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div { width:300px; height:100px; background-color: #aaa; margin:10px; padding:5px;}
+        /*div:gt(2) { border:1px solid black;}*/
+    </style>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    $(function(){
+        // [属性]选择器
+        // $("[title]").css({border:"1px solid black"});
+        // $("[title=div2]").css({border:"1px solid black"});
+        // $("div[title!=div2]").css({border:"1px solid black"});
+        // $("div[title^=div]").css({border:"1px solid black"});
+        // $("[title$=2]").css({border:"1px solid black"});
+        // $("[title*=w]").css({border:"1px solid black"});
+        // $("div[class][title]").css({border:"1px solid black"});
+        
+        //后代选择器
+
+        // $("p:first-child").css({border:"1px solid black"});
+        // $(".box0 p:first-child").css({border:"1px solid black"});
+        // $(".box0 p:first-of-type").css({border:"1px solid black"});
+        // $(".nav li:nth-child(2)").css({border:"1px solid black"});
+        // $(".nav li:nth-child(3n+1)").css({border:"1px solid black"});
+        // $(".nav li:nth-last-child(2)").css({border:"1px solid black"});
+        // $(".box0 p:nth-of-type(2)").css({border:"1px solid black"});
+        // $(".box0 p:nth-last-of-type(2)").css({border:"1px solid black"});
+        // $(".box4 a:only-child").css({border:"1px solid black"});
+        $(".box0 h1:only-of-type").css({border:"1px solid black"});
+        
+        //表单选择器
+       
+
+    });
+    </script>
+</head>
+<body>
+<!-- div元素 -->
+    <button>change</button>
+    <ul class="nav">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <div class="box0" title="dwia" style="height:500px;">
+        <h1>h1</h1>
+        <p>
+            p1
+            <span>span1</span>
+        </p>
+        <p>p2</p>
+        <span>span2</span>
+        <p>p3</p>
+    </div>
+    <div title="div2">
+        div1
+    </div>
+    <div class="box" title="div1">
+        div2
+    </div>
+    <div class="box" >
+        div113
+    </div>
+    <div class="box4">
+        <a href="28-target.html#div2" title="a2">跳转至下个页面</a>
+    </div>
+
+
+<!-- h元素 -->
+    <h1></h1>
+    <h2>h2</h2>
+    <h2>h2</h2>
+    <h3>h3</h3>
+
+<!-- form元素 -->
+<input type="text"><br>
+<input type="text"><br>
+<input type="checkbox">
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Marte (iqianduan@126.com)
+ * @date    2017-04-25 14:28:26
+ * @version $Id$
+ */
+.new-cont .wrapper h3{
+    font-size: 28px;
+    padding: 50px 0px 0px;
+    text-align: center;
+    line-height: 32px;
+    color: #1a1a1a;
+}
+.new-cont img{
+    max-width:100%;
+}
+.new-cont .wrapper .p1{
+    font-size:18px;
+    text-indent: 2em;
+    text-align: left;
+}
+.new-cont .wrapper .p2{
+
+    text-align: center;
+    padding:20px 0;
+}
+.new-cont .wrapper h4{
+    font-size: 24px;
+    padding: 30px 0px 0px;
+    text-indent:10px;
+    line-height: 32px;
+    color: #1a1a1a;
+}
+.footer{
+    width:100%;
+    bottom:0;
+    background: #3A3A3A;
+    height:60px;
+}
+.footer .wrapper{width:1200px;margin:0 auto}
+.footer ul{
+    padding-top:25px;
+}
+.footer ul li{
+    color:#fff;
+    display: inline-block;
+    margin:0 30px;
+}
+.footer ul li a{
+    display:block;
+    color: #A6A6A6;
+}
+span{
+    color:red;
+}

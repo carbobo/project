@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+    <script src="../js/less.js"></script>
+    <style>
+        .VipGradePrivilege .ui-grid-cards-list-2 .ui-grid-cards-item{
+            position: relative;
+            width: 48%;
+            padding: 0;
+        }
+        .VipGradePrivilege .grid-item-inner{
+            background: #fff;
+            padding: 10px 10px 10px 16px;
+            height: 107px;
+            border-bottom: 2px dotted #eee;
+        }
+        .VipGradePrivilege .ui-grid-cards-item:after{
+            content: " ";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 6px;
+            background: url(../imgs/dot_bottom.png) repeat-x;
+        }
+        .PrivilegeContent{
+            padding:10px;
+            position: relative;
+        }
+        .dot{
+            position: absolute;
+            top: 85px;
+        }
+        .dot.dot-left{
+            left: -27px;
+        }
+        .dot.dot-right{
+            right: -22px;
+        }
+        .fz-16{
+            font-size: 16px;
+        }
+        .ui-filtergray img,.ui-filtergray b,.ui-filtergray .P_date{ 
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+            filter: gray;
+            color: #848583;
+        }
+        .PrivilegeContent.ui-filtergray,#privilege-dialog .ui-hover:hover{
+            background: #f9f9f9;
+        }
+        #privilege-dialog .ui-hover:not(:last-child){
+            margin-bottom: -1px;
+        }
+        .ui-shadow .grid-item-inner:last-child .dot{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="VipGradePrivilege">
+        <div class="ui-grid-cards-list-2" style="margin-bottom: 10px;">
+            <div class="ui-grid-cards-list-inner" style="margin: 0;">
+                <div class="ui-grid-cards-item " style="margin-right:20px;">
+                    <div class="wrap-title"><b class="wrap-title-cot">粉丝</b>&nbsp;&nbsp;&nbsp;<span class="color-normal-gray-810">关注送礼</span></div>
+                    <div class="ui-shadow">
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/rule_icon1_1.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <b class="fz-16">10000元减200元现金券</b>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="查看">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="禁用">
+                                                <span class="glyphicon glyphicon-ban-circle"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-nav-bar">
+                                   <div class="grid-nav-bar-item" style="width: 52px;height: 25px;padding-right: 12px;"></div>
+                                   <div class="grid-nav-bar-item text-left text-top">
+                                        <span class="color-normal-gray-810 P_date">2016.6.1-2016.6.30</span>
+                                   </div>
+                                   <div class="grid-nav-bar-item text-top" style="width: 119px;">
+                                        <span class="color-light-green-500">审核成功</span>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item ui-filtergray">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/rule_icon2_2.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <b class="fz-16">价值10000元大礼包</b>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="查看">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="删除">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-nav-bar">
+                                   <div class="grid-nav-bar-item" style="width: 52px;height: 25px;padding-right: 12px;"></div>
+                                   <div class="grid-nav-bar-item text-left text-top">
+                                        <span class="color-normal-gray-810">2016.6.1-长期</span>
+                                   </div>
+                                   <div class="grid-nav-bar-item text-top" style="width: 119px;">
+                                        <span class="color-normal-blue-400">审核中</span>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item ui-filtergray">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/rule_icon2_2.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <b class="fz-16">价值10000元大礼包</b>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="查看">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="删除">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-nav-bar">
+                                   <div class="grid-nav-bar-item" style="width: 52px;height: 25px;padding-right: 12px;"></div>
+                                   <div class="grid-nav-bar-item text-left text-top">
+                                        <span class="color-normal-gray-810 P_date">2016.6.1-长期</span>
+                                   </div>
+                                   <div class="grid-nav-bar-item text-top" style="width: 119px;">
+                                        <span class="color-normal-blue-400">审核中</span>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/rule_icon3_3.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <b class="fz-16">100分</b>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="查看">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="禁止">
+                                                <span class="glyphicon glyphicon-ban-circle"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-nav-bar">
+                                   <div class="grid-nav-bar-item" style="width: 52px;height: 25px;padding-right: 12px;"></div>
+                                   <div class="grid-nav-bar-item text-left text-top">
+                                        <span class="color-normal-gray-810 P_date">长期</span>
+                                   </div>
+                                   <div class="grid-nav-bar-item text-top" style="width: 119px;">
+                                        <span class="color-light-green-500">审核成功</span>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid-cards-item">
+                    <div class="wrap-title"><b class="wrap-title-cot">普通会员</b>&nbsp;&nbsp;&nbsp;<span class="color-normal-gray-810">入会送礼</span></div>
+                        <div class="ui-shadow">
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/rule_icon3_3.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <b class="fz-16">100分</b>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="查看">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="禁用">
+                                                <span class="glyphicon glyphicon-ban-circle"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-nav-bar">
+                                   <div class="grid-nav-bar-item" style="width: 52px;height: 25px;padding-right: 12px;"></div>
+                                   <div class="grid-nav-bar-item text-left text-top">
+                                        <span class="color-normal-gray-810 P_date">长期</span>
+                                   </div>
+                                   <div class="grid-nav-bar-item text-top" style="width: 119px;">
+                                        <span class="color-light-green-500">审核成功</span>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/rule_icon1_1.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <b class="fz-16">10000元减200元现金券</b>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="查看">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="删除">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-nav-bar">
+                                   <div class="grid-nav-bar-item" style="width: 52px;height: 25px;padding-right: 12px;"></div>
+                                   <div class="grid-nav-bar-item text-left text-top">
+                                        <span class="color-normal-gray-810">2016.6.1-2016.6.30</span>
+                                   </div>
+                                   <div class="grid-nav-bar-item text-top" style="width: 119px;">
+                                        <span class="color-light-green-500">审核成功</span>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/rule_icon2_2.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <b class="fz-16">价值10000元大礼包</b>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="查看">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="删除">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-nav-bar">
+                                   <div class="grid-nav-bar-item" style="width: 52px;height: 25px;padding-right: 12px;"></div>
+                                   <div class="grid-nav-bar-item text-left text-top">
+                                        <span class="color-normal-gray-810 P_date">2016.6.1-长期</span>
+                                   </div>
+                                   <div class="grid-nav-bar-item text-top" style="width: 119px;">
+                                        <span class="color-light-green-500">审核成功</span>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/add_sm.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <span class="fz-16 color-normal-gray-510">新增特权</span>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-grid-cards-list-2">
+            <div class="ui-grid-cards-list-inner" style="margin: 0;">
+                <div class="ui-grid-cards-item " style="margin-right:20px;">
+                    <div class="wrap-title"><b class="wrap-title-cot">VIP</b>&nbsp;&nbsp;&nbsp;<span class="color-normal-gray-810">升级送礼</span></div>
+                    <div class="ui-shadow">
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/rule_icon1_1.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <b class="fz-16">10000元减200元现金券</b>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="查看">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ui-circular operation-icon square-34">
+                                            <div class="ui-circular-inner" data-toggle="tooltip" data-placement="top" title="禁用">
+                                                <span class="glyphicon glyphicon-ban-circle"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-nav-bar">
+                                   <div class="grid-nav-bar-item" style="width: 52px;height: 25px;padding-right: 12px;"></div>
+                                   <div class="grid-nav-bar-item text-left text-top">
+                                        <span class="color-normal-gray-810 P_date">2016.6.1-2016.6.30</span>
+                                   </div>
+                                   <div class="grid-nav-bar-item text-top" style="width: 119px;">
+                                        <span class="color-light-green-500">审核成功</span>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/add_sm.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <span class="fz-16 color-normal-gray-510">新增特权</span>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/add_sm.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <span class="fz-16 color-normal-gray-510">新增特权</span>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/add_sm.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <span class="fz-16 color-normal-gray-510">新增特权</span>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid-cards-item">
+                    <div class="wrap-title"><b class="wrap-title-cot">SVIP</b>&nbsp;&nbsp;&nbsp;<span class="color-normal-gray-810">升级送礼</span></div>
+                    <div class="ui-shadow">
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/add_sm.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <span class="fz-16 color-normal-gray-510">新增特权</span>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/add_sm.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <span class="fz-16 color-normal-gray-510">新增特权</span>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/add_sm.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <span class="fz-16 color-normal-gray-510">新增特权</span>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-inner grid-nav-bar">
+                            <div class="PrivilegeContent grid-nav-bar-item">
+                                <span class="dot dot-left">
+                                    <img src="../imgs/dotvl.png" alt=""/>
+                                </span>
+                                <span class="dot dot-right">
+                                    <img src="../imgs/dotvr.png" alt=""/>
+                                </span>
+                                <div class="grid-nav-bar">
+                                    <div class="grid-nav-bar-item" style="width: 40px;padding-right: 12px;">
+                                        <img src="../imgs/add_sm.png" alt="" width="40px" height="40px" />
+                                    </div>
+                                    <div class="grid-nav-bar-item text-left">
+                                        <span class="fz-16 color-normal-gray-510">新增特权</span>
+                                    </div>
+                                    <div class="grid-nav-bar-item" style="width: 119px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Model -->
+<div class="dialog_left fadeIn" id="privilege-dialog" style="top: 0;">
+    <div class="dialog_left_top">
+        <div class="dialog_left_tit fw-b">送电子券包</div>
+        <button class="close wdn" type="button">×</button>
+    </div>
+    <div class="dialog_left_cont padding-base">
+       <div class="ui-form-horizontal">
+            <div class="ui-form-fields grid-nav-bar">
+                <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:100px;">
+                    <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;活动时间</span>
+                </div>
+                <div class="ui-form-field-cot grid-nav-bar-item">
+                    <div class="ui-form-inline">
+                        <div class="ui-form-group">
+                            <input type="radio" id="TicketTime1" name="TicketTime">
+                            日期控件
+                        </div>
+                    </div>
+                    <br>
+                    <input type="radio" id="TicketTime2" name="TicketTime">
+                    <span>永久有效</span>
+                </div>
+            </div>
+            <div class="ui-form-fields grid-nav-bar">
+                <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:100px;">
+                    <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;活动类型</span>
+                </div>
+                <div class="ui-form-field-cot grid-nav-bar-item">
+                    <input type="radio" id="rad1" name="rad1">
+                    <label for="rad1">送电子券</label>
+                    <input type="radio" id="rad2" name="rad1">
+                    <label for="rad2">送电子券包</label>
+                    <input type="radio" id="rad3" name="rad1">
+                    <label for="rad3">送积分</label>
+                </div>
+            </div>
+            <!-- 送积分 -->
+            <div class="ui-form-fields grid-nav-bar">
+                <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:100px;">
+                    <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;积分值</span>
+                </div>
+                <div class="ui-form-field-cot grid-nav-bar-item">
+                    <input id="ui-form-group-11" size="12" class="ui-form-control width-100" type="text">
+                </div>
+            </div>
+            <!-- 送积分 end  -->
+            <!-- 送电子券 -->
+            <div class="ui-form-fields grid-nav-bar">
+                <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:100px;">
+                    <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;电子券</span>
+                </div>
+                <div class="ui-form-field-cot grid-nav-bar-item">
+                    <input id="ui-form-group-11" size="12" class="ui-form-control width-100" type="text">
+                </div>
+            </div>
+            <div class="ui-form-fields grid-nav-bar">
+                <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:100px;">
+                    <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;有效期</span>
+                </div>
+                <div class="ui-form-field-cot grid-nav-bar-item">
+                   
+                    <div class="ui-form-inline">
+                        <div class="ui-form-group">
+                            <input type="radio" id="TicketPackages1" name="TicketPackages">
+                            <span>自赠送日起</span>&nbsp;
+                            <input class="ui-form-control" type="text" style="width: 45%;">&nbsp;
+                            <span>天有效</span>
+                        </div>
+                    </div>
+                    <br>
+                    <input type="radio" id="TicketPackages2" name="TicketPackages">
+                    <span>日期插件</span>
+                </div>
+            </div>
+            <div class="ui-form-fields grid-nav-bar">
+                <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:100px;">
+                    <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;使用说明</span>
+                </div>
+                <div class="ui-form-field-cot grid-nav-bar-item">
+                    <textarea class="ui-form-control width-100" name="" style="min-height: 85px;"></textarea>
+                </div>
+            </div>
+            <!-- 送电子券 end -->
+            <!-- 送电子券包 -->
+            <div class="ui-form-fields grid-nav-bar">
+                <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:100px;">
+                    <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;电子券包</span>
+                </div>
+                <div class="ui-form-field-cot grid-nav-bar-item">
+                    <input id="ui-form-group-11" size="12" class="ui-form-control width-100" type="text">
+                </div>
+            </div>
+            <div class="ui-shadow padding-base ui-hover">
+                <div class=" wrap-title"><span class="wrap-title-cot"><b>券1</b></span></div>
+                <div class="ui-form-fields grid-nav-bar">
+                    <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:80px;">
+                        <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;电子券</span>
+                    </div>
+                    <div class="ui-form-field-cot grid-nav-bar-item">
+                        <input id="ui-form-group-11" size="12" class="ui-form-control width-100" type="text">
+                    </div>
+                </div>
+                <div class="ui-form-fields grid-nav-bar">
+                    <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:80px;">
+                        <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;有效期</span>
+                    </div>
+                    <div class="ui-form-field-cot grid-nav-bar-item">
+                       
+                        <div class="ui-form-inline">
+                            <div class="ui-form-group">
+                                <input type="radio" id="TicketPackages1" name="TicketPackages">
+                                <span>自赠送日起</span>&nbsp;
+                                <input class="ui-form-control" type="text" style="width: 45%;">&nbsp;
+                                <span>天有效</span>
+                            </div>
+                        </div>
+                        <br>
+                        <input type="radio" id="TicketPackages2" name="TicketPackages">
+                        <span>日期插件</span>
+                    </div>
+                </div>
+                <div class="ui-form-fields grid-nav-bar">
+                    <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:80px;">
+                        <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;使用说明</span>
+                    </div>
+                    <div class="ui-form-field-cot grid-nav-bar-item">
+                        <textarea class="ui-form-control width-100" name="" style="min-height: 85px;"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-shadow padding-base ui-hover">
+                <div class=" wrap-title"><span class="wrap-title-cot"><b>券2</b></span></div>
+                <div class="ui-form-fields grid-nav-bar">
+                    <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:80px;">
+                        <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;电子券</span>
+                    </div>
+                    <div class="ui-form-field-cot grid-nav-bar-item">
+                        <input id="ui-form-group-11" size="12" class="ui-form-control width-100" type="text">
+                    </div>
+                </div>
+                <div class="ui-form-fields grid-nav-bar">
+                    <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:80px;">
+                        <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;有效期</span>
+                    </div>
+                    <div class="ui-form-field-cot grid-nav-bar-item">
+                       
+                        <div class="ui-form-inline">
+                            <div class="ui-form-group">
+                                <input type="radio" id="TicketPackages1" name="TicketPackages">
+                                <span>自赠送日起</span>&nbsp;
+                                <input class="ui-form-control" type="text" style="width: 45%;">&nbsp;
+                                <span>天有效</span>
+                            </div>
+                        </div>
+                        <br>
+                        <input type="radio" id="TicketPackages2" name="TicketPackages">
+                        <span>日期插件</span>
+                    </div>
+                </div>
+                <div class="ui-form-fields grid-nav-bar">
+                    <div class="ui-form-field-label grid-nav-bar-item clear-padding" style="width:80px;">
+                        <span class="ui-form-field-label-span"><span class="color-normal-red-500">*</span>&nbsp;使用说明</span>
+                    </div>
+                    <div class="ui-form-field-cot grid-nav-bar-item">
+                        <textarea class="ui-form-control width-100" name="" style="min-height: 85px;"></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- 送电子券包 end  -->
+
+        </div>
+    </div>
+    <div class="dialog_left_bottom">
+        <button type="button" class="ui-btn ui-btn-default w-120 btn-no"> 关闭 </button>
+        <button type="button" class="ui-btn ui-btn-green w-120"> 提交至微信 </button>
+    </div>
+</div>
+<!-- Model end -->
+</body>
+</html>

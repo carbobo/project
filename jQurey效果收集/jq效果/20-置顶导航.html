@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="jquery-1.9.1.min.js"></script>
+   <script>
+    $(function(){
+        // $(document).scroll(function(){
+        //     var w=$("body").scrollTop();  // 获取滚动值
+                
+        //         if (w>800){
+        //             $(".nav").fadeIn();
+
+        //         }else{
+        //              $(".nav").fadeOut(600,function(){
+        //                 if (w>30) { 
+        //                   $(".nav").css({position:"fixed",display:"none"});
+        //                }
+        //             });
+                    
+        //             }
+        //             if (w<30){ 
+        //                 $(".nav").css({position:"static",display:"block"});     
+                
+                       
+        //         }
+                
+        //     });
+        $(".nav").clone().appendTo($("body"));
+        $(".nav").eq(1).css({position:"fixed",display:"none"});
+        $(document).scroll(function(){
+             var t=$("body").scrollTop();
+             if (t>800){
+                $(".nav").eq(1).fadeIn();
+             }else{
+                $(".nav").eq(1).fadeOut();
+             }
+        });
+
+    });
+</script>
+
+<link href="" rel="stylesheet">
+<style>
+    div { width:1000px; height: 700px; border:1px solid #666;}
+    .d1 { background-color:red;}
+    .d2 { background-color:blue;}
+    .d3 { background-color:green;}
+    .d4 { background-color:red;}
+    .d5 { background-color:pink;}
+    a:link,a:visited {text-decoration: none; color:#666;}
+    .nav { height:50px; width:100%; border:none; background:orange; top:0; left:0; text-align:center;}
+    
+</style>
+</head>
+<body>
+    <div class="nav">
+        <a href="javascript:void(0)">红</a>
+        <a href="#">蓝</a>
+        <a href="#">绿</a>
+        <a href="#">红</a>
+        <a href="#">粉</a>
+    </div>
+    <div class="header">头部信息</div>
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    <div class="d4"></div>
+    <div class="d5"></div>
+    <div class="toTop"><a href="javascript:void(0)">返回<br>顶部</a></div>
+
+</body>
+</html>

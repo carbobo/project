@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/**
+ * 登录界面
+ */
+.login{height:390px;}
+.login p{width:270px; margin:15px auto 0; color:#999; cursor:default;}
+.login .tips{width:270px;}
+.login .tips .tiptext{width:170px;}
+.login .other-login{width:275px; height:35px; margin:5px auto 0;}
+.login .other-login>a{float:left; width:128px; height:29px; line-height:29px; background:#fff url(../images/register_login1.png) no-repeat 0px -256px; border:1px solid #3ebb2b; border-radius:2px; color:#3ebb2b; text-indent:40px;}
+.login .other-login>a:hover{background-position:0px -282px; border:1px solid #21a901; color:#21a901;}
+.login .other-login .weibo{background-position:0px -310px; border-color:#ff734a; color:#ff734a; margin-left:12px;}
+.login .other-login .weibo:hover{background-position:0px -338px; border-color:#f26a47; color:#f26a47;}
+.login .bottom-text{margin-top:55px;}

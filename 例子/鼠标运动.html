@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2自定义滚动条</title>
+    <style>
+        #parent{width: 400px;height: 20px;position: relative;background: #ccc;margin:  30px auto;}
+        #child{width: 20px;height: 20px;position: absolute;background: red;cursor: pointer;}
+        #divShow{width: 0;height: 0;background: red;}
+    </style>
+</head>
+<body>
+<div id="parent">
+    <div id="child"></div>
+</div>
+<div id="divShow"></div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+$("#child").onmousedown = function(e){
+    alert(1)
+    var oEvent = e || event;
+    var X = oEvent.clientX - $("#child").offsetLeft;//!!!!!
+    document.onmousemove = function(e){
+        var oEvent = e || event;
+        var xEnd = oEvent.clientX - X;
+        if(xEnd < 0){Xend = 0;}else if(xEnd > $("#parent").offsetWidth - $("#child").offsetWidth){
+             xEnd = $("#parent").offsetWidth - $("#child").offsetWidth;
+        }
+        $("#child").css({left:xEnd});
+        var scale = l/($("#parent").offsetWidth - $("#child").offsetWidth);
+             $("#divShow").width(scale *300 + "px");
+             $("#divShow").height(scale *300 + "px");
+
+    }
+     document.onmouseup = function () {
+            document.onmousemove = null;
+           document.onmouseup = null;
+           }
+};
+    // var oParent = document.getElementById("parent");
+    // var oChild = document.getElementById("child");
+
+    // //获取要显示的div
+    // var oDivShow = document.getElementById("divShow");
+
+    // oChild.onmousedown = function (ev) {
+    //     var oEvent = ev|| event;
+    //     var disX = oEvent.clientX - oChild.offsetLeft;
+
+    //     document.onmousemove = function (ev) {
+    //         var oEvent = ev|| event;
+    //         var l = oEvent.clientX - disX;
+    //         if(l < 0){
+    //             l = 0;
+    //         }else if(l > oParent.offsetWidth - oChild.offsetWidth){
+    //             l = oParent.offsetWidth - oChild.offsetWidth;
+    //         }
+
+    //         oChild.style.left = l + "px";
+
+    //         //移动的比例
+    //         var scale = l/(oParent.offsetWidth - oChild.offsetWidth);
+    //         oDivShow.style.width = scale *300 + "px";
+    //         oDivShow.style.height = scale *300 + "px";
+    //     };
+
+    //     document.onmouseup = function () {
+    //         document.onmousemove = null;
+    //         document.onmouseup = null;
+    //     }
+    // }
+
+</script>
+
+</body>
+</html>

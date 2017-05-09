@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/*
+home页面公共样式
+ */
+body{width:100%;font-size:.32rem;padding-bottom:1.02rem;}
+h2{background:#fff;padding:.2rem 0.18rem .3rem  !important;}
+h2 b.iconfont{font-size: .32rem;float: right;}
+/**********************header css start**********************/
+.top {width:7.5rem;height:4rem;}
+.top .swiper-wrapper img{width:7.5rem;height:4rem;}
+.swiper-container {width: 7.5rem;height: 4rem;} 
+.top .swiper-container-horizontal>.swiper-pagination-bullets{bottom:0;}
+.top .swiper-pagination li{width:0.2rem;height:0.2rem;background: #fff;margin:0 0.1rem;background: red;bottom:0.1rem;}
+.top .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ff0000'%2F%3E%3C%2Fsvg%3E")}
+.top .swiper-button-next{background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ff0000'%2F%3E%3C%2Fsvg%3E")}
+.top .search{left:0.1rem;bottom:0.5rem;z-index: 2;opacity: .7}
+.top .search input{width:2.7rem;height:0.7rem;border-radius:0.1rem;font-size:0.26rem;border:1px solid #aaa;outline:0;padding:0 2.3rem;}
+.top .search i{position: absolute;width: 0.4rem;height:0.4rem;left:1.8rem;top:0.2rem;}
+.top .search i img{width:0.3rem;height:0.3rem;}
+.top .date{right:1rem;top:.6rem;z-index: 2;}
+.top .date p{width:.4rem;/*height:1.3rem;*/text-align:center;float: left;background: rgba(255,255,255,.7);margin-right:.1rem;}
+.top .date ul{float: right;}
+.top li{width:.4rem;height:.4rem;margin-bottom:.1rem;background: #000;color:#fff;line-height: .4rem;text-align: center;font-size: .32rem;}
+.top .date li:nth-child(1){background: #24b23e;}
+.top .date li:nth-child(2){background: #24b23e;}
+/***********************header css end**********************/
+
+
+/***********************nav css start**********************/
+.nav{width:7.5rem;}
+.nav li {font-size:.32rem;float:left;width:1.47rem;padding:.27rem 0.2rem .17rem;text-align: center;}
+.nav li:hover p{color:#eb4f38;}
+.nav li a{display: inline-block;*display: inline;*zoom:1;}
+.nav li img{width:.6rem;height:.63rem;}
+/*********************nav css end***********************/
+
+/*********************commonSense css start******************/
+/*knowledeg 样式*/
+.knowledeg{width:6.9rem;background-color:#fff;padding:.28rem;margin-bottom:.28rem;}
+.knowledeg h2{font-size:.32rem;}
+/*.knowledeg div:nth-child(1){padding-top:.33rem;}*/
+.knowledeg .knowledeg-main a{display:block;padding-top:.33rem;} 
+.knowledeg div img{width:2rem;height:1.6rem;}
+.knowledeg dl{width:4.8rem;}
+.knowledeg dl dt{font-size:.32rem;font-weight:bold;margin-bottom:.15rem;}
+.knowledeg dl dd{font-size:.22rem;line-height:.28rem;}
+.knowledeg dl dd:nth-child(2){padding-bottom:.2rem;}
+.knowledeg dl dd:nth-child(3) span{margin-right:.5rem;}
+.knowledeg dl dd span:nth-child(3){margin-right:0;}
+.knowledeg dl dd:link,.knowledeg dl dd:visited{color:#979797;}
+/*********************commonSense css end********************/
+
+/*********************gastronome css start********************/
+.gastronome {width:7.5rem;padding-bottom:.44rem;}
+.swiper-gastronome {overflow: hidden;}
+.gastronome li{width:1.5rem;float:left;text-align: center;font-size: 0.28rem}
+.gastronome li a{width:100%;height:100%;display: block;}
+.gastronome li img{width:.9rem;height:.9rem;}
+/*********************gastronome css end********************/
+
+/*********************spring css start********************/
+.spring{width:7.5rem;}
+.spring img{width:7.5rem;}
+/*********************spring css end********************/
+
+/*********************subject css start********************/
+.subject{width:7.5rem;}
+.subject img{width:7.5rem;margin:0.15rem 0;}
+/*********************subject css end********************/
+
+/*********************circle css start********************/
+.circle{width:7.5rem;}
+.circle .person{padding:.18rem;border-top:1px solid #aaa;position: relative;}
+.circle .person i.layer{position: fixed;width:100%;height:100%;background: rgba(0,0,0,.8);left:0;top:0;z-index: 10;text-align: center;}
+.circle .person i.layer img{position: absolute;top:2rem;left:50%;transform:translateX(-50%);}
+.circle .person>img{width:3.5rem;height:2.6rem;}
+.circle p:first-child img{vertical-align:middle;margin-right:.1rem;}
+.circle .person span{margin-right:3rem;}
+.circle .person a{display:inline-block;padding-top:.2rem;}
+.circle .person a:nth-of-type(1){margin-right:.2rem;}
+.circle .person a img{width:.4rem;height:.3rem;margin-right:.1rem;}
+.circle .person p:nth-child(2){padding:.1rem 0;}
+/*********************circle css end********************/
+
+/*******************footer css start*******************/
+
+.footer ul li:nth-child(1) a:link,.footer ul li:nth-child(1) a:visited{color:#eb4f38;;}
+.footer li:nth-child(3){height:1.06rem;}
+.footer input{width: 100%;height:100%;opacity: 0;}
+
+/*******************footer css end*******************/

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+	<script src="../js/less.js"></script>
+	<title>生命周期</title>
+	<style>
+		.CardIcon .ui-panel .ui-panel-head{
+			    position: relative;
+			    padding-left: 94px;
+		}
+		.CardIcon .ui-panel .ui-panel-head img{
+			    position: absolute;
+			    top: -10px;
+			    left: 20px;
+		}
+		.w-70{
+			width: 70px!important;
+		}
+	</style>
+</head>
+<body>
+	<div class="LifeCycle CardIcon">
+		<div class="wrap-title">
+			<span class="wrap-title-cot"> <b>新老状态</b>
+			</span>
+		</div>
+		<div class="ui-grid-cards-list-3" style="overflow: inherit;">
+			<div class="ui-grid-cards-list-inner">
+				<div class="ui-grid-cards-item">
+					<div class="ui-panel">
+						<div class="ui-panel-head">
+							<img src="../imgs/memberinfo_person.png">
+							新会员
+						</div>
+						<div class="ui-panel-body">
+							<div class="ui-form-inline">
+								<div class="ui-form-group">
+									<span class="color-normal-gray-810">入会时间≤</span>
+									<input class="ui-form-control w-70" type="text">&nbsp;
+									<span class="color-normal-gray-810">天</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui-grid-cards-item">
+					<div class="ui-panel">
+						<div class="ui-panel-head">
+							<img src="../imgs/lifecycle_02.png">
+							老会员
+						</div>
+						<div class="ui-panel-body">
+							<div class="ui-form-inline">
+								<div class="ui-form-group">
+									<span class="color-normal-gray-810">入会时间＞</span>
+									<input class="ui-form-control w-70" type="text">&nbsp;
+									<span class="color-normal-gray-810">天</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<p></p>
+		<div class="wrap-title">
+			<span class="wrap-title-cot"> <b>会员活跃度</b>
+			</span>
+		</div>
+		<div class="ui-grid-cards-list-3" style="overflow: inherit;">
+			<div class="ui-grid-cards-list-inner">
+				<div class="ui-grid-cards-item">
+					<div class="ui-panel">
+						<div class="ui-panel-head">
+							<img src="../imgs/lifecycle_03.png">
+							活跃会员
+						</div>
+						<div class="ui-panel-body">
+							<div class="ui-form-inline">
+								<div class="ui-form-group">
+									<span class="color-normal-gray-810">＜</span>
+									<input class="ui-form-control w-70" type="text">&nbsp;
+									<span class="color-normal-gray-810">(含)天内有消费</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui-grid-cards-item">
+					<div class="ui-panel">
+						<div class="ui-panel-head">
+							<img src="../imgs/lifecycle_04.png">
+							沉默会员
+						</div>
+						<div class="ui-panel-body">
+							<div class="ui-form-inline">
+								<div class="ui-form-group">
+									<input class="ui-form-control w-70" type="text" readonly="">&nbsp;
+									<span class="color-normal-gray-810">(含)至</span>
+									<input class="ui-form-control w-70" type="text">&nbsp;
+									<span class="color-normal-gray-810">天内有消费</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui-grid-cards-item">
+					<div class="ui-panel">
+						<div class="ui-panel-head">
+							<img src="../imgs/lifecycle_05.png">
+							睡眠会员
+						</div>
+						<div class="ui-panel-body">
+							<div class="ui-form-inline">
+								<div class="ui-form-group">
+									<input class="ui-form-control w-70" type="text" readonly="">&nbsp;
+									<span class="color-normal-gray-810">(含)至</span>
+									<input class="ui-form-control w-70" type="text">&nbsp;
+									<span class="color-normal-gray-810">天内有消费</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui-grid-cards-item">
+					<div class="ui-panel">
+						<div class="ui-panel-head">
+							<img src="../imgs/lifecycle_06.png">
+							预流失会员
+						</div>
+						<div class="ui-panel-body">
+							<div class="ui-form-inline">
+								<div class="ui-form-group">
+									<input class="ui-form-control w-70" type="text" readonly="">&nbsp;
+									<span class="color-normal-gray-810">(含)至</span>
+									<input class="ui-form-control w-70" type="text">&nbsp;
+									<span class="color-normal-gray-810">天内有消费</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui-grid-cards-item">
+					<div class="ui-panel">
+						<div class="ui-panel-head">
+							<img src="../imgs/lifecycle_07.png">
+							流失会员
+						</div>
+						<div class="ui-panel-body">
+							<div class="ui-form-inline">
+								<div class="ui-form-group">
+									<span class="color-normal-gray-810">＞</span>
+									<input class="ui-form-control w-70" type="text" readonly="">&nbsp;
+									<span class="color-normal-gray-810">天内有消费</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<p></p>
+		<div class="wrap-title">
+			<span class="wrap-title-cot"> <b>有效会员（所有数据统计分析的取值范围）</b>
+			</span>
+		</div>
+		<div class="ui-shadow padding-base">
+				<div class="ui-form-inline">
+					<div class="ui-form-group">
+						是否排除流失会员
+						&nbsp;&nbsp;
+			                <input type="radio" id="rad1" name="rad1" class="text-top">
+			                <label for="rad1">radio1</label>
+			                <input type="radio" id="rad2" name="rad1" class="text-top">
+			                <label for="rad2">radio2</label>
+					</div>
+				</div>
+		</div>
+	</div>
+</body>
+</html>

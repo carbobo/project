@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <form action="1.php" method="get">
+        用户名：<input type="text" name="userName"><br>
+        密  码：<input type="text" name="password"><br>
+        E-mail：<input type="text" name="email"><br>
+        TEL：<input type="text" name="tel"><br>
+        爱好: 
+        <input type="checkbox" value="游泳" name="hobby">游泳
+        <input type="checkbox" value="写作"  name="hobby">写作
+        <input type="checkbox" vale="旅游"  name="hobby">旅游
+        <input type="checkbox" value="观影"  name="hobby">观影
+        <br>
+        <br>
+        <input type="button" id="btn">
+    </form>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    $("#btn").click(function(){
+
+        console.log($('form').serialize());
+    });
+    </script>
+</body>
+</html>

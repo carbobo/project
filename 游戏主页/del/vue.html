@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
+<body>
+<div id="aaa">
+    <input type="text"v-bind:value="message">
+    <div>{{ message }}</div>
+
+
+</body>
+<script>
+var aaa=new Vue({
+    el:"#aaa",
+    data:{
+        message:"123"
+    }
+})
+</script>
+</html>

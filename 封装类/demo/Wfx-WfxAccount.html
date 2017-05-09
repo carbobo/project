@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+    <script src="../js/less.js"></script>
+    <title>营销工具-微分销-分销商</title>
+</head>
+    <style>
+    .col-nav{
+        overflow: hidden;
+    }
+    .col-nav-4 .col-nav-item{
+        width: 25%;
+        float: left;
+    }
+    .col-nav .col-nav-item:not(:last-child){
+        border-right: 1px solid #e6e6e5;
+    }
+</style>
+<body>
+    <div class="distributors">
+        <div class="ui-form-inline text-right" style="margin-bottom: 10px;">
+            <div class="ui-form-group">
+                <div class="ui-select">
+                    <select name="selct">
+                        <option value="1">option0</option>
+                        <option value="2">option1</option>
+                        <option value="3">option2</option>
+                    </select>
+                </div>
+                <div class="ui-select">
+                    <select name="selct">
+                        <option value="1">option0</option>
+                        <option value="2">option1</option>
+                        <option value="3">option2</option>
+                    </select>
+                </div>
+                <div class="ui-select">
+                    <select name="selct">
+                        <option value="1">option0</option>
+                        <option value="2">option1</option>
+                        <option value="3">option2</option>
+                    </select>
+                </div>
+                <div class="ui-input-group">
+                    <input type="text" class="ui-form-control" placeholder="员工姓名/工号">
+                    <button type="button" class="ui-btn ui-btn-green">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ui-panel" style="margin-bottom:20px;">
+            <div class="ui-panel-body">
+                <div class="grid-nav-bar margin-bottom-base" >
+                    <div class="grid-nav-bar-item">
+                        <div class="col-nav col-nav-4">
+                            <div class="col-nav-item">
+                                分销商总数(人)
+                                <br>
+                                <span class="color-light-green-500 h2">100</span>
+                            </div>
+                            <div class="col-nav-item">
+                                累计订单(单)
+                                <br>
+                                <span class="color-light-green-500 h2">100</span>
+                            </div>
+                            <div class="col-nav-item">
+                                累计销售(元)
+                                <br>
+                                <span class="color-light-green-500 h2">10,489,361.51</span>
+                            </div>
+                            <div class="col-nav-item">
+                                累计佣金(元)
+                                <br>
+                                <span class="color-light-green-500 h2">100000.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-nav-bar-item" style="width: 120px;vertical-align: bottom;">
+                        <button type="button" class="ui-btn ui-btn-green w-120">导出Excel</button>
+                    </div>
+                </div>
+
+                <table class="ui-table ui-striped-rows">
+                    <thead>
+                        <tr>
+                            <th>员工姓名</th>
+                            <th>工号</th>
+                            <th>手机号</th>
+                            <th>员工类型</th>
+                            <th>所属门店</th>
+                            <th>入驻时间</th>
+                            <th>累计订单</th>
+                            <th>累计销售(元) </th>
+                            <th>累计佣金(元)</th>
+                            <th>可用佣金(元)</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td>李易峰</td>
+                            <td>M4</td>
+                            <td>1390230929</td>
+                            <td>门店用户</td>
+                            <td title="南京东路">南京东路</td>
+                            <td>2015-09-01 12:30</td>
+                            <td>100</td>
+                            <td title="10,122,1221">10,122,1221</td>
+                            <td>100.00</td>
+                            <td>100.00</td>
+                            <td>
+                                <div class="control-inline ui-onoffswitch ui-onoffswitch-sm">
+                                    <input type="checkbox" id="isDisabled" class="onoffswitch-checkbox" name="onoffswitch">                  
+                                    <label for="isDisabled" class="onoffswitch-label">
+                                        <span class="onoffswitch-inner">
+                                            <span class="onoffswitch-before">ON</span>
+                                            <span class="onoffswitch-after">OFF</span>
+                                        </span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="margin-bottom-base">
+            <nav style="display: flex; display:-webkit-flex; justify-content:center;">
+                        <ul class="ui-pagination" style="margin: 0;">
+                            <li>
+                                <a href="#" aria-label="Previous"><span aria-hidden="true">上一页</span></a>
+                            </li>
+                            <li class="active">
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">1</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">2</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">3</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">4</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">5</a>
+                            </li>
+                            <li>
+                                <a style="width:40px;height:40px;line-height:32px;border:none;padding:0;text-align:center;margin-left:0;margin-right:1px;background:#efefef;">...</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width:40px;height:40px;line-height: 40px;padding:0;text-align:center;">100</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Next"><span aria-hidden="true">下一页</span></a>
+                            </li>
+                        </ul>
+
+                        <div class="ui-form-inline" style="margin-left: 30px;">
+                            <div class="ui-form-group" style="color: #848583;">
+                                <label for="page">跳转到</label><input id="page" class="ui-form-control" type="text" style="width: 40px; height: 40px;padding: 0;text-align: center; margin:0 10px;">页
+                            </div>
+                        </div>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

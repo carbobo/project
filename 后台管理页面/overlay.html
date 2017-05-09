@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/reset.css" rel="stylesheet">
+<style>
+.overlay{width:100%;height:100%;position: fixed;left:0;top:0;background-color:#000;opacity:.5;box-sizing: border-box;font-size:16px;}
+.overlay .cont{width:660px;height:580px;background-color:#fff;margin:0 auto;}
+.overlay .top{height:56px;line-height:56px;background-color:#fff2ec;border-bottom:2px solid #f4b197;font-size:18px;padding:0 25px;}
+.overlay .top .zuoye{color:#a45c44;}
+.overlay .top .func{width:150px;height:48px;margin-top:5px;border:1px solid #666;text-align:center;line-height:48px;}
+.overlay .top .func a .close{margin-top:10px;width:25px;height:25px;}
+.overlay .left{width:210px;text-align:right;}
+.overlay .left .p1{margin:25px 0 30px;}
+.overlay .left .p2{margin-bottom:140px;}
+.overlay .left .p3{margin-bottom:30px;}
+.overlay .left .p4{margin-bottom:30px;}
+.overlay .left .p5{margin-bottom:30px;}
+.overlay .left .p6{margin-bottom:30px;}
+.overlay .right{padding-left:15px;}
+.overlay .right .item1{margin:25px 0 22px;}
+.overlay .right .item2{margin-bottom:130px;}
+.overlay .right .item2 .item2-d{margin-right:8px;width:18px;height:18px;vertical-align:-3px;}
+.overlay .right .item2 .caret{margin-left:8px; border-top:12px dashed; border-right: 6px solid transparent;border-left: 6px solid transparent;}
+.overlay .right .item2 .rightName{width:420px;height:110px;font-size:12px;overflow-y:auto;overflow-x:hidden;}
+.overlay .right .item2 .rightName input{width:15px;height:15px;vertical-align:-6px;margin-right:6px;background-color:#fff;vertical-align:bottom;}
+.overlay .right .item2 .rightName label{margin-right:16px;}
+.overlay .right .item3{margin-bottom:20px;}
+.overlay .right .item4{margin-bottom:30px;}
+.overlay .right .item5{margin-bottom:20px;font-size:14px;}
+.overlay .right .item5 input{margin-right:12px;width:20px;height:20px;background-color:green;vertical-align:bottom;}
+.overlay .right .item6 {margin-bottom:35px;}
+.overlay .right .item7 .btn{width:164px;height:50px;margin-right:25px;font-size:16px;color:#fff;}
+.overlay .right .item7 .btn1{background-color:#ec6434;}
+.overlay .right .item7 .btn2{color:#ec6434;border:1px solid #ec6334;background-color:#fff;}
+</style>
+</head>
+<body>
+<div class="overlay">
+    <div class="cont">
+        <div class="top clearfix">
+            <div class="zuoye fl">布置作业</div>
+            <div class="func fr">
+                <a href="javascript:voit()">缩小</a>
+                <a href="javascript:voit()"><span>放大</span></a>
+                <a href="javascript:voit()"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></a>
+            </div>
+        </div>
+        <div class="item clearfix">
+            <div class="left fl">
+                <p class="p1">作业名称：</p>
+                <p class="p2">选择本次作业班级:</p>
+                <p class="p3">发送作业时间：</p>
+                <p class="p4">作业提交截止时间：</p>
+                <p class="p5">随堂检查：</p>
+                <p class="p6">随堂检测时间：</p>
+            </div>
+            <div class="right fl">
+                <form action="overlay_submit" method="get" accept-charset="utf-8">
+                    <div class="item1"><input type="" name="" value="4月21日数学作业" class="input"> </div>
+                    <div class="item2 por">
+                    <form action" method="get" accept-charset="utf-8" class="form-control">
+                        <label><input type="checkbox" name="" value="" class="item2-d"></label>
+                        <select class="">
+                              <option>五年级五班</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                        </select>
+                    </form>
+                        <div class="rightName poa">
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                            <label><input type="checkbox" name="" value="">张三</label>
+                        </div>
+                    </div>
+                    <div class="item3">
+                         <input type="date" name="">
+                    </div>
+                    <div class="item4"> <input type="date" name=""></div>
+                    <div class="item5"><label><input type="radio" name="" value="">设为随堂检测</label></div>
+                    <div class="item6"><input type="" name="" class="input">分钟</div>
+                    <div class="item7"><button class="btn btn1">确&nbsp;&nbsp;认</button><button class="btn btn2">取&nbsp;&nbsp;消</button></div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

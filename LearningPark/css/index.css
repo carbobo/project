@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Marte (iqianduan@126.com)
+ * @date    2017-03-28 17:31:21
+ * @version $Id$
+ */
+// @media screen and (min-width:320px) and (max-width:800px){
+//     body{
+//         width:768px;
+//     }
+// }
+.container{
+    width: 95%;
+    margin:5px auto;
+    box-sizing: border-box;
+}
+ .nav {
+    width:95%;
+}
+ .nav li{
+    float:left;
+    width:33%;
+    padding:10px 0;
+    text-align: center;
+}
+ .nav .active{
+    color:green;
+    border-bottom: 3px solid green;
+}
+ .nav .active a{
+     color:green;
+}
+ .tab .cont .cont-list{
+    padding:15px 25px;
+}
+ .tab .cont .cont-list>ul{
+    border-bottom:1px solid #c4c4c4;
+    padding-bottom: 10px;
+    margin-bottom:25px;
+
+ }
+
+ .tab .cont .cont-list li{
+    float: left;
+}
+.tab .cont .c-classFly, .tab .cont .c-recommed {
+    display:none;
+}
+ .tab .cont .cont-list .num{
+    margin-top:15px;
+ }
+ .tab .cont .cont-list li.down{
+    float: right;
+}
+ .tab .cont .cont-list .pic{
+    margin:0 15px;
+    width:50px;height:50px;
+    vertical-align: top;
+     // vertical-align:middle;
+ }
+  .tab .cont .cont-list .pic img{
+    width:100%;height:100%;
+
+  }
+  .tab .cont .cont-list .name{
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .tab .num{
+    font-size:12px;
+  }
+.tab .cont .cont-list .name em{
+    font-size:14px;
+    font-weight:bold;
+}
+
+.tab .cont .cont-list .name2 i{
+    color:green;
+}
+.tab .cont .cont-list .down{
+
+    margin-top: 15px;
+}
+.tab .cont .cont-list .down a{
+    display:block;
+    width:45px;height:25px;
+    border:1px solid green;
+    color:green;
+    line-height: 25px;
+    font-size:12px;
+    text-align:center;
+    border-radius: 4px;
+}
+.tab2 .t-nav{
+    height:40px;
+    border-bottom:1px solid #f9f9f9;
+    line-height:40px;
+    background-color:f7f7f7;
+}
+.tab2 .t-nav li{
+    display: inline-block;*display:inline;*zoom:1;
+    width:23%;
+    text-align: center;
+    margin-right: 3px;
+}
+.tab2 .t-list{
+    padding:20px 25px;
+    display:none;
+}
+.tab2 .t-list-first{
+    display: block;
+}
+.tab2 .t-list li{
+    width:24%;
+    text-align: center;
+    margin-bottom:20px;
+    // margin:0 4px;
+    display: inline-block;*display:inline;*zoom:1;
+}
+.tab2 .t-list li p{
+    font-size:12px!important;
+}
+.tab2 .active{
+    color:green;
+}
+.tab2 .t-list li img{
+    width:50px;height:50px;
+    margin-bottom:6px;
+}
+.c-recommed .tab3 .t-nav{
+    background-color: #f7f7f7;
+    padding:5px 20px;
+}
+.c-recommed .tab3 .t-nav li{
+    width:48%;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: top;
+    text-align:center;
+}
+.c-recommed .tab3 .active{
+    color:green;
+}
+.c-recommed .tab3 .cont-list:nth-child(2){
+    display:none;
+}
+

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-13 16:41:31
+ * @version $Id$
+ */
+html{height:100%;overflow: hidden;}
+body,.swiper-container,.swiper-slide,img{width:7.5rem;height:100%;margin: 0 auto;}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Marte (iqianduan@126.com)
+ * @date    2017-03-30 15:10:29
+ * @version $Id$
+ */
+.row{
+    margin-bottom: 15px;
+}
+.starter-template{
+    margin-top: 55px;
+}
+.row>div{
+    border:1px solid #999;
+}
+.banner-init>div{
+    height:150px;line-height:150px;cursor: pointer;
+}
+.row1 p{
+    height:55px;
+}
+.row2>div{
+    height:80px;
+}
+.row3>div{
+    height:110px;
+}
+.row4 div img{
+    width:100%;
+}

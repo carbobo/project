@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            // $("ul li:first").css({border:'1px solid red'});
+            // $("ul li:first-child").css({border:'1px solid red'});
+            // console.log($("ul li").size())
+            // $(".box .cur").parent();
+            // $(".box .nav").children().css({border:'1px solid red'});
+            // $(".box .nav").children(".red").css({border:'1px solid red'});
+            // $(".box .nav").find('li').css({border:'1px solid red'});
+            // $(".box li[class]").eq(2).css({border:'1px solid red'});
+            $(".box li[class]").filter(".red").css({border:'1px solid red'});
+        });
+    </script>
+</head>
+<body>
+<div class="box">
+    <ul class='nav'>
+        <li>11
+            <ul>
+                <li>111</li>
+                <li>112<span>span</span></li>
+                <li>113</li>
+            </ul>
+        </li>
+        <li>2</li>
+        <li class="red">03</li>
+        <li class="red">04</li>
+        <li>5</li>
+    </ul>
+    <ul>
+        <li class="cur">012</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+</body>
+</html>

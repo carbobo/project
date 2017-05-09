@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-11 13:26:37
+ * @version $Id$
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+address,caption,cite,code,dfn,em,strong,table,thead,tbody,th,var,form,fieldset,input,textarea,p,blockquote,th,td{ font-weight: normal;font-style: normal; padding: 0; margin: 0;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;font-size: 100%;}
+q:before,q:after { content:'';}
+fieldset,img {border: 0;}
+abbr,acronym { border: 0;}
+caption,th {   text-align: left;}
+table { border-collapse: collapse; border-spacing: 0;}
+ol,ul { list-style: none;}
+body{font-size: 14px;font-family: "微软雅黑";min-width: 1200px;}
+i{font-style: normal;}
+b{font-weight: normal;}
+ins{text-decoration: none;}
+/*通用样式*/
+
+a:link,a:visited {text-decoration: none; color:#6a6a6a; }
+a:hover {color:#16a3e5; text-decoration: none; }
+.wrapper {width:1200px; margin:0 auto; }
+.fl {float:left; }
+.fr {float: right; }
+.in-block{display:inline-block; *display:inline; *zoom:1; }
+.por {position: relative; }
+.poa {position: absolute;}
+.pof {position: fixed;}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix {*zoom:1; }
+.bk {border:1px solid  red; }
+.minWidth{ 
+    width:100%;
+    min-width:1200px;
+}

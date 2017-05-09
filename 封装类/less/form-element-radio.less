@@ -1,0 +1,74 @@
+.ui-radio{
+	cursor: pointer;
+}
+.ui-radio-inline {
+    font-weight: 400;
+}
+@ui-checkcolorban: #e5e6e6;
+
+
+
+    .ui-radio-inline:not(ie8), .ui-radio-styled.ui-radio-inline:not(ie8), .ui-radio-styled{
+        padding-left: 0;
+    }
+    .form-horizontal .ui-radio,.form-horizontal .ui-radio-inline{
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 5.5px;
+    }
+    .ui-radio-styled:not(ie8) input[type="radio"],.ui-radio-styled:not(ie8) input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    .ui-radio-styled:not(ie8) input ~ span {
+        cursor: pointer;
+        display: inline-block;
+        padding-left: 30px;
+        position: relative;
+        vertical-align: text-top;
+    }
+    .ui-radio-styled:not(ie8) input:checked ~ span::after {
+        height: 10px;
+        left: 5px;
+        top: 5px;
+        width: 10px;
+    }
+    .ui-radio-styled:not(ie8) input ~ span::before {
+        border: 2px solid #535858;
+        content: "";
+        height: 20px;
+        left: 0;
+        position: absolute;
+        width: 20px;
+        z-index: 1;
+    }
+    .ui-radio-styled:not(ie8) input ~ span::after {
+        background-color: @brand-green;
+        border-radius: 50%;
+        content: "";
+        height: 0;
+        left: 10px;
+        position: absolute;
+        top: 10px;
+        transition: all 0.15s ease-in-out 0s;
+        width: 0;
+        z-index: 1;
+
+    }
+	.ui-radio-styled:not(ie8) input:checked ~ span::before {
+		border-color: @brand-green;
+	}
+    .ui-radio-styled:not(ie8) input ~ span::before {
+        border-radius: 50%;
+        top: 0;
+        transition: all 0.15s ease-in-out 0s;
+    }
+    .ui-radio-styled.disabled:not(ie8) ~ span::before,.ui-radio-styled:not(ie8) input[disabled] ~ span::before,.ui-radio-styled:not(ie8) input[readonly] ~ span::before {
+        border-color: @ui-checkcolorban!important;
+        cursor: no-drop;
+    }
+    .ui-radio-styled.disabled:checked:not(ie8) ~ span::after,.ui-radio-styled:not(ie8) input[disabled]:checked ~ span::after,.ui-radio-styled:not(ie8) input[readonly]:checked ~ span::after {
+        background-color: @ui-checkcolorban;
+        cursor: no-drop;
+    }

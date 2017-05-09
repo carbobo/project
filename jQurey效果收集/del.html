@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .box { width:300px; height:200px; border:1px solid red;}
+    </style>
+</head>
+<body>
+    
+　　
+    <script src="js/jquery-1.11.3.min.js"></script>
+     <script>
+
+     //传统ajax
+        $.ajax({
+
+　　　　url: "test.html",
+
+　　　　success: function(){ 
+　　　　　　alert("哈哈，成功了！"); 
+　　　　},
+
+　　　　error:function(){ 
+　　　　　　alert("出错啦！"); 
+　　　　}
+    //done的写法：
+        $.get("test.php").done(function() { 
+            alert("$.get succeeded"); 
+        });
+
+    // 或者
+        $.ajax("test.html")
+
+    　　.done(function(){ alert("哈哈，成功了！");} )
+
+    　　.fail(function(){ alert("出错啦！"); } )
+
+    　　.done(function(){ alert("第二个回调函数！");} );
+    　　});
+     </script>
+</body>
+</html>

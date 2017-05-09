@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/bootstrap.css" rel="stylesheet">
+<style>
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+address,caption,cite,code,dfn,em,strong,table,thead,tbody,th,var,form,fieldset,input,textarea,p,blockquote,th,td,label{ font-weight: normal;font-style: normal; padding: 0; margin: 0;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;font-size: 100%;}
+q:before,q:after { content:'';}
+fieldset,img {border: 0;}
+abbr,acronym { border: 0;}
+caption,th {   text-align: left;}
+table { border-collapse: collapse; border-spacing: 0;}
+ol,ul { list-style: none;}
+body{font-size: 16px;font-family: "微软雅黑";}
+.container{min-width:1750px;border:1px solid #666;margin:0 auto;margin-bottom:30px;}
+.container .search-nav ul{padding-top: 30px;}
+.container .search-nav ul li{display:inline-block;margin-right:20px;}
+.container .search-nav ul li .form-control{display:inline-block;width:auto;}
+.container .search-nav ul li a.btn-lit{text-align: center;
+    border: 1px solid red;width: 60px;padding: 6px 8px;border-radius: 5px;background: #EA6F5A;color:#fff;}
+
+
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="search-nav">
+    <ul>
+        <li><a class="btn-lit back" href="javaScript:void(0)" onclick="returnQue()"><span>返回</span></a></li>
+
+         <li>
+            <span>是否公有:</span>
+            <label>校内<input type="radio" name="chose" value="0" checked="checked"></label>
+            <label>公有<input type="radio" name="chose" value="0" checked="checked"></label>
+        </li>
+         <li>
+          <span>学校</span>
+           <select id="school" class="form-control">
+                            <option value=''>请选择</option>
+                            <c:forEach items="${schools }" var="s">
+                                <option value="${s.id }">${s.schoolName }</option>
+                            </c:forEach>
+                    </select>
+        </li>
+         <li>
+          <span>科目</span>
+             <select name="subject.subjectName" id="subject" class="form-control">
+                            <option value=''>请选择</option>
+                            <option value="1">语文</option>
+                            <option value="2">数学</option>
+                            <option value="3">外语</option>
+                            <option value="4">物理</option>
+                            <option value="8">化学</option>
+                            <option value="7">生物</option>
+                            <option value="6">历史</option>
+                            <option value="5">地理</option>
+                            <option value="9">政治</option>
+                    </select>
+          </select>
+        </li>
+        <li>
+          <span>年级</span>
+           <select id="gradeId" class="select-normal form-control">
+           <option value="">请选择</option>
+           <option value="704">毕业</option>
+           <option value="705">123</option>
+           <option value="711">初中2</option>
+           </select>
+        </li>
+        <li>
+          <span>类型</span>
+            <select id="catalogType" class="select-normal form-control">
+                <option id="choseCatalog" value=''>请选择</option>
+                <option value="1">知识点</option>
+                <option value="2">教辅</option>
+            </select>
+        </li>
+        <li>
+          <span>教材</span>
+           <select id="version" class="select-normal form-control">
+            <option value=''>请选择</option>
+            </select>
+        </li>
+        <li>
+          <span>课本</span>
+           <select id="book" class="select-normal form-control">
+            <option value=''>请选择</option>
+            </select>
+        </li>
+        <li>
+          <span>目录</span>
+           <select id="catalog" class="select-normal form-control">
+            <option value=''>请选择</option>
+            </select>
+            <font color="red">*</font>
+        </li>
+         <li><a class="btn-lit" href="javaScript:void(0)" onclick="onHelp()"><span>操作文档</span></a></li>
+    </ul>
+</div>
+</div>
+</body>
+</html>

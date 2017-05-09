@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>轮播</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/reset.css">
+<style>
+.swiper-container{width:500px;height:200px;margin:200px auto;}
+
+
+</style>
+</head>
+<body>
+<div class="swiper-container bk">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination bk">111111</div>
+</div>
+<input class="btn btn-gray button-prev" name="" type="button" value="上一题">
+<input class="btn btn-gray button-next" name="" type="button" value="下一题">
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript">
+    var mySwiper = new Swiper ('.swiper-container', {
+        // 如果需要前进后退按钮
+        nextButton: '.button-next',//对应"下一题"按钮的class
+        prevButton: '.button-prev',//对应"上一题"按钮的class
+        pagination: '.pagination',//分页容器的css选择器
+        paginationType : 'custom',//自定义-分页器样式类型（前提）
+        //设置自定义分页器的内容
+        paginationCustomRender: function (swiper, current, total) {
+            var _html = '';
+            for (var i = 1; i <= total; i++) {
+              if (current == i) {
+                _html += '<li class="swiper-pagination-custom active">' + i + '</li>';
+              }else{
+                _html += '<li class="swiper-pagination-custom">' + i  + '</li>';
+              }
+            }
+            return _html;//返回所有的页码html
+        }
+    })
+    //给每个页码绑定跳转的事件
+    $('.swiper-pagination').on('click','li',function(){
+      var index = this.innerHTML;
+      mySwiper.slideTo(index-1, 500, false);//切换到第一个slide，速度为1秒
+    })
+</script>
+</body>
+</html>

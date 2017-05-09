@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-08 16:47:24
+ * @version $Id$
+ */
+header{text-align: center;padding-top:.3rem;height:.62rem;}
+header h2 i.iconfont{float: left;font-size: .32rem;cursor:pointer;}
+header h2 b.iconfont{float: right;font-size: .32rem;margin:0 .1rem;}
+nav{width:7.3rem;background: #d7d7d7;padding:.2rem .1rem;margin: 0 auto;}
+nav li{width:1.8rem;height:1.1rem;border-radius:0.1rem;line-height: 1.1rem;text-align: center;float: left;background: #fff;margin-right:.1rem;font-size: .32rem;}
+nav li.cur{background: #333;color:#fff;}
+nav li.swiper-slide{width:3.8rem;}
+.show {padding:.2rem 0;background: #e4e4e4;width:7.5rem;}
+.show li {float:left;margin: .1rem .25rem;background: #fff;}
+.show li img{width:3.25rem;}
+.show li p{width:3.15rem;overflow: hidden;white-space:nowrap;text-overflow:ellipsis;padding:.2rem 0;padding-left:.1rem;}
+.show li p:nth-of-type(3){border-top:1px solid #aaa;}
+.show li p:nth-of-type(3) span:nth-child(1){color:red;margin-right:.3rem;}
+.show li p:nth-of-type(3) span:nth-child(2){color:#aaa;}
+.footer ul li:nth-child(1) a:link,.footer ul li:nth-child(1) a:visited{color:#eb4f38;}

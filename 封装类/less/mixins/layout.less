@@ -1,0 +1,69 @@
+// 1.自动
+// 2.满屏
+.layout-position( @height; @width; @bg ){
+  height: @height;
+  width: @width;
+  background-color: @bg;
+  position: absolute;
+  left:0;
+}
+
+.ui-layout-height-auto(){
+   .ui-layout-body{
+    display: table;
+    width:100%;
+    min-height: 100%;
+  }
+   .ui-layout-left{
+    display: table-cell;
+    position: relative;
+  }
+   .ui-layout-cot{
+    display: table-cell;
+    position: relative;
+    width: auto;
+    padding-left:0;
+    vertical-align: top;
+  }
+}
+
+.layout( @headHeight; @leftWidth; @footerHeight; @headBg; @leftBg; @cotBg; @footerBg ){
+  .ui-layout{
+//    position: relative;
+    .ui-layout-head{
+      .layout-position(@headHeight; 100%; @headBg;);
+      z-index: 3;
+      top:0;
+//      position: fixed;
+      &.ui-layout-head-fixed{
+        position: fixed;
+      }
+    }
+    .ui-layout-left{
+      .layout-position(100%; @leftWidth; @leftBg;);
+      padding-top:@headHeight;
+      padding-bottom:@footerHeight;
+      z-index: 2;
+      top:0;
+      overflow: auto;
+    }
+    .ui-layout-cot{
+      .layout-position(100%; 100%;@cotBg);
+      padding-top:@headHeight;
+      padding-left:@leftWidth;
+      padding-bottom:@footerHeight;
+      z-index: 1;
+      top:0;
+      overflow: auto;
+    }
+    .ui-layout-footer{
+      .layout-position(@footerHeight; 100%; @footerBg);
+      bottom:0;
+      z-index: 3;
+    }
+    &.height-auto{
+      .ui-layout-height-auto();
+    }
+  }
+}
+

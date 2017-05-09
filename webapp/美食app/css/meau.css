@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-06 10:15:01
+ * @version $Id$
+ */
+* {box-sizing: border-box;}
+
+header  .top-tit{
+    height: .7rem;text-align: center;color: #fff;font-size: .36rem;
+    padding-top: .3rem;
+}
+header  .top-tit i.icon1{
+  float: left;
+  margin-left: .2rem;line-height: .5rem;
+}
+header  .top-tit i.icon2{
+  float: right;
+  line-height: .5rem;
+  margin-right: .3rem;
+}
+header  .top-tit i.icon3{
+  float: right;
+  line-height: .5rem;
+  margin-right: .3rem;
+}
+header  .top-tit h3{
+  display: inline-block;
+}
+.top-search{
+  background: #e4e4e4;
+  width: 100%;height: 1.08rem;
+}
+.top-search form{
+  position: relative;
+  width: 100%;height: .7rem;text-align: center;
+  padding-top: .2rem;
+}
+.top-search form input{
+  margin:0 auto;
+  background: #fff;
+  width: 6.9rem;height: .7rem;
+  border-radius: .2rem;
+  border:none;
+  text-indent: 1.6rem;
+  color: #d0d0d0;font-size: .36rem;
+}
+.tab{
+  width: 100%;
+}
+.tab .tab-list{
+  width: 1.85rem;
+  background: #e4e4e4;
+}
+.tab .tab-list li{
+    width: 100%;height: 1rem;line-height: 1rem;
+    text-align: center;
+}
+.tab .tab-list li.active{
+  background: #fff;color: red;
+}
+.tab .tab-list li a{
+  display: block;font-size: .32rem;
+}
+.tab .tab-cont{
+  padding-top: .75rem;
+  width: 5.3rem;
+  margin-left: .3rem;
+  display: none;
+}
+.tab .cont-list .tab-cont1{
+  display: block;
+}
+.tab .tab-cont li{
+  float: left;
+  margin-bottom: .4rem;
+  
+}
+.tab .tab-cont li a{
+  display: block;
+  height: .5rem;
+  width: 1.5rem;
+  line-height: .5rem;text-align: center;
+  border:.03rem solid #666;
+  border-radius: .3rem;
+  margin-right: .25rem;
+  color: #797979;
+  font-size: .3rem;
+}
+
+.footer ul li:nth-child(1) a:link,.footer ul li:nth-child(1) a:visited{color:#eb4f38;}

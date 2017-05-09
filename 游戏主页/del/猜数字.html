@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="cont">
+    输入数字：<input id="txt" type="text"><input id="btn" type="button" value="提交">
+    提示：<span id="msg"></span>
+    次数：<span id="times">0</span>
+</div>
+</body>
+<script>
+    var num=5;
+    var btn = document.getElementById("btn");
+    var txt = document.getElementById("txt");
+    var msg = document.getElementById("msg");
+    var times = document.getElementById("times");
+    var i=0;
+    btn.onclick=function(){
+        i++;
+        if (parseInt(txt.value)>num){
+            msg.innerHTML="大";
+        };
+         if (parseInt(txt.value)<num){
+            msg.innerHTML="小";
+        };if(parseInt(txt.value)==num){
+            alert("you win<br/> ,次数："+i+"<br/>页面刷新重置");
+
+        }
+        times.innerHTML=i;
+    }
+
+</script>
+</html>

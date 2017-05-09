@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .box { width:300px; height:200px; border:1px solid red;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        box
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+     <script>
+     //get()方法：通过jquery对象获取dom对象
+        $(".box").get(0).innerHTML = "替换";
+        // $(".box")[0].innerHTML = "替换";
+     </script>
+</body>
+</html>

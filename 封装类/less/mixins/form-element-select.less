@@ -1,0 +1,32 @@
+.calc-element-select(){
+  .ui-select {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+
+    > select{
+      -moz-appearance: none;
+      -webkit-appearance: none;
+       height: @form-element-height;
+       padding: @form-element-select-padding;
+       border-radius: @form-element-select--radius;
+       border: 1px solid @input-border;
+       position: relative;
+       z-index: 2;
+       background: transparent;
+       cursor:pointer;
+    }
+
+    &:after{
+      content: "\e259";
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+//      margin-left: -24px;
+      position: absolute;
+      top:12px;
+      right:10px;
+      z-index: 1;
+    }
+
+  }
+}

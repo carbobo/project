@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name='viewport' content='width=device-width'>
+<title>香哈</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src='js/common.js'></script>
+<link rel="shortcut icon" href="images/delicacy.ico" />
+<link href="css/guide.css" rel="stylesheet">
+<link href="css/swiper-3.4.0.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/guide1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/guide2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/guide3.jpg" alt=""></div>
+        </div>
+    </div>
+<script src='js/swiper-3.4.0.min.js'></script>
+<script src='js/zepto.js'></script>
+
+<script type="text/javascript">
+    var mySwiper = new Swiper ('.swiper-container', {
+        autoplay:3000,
+        onSlideChangeEnd: function(swiper){
+            if(swiper.activeIndex == 2){
+                setTimeout(function(){
+                    window.location.href="home.html" ;
+                },500)
+            }
+        }
+    }); 
+    // console.log($('body').height());
+    
+
+
+
+</script>
+</body>
+</html>

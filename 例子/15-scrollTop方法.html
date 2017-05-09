@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    body { height:2000px;}
+    button { position: absolute; left:100px; top:50%;}
+    </style>
+</head>
+<body>
+    <button>click</button>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    $("button").click(function(){
+        //兼容各个浏览器，可获取滚动条偏移值
+        // var result = $(window).scrollTop();
+        // alert(result);
+
+         // $(window).scrollTop(700);
+         
+
+        $("html,body").animate({scrollTop:500});  // 兼容
+        // 
+        
+        //以下方法无效
+        // $(window).animate({scrollTop:500});
+    });
+    </script>
+</body>
+</html>

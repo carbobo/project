@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div { width:300px; height:100px; background-color: #aaa; margin:10px; padding:5px;}
+        /*div:gt(2) { border:1px solid black;}*/
+    </style>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    $(function(){
+        // * :通配，匹配指定元素内部的所有后代元素。
+        // $("body *").css({border:"1px solid black"});
+        
+        //匹配直接子元素
+        // $(".box0>p>span").css({border:"1px solid black"});
+
+        // + 匹配指定元素后面紧挨的一个兄弟元素
+        // $(".box0 + div").css({border:"1px solid black"});
+        
+        //~匹配指定元素后面所有的兄弟元素（不包括前面的）
+        // $(".box2 ~ div").css({border:"1px solid black"});
+
+        //:first: 匹配元素集合中的第一个元素
+        // $("div:first").css({border:"1px solid black"});
+        
+        //:not 在集合中把指定元素排除掉
+        // $("div:not(.box)").css({border:"1px solid black"});
+        
+        //:even 偶数，odd：奇数  （第一个即为0个，为偶数）
+        // $("div:even").css({border:"1px solid black"});
+
+        //:eq(index)
+        // $("div:eq(1)").css({border:"1px solid black"});
+        
+        //:gt(index),:lt(index)
+        // $("div:gt(2)").css({border:"1px solid black"});
+        
+        //匹配所有的h系列元素
+        // $(":header").css({border:"1px solid black"});
+        
+
+        // 匹配所有正在执行动画效果的元素
+        // 动画
+        // :animated
+        // $(".box0,.box").delay(2000).slideUp(10000);
+        // $("button").click(function(){
+        //     $(":animated").css({border:"1px solid black"});
+        // });
+        
+        //focus
+        $("input:eq(0)").get(0).focus();
+        $("input:focus").css({border:"1px solid black"});
+        $("input:focus").css({color:'red'});
+
+               
+
+        //:contains():匹配包含指定内容的元素
+        // $("div:contains('div11')").css({border:"1px solid black"});
+
+        //:empty 
+        // $(":empty").css({border:"1px solid black"});
+
+        //:has(selector)
+        // $("div:has(p)").css({border:"1px solid black"});
+
+        //:parent
+        // $("div:parent").css({border:"1px solid black"});
+        
+        //:hidden :visible
+        // $("div:hidden").css({border:"1px solid black"});
+        // $(".box0 + div").css({border:"1px solid black"});
+        // $(".box0 + div").css({border:"1px solid black"});
+        // $(".box0 + div").css({border:"1px solid black"});
+        // $(".box0 + div").css({border:"1px solid black"});
+        // $(".box0 + div").css({border:"1px solid black"});
+        
+
+    });
+    </script>
+</head>
+<body>
+<!-- div元素 -->
+    <button>change</button>
+    <div class="box0">
+        div0
+        <p>
+            p1
+            <span>span1</span>
+        </p>
+    </div>
+    <div>
+        div111
+    </div>
+    <div class="box">
+        div2
+    </div>
+    <div class="box">
+        div113
+    </div>
+    <div class="box4">
+        <a href="28-target.html#div2">跳转至下个页面</a>
+    </div>
+
+
+<!-- h元素 -->
+    <h1></h1>
+    <h2>h2</h2>
+    <h2>h2</h2>
+    <h3>h3</h3>
+
+<!-- form元素 -->
+<input type="text"><br>
+<input type="text"><br>
+<input type="checkbox">
+
+
+</body>
+</html>

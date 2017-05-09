@@ -1,0 +1,104 @@
+body {
+	background-color: #f3f2f3;
+}
+
+.wrapper{
+	width: 100%;
+}
+
+
+/*================================= main ===================================*/
+
+.main-container {
+	width: 1100px;
+	margin: 15px auto 0 auto;
+}
+
+.main-content {
+	position: relative;
+}
+
+.main-content li {
+	display: block;
+	position: relative;
+	float: left;
+	padding: 4px;
+	margin: 5px;
+	border: 1px solid #ccc;
+	background-color: #dad0b5;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 3px rgba(150,150,150,.5);
+	-moz-box-shadow: 0 0 3px rgba(150,150,150,.5);
+	-webkit-box-shadow: 0 0 3px rgba(150,150,150,.5);
+	cursor: pointer;
+}
+
+.main-content li img {
+	width: 200px;
+}
+
+.info {
+	width: 180px;
+	height: 42px;
+	line-height: 42px;
+	padding: 0 10px;
+	background-color: #FFF;
+}
+
+.info label {
+	font-size: 12px;
+	color: #999;
+}
+
+.info a {
+    display: inline-block;
+	height: 18px;
+	line-height: 18px;
+    color: #444;
+    padding: 0 4px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    background-color: #f2f2f2;
+    vertical-align: middle;
+    outline: none;
+}
+
+.info a:hover {
+	color: #FFF;
+	background-color: #e5461c;
+}
+
+
+/*================================= /main ===================================*/
+
+.go-top {
+	position: fixed;
+	width: 37px;
+	height: 38px;
+	left: 50%;
+	margin-left: 570px;
+	bottom: 120px;
+	background: url(../images/icons.png) no-repeat -37px 0;
+	cursor: pointer;
+	display: none;
+}
+
+.go-top:hover {
+	background-position: 1px 0;
+}
+
+.clear-float {
+    zoom: 1;
+}
+
+.clear-float:after {
+    content: ".";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}

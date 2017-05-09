@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8">
+<head>
+	<title>券卡发放列表</title>
+	<link rel="stylesheet/less" type="text/css" href="../less/bass.less">
+	<script src="../js/less.js"></script>
+</head>
+	<style>
+.vouchercardlist{
+	height: 405px;
+	/*width: 354px;*/
+	position: relative;
+}
+.vouchercard .ui-panel-sheet.bottom .ui-panel-sheet-wrap{
+	background: rgba(225,225,225,0.92);
+	background-size:cover;
+	height: auto;
+	line-height: 24px;
+}
+</style>
+<body>
+	<div class="vouchercard">
+		<div class="integraldraw">
+			<div class="wrap-title">
+				<span class="wrap-title-cot"> <b>积分抽奖</b>
+				</span>
+			</div>
+			<div class="ui-grid-cards-list-3">
+				<div class="ui-grid-cards-list-inner">
+					<div class="ui-grid-cards-item" >
+						<div class="test-card vouchercardlist" >
+							<div class="ui-panel-sheet bottom" style="background: url(../imgs/Interaction_01.png) no-repeat;background-size:cover;">
+								<div class="ui-panel-sheet-wrap padding-base">
+									<div class="clearfix text-middle-parent">
+										<span class="pull-left text-middle"> <b>砸金蛋</b>
+										</span>
+										<span class="pull-right color-normal-red-500">
+											<span class="h6">￥</span>
+											<span style="font-size: 20px;">50</span>
+										</span>
+									</div>
+									<div class="gameintroduction color-normal-gray-810">游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介</div>
+									<div class="text-center" style="margin-top:10px;">
+										<button id="export-data" class="ui-btn ui-btn-default w-120" type="button" style="margin-right:15px;">详细介绍</button>
+										<button class="ui-btn ui-btn-green w-120" type="button">立即制作</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-grid-cards-item" >
+						<div class="test-card vouchercardlist" >
+							<div class="ui-panel-sheet bottom" style="background: url(../imgs/Interaction_02.png) no-repeat;background-size:cover;">
+								<div class="ui-panel-sheet-wrap padding-base">
+									<div class="clearfix text-middle-parent">
+										<span class="pull-left text-middle">
+											<b>刮刮卡</b>
+										</span>
+										<span class="pull-right color-normal-red-500">
+											<span class="h6">￥</span>
+											<span style="font-size: 20px;">50</span>
+										</span>
+									</div>
+									<div class="gameintroduction color-normal-gray-810">游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介</div>
+									<div class="text-center" style="margin-top:10px;">
+										<button class="ui-btn ui-btn-default w-120" type="button" style="margin-right:15px;">详细介绍</button>
+										<button class="ui-btn ui-btn-green w-120" type="button">立即制作</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-grid-cards-item" >
+						<div class="test-card vouchercardlist" >
+							<div class="ui-panel-sheet bottom" style="background: url(../imgs/Interaction_03.png) no-repeat;background-size:cover;">
+								<div class="ui-panel-sheet-wrap padding-base">
+									<div class="clearfix text-middle-parent">
+										<span class="pull-left text-middle">
+											<b>摇一摇</b>
+										</span>
+										<span class="pull-right color-normal-red-500">
+											<span class="h6">￥</span>
+											<span style="font-size: 20px;">50</span>
+										</span>
+									</div>
+									<div class="gameintroduction color-normal-gray-810">游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介</div>
+									<div class="text-center" style="margin-top:10px;">
+										<button class="ui-btn ui-btn-default w-120" type="button" style="margin-right:15px;">详细介绍</button>
+										<button class="ui-btn ui-btn-green w-120" type="button">立即制作</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="shopinteraction">
+			<div class="wrap-title">
+				<span class="wrap-title-cot">
+					<b>门店互动</b>
+				</span>
+			</div>
+			<div class="ui-grid-cards-list-3">
+				<div class="ui-grid-cards-list-inner">
+					<div class="ui-grid-cards-item" >
+						<div class="test-card vouchercardlist" >
+							<div class="ui-panel-sheet bottom" style="background: url(../imgs/Interaction_03.png) no-repeat;background-size:cover;">
+								<div class="ui-panel-sheet-wrap padding-base">
+									<div class="clearfix text-middle-parent">
+										<span class="pull-left text-middle">
+											<b>砸金蛋</b>
+										</span>
+										<span class="pull-right color-normal-red-500">
+											<span class="h6">￥</span>
+											<span style="font-size: 20px;">50</span>
+										</span>
+									</div>
+									<div class="gameintroduction color-normal-gray-810">游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介</div>
+									<div class="text-center" style="margin-top:10px;">
+										<button class="ui-btn ui-btn-default w-120" type="button" style="margin-right:15px;">详细介绍</button>
+										<button class="ui-btn ui-btn-green w-120" type="button">立即制作</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div id="dialog1" class="dialog_left fadeIn">
+			<div class="dialog_left_top clear-padding">
+				<div class="dialog_left_tit fw-b">消息</div>
+				<button class="close" type="button">×</button>
+			</div>
+			<div style="padding: 20px 10px;" class="dialog_left_cont ">
+				<div class="dialog_left_cont_wrap">
+					<div style="line-height:24px;">
+						游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介
+					</div>
+					<div class="text-center" style="margin-top:20px;margin-bottom:10px;"><img src="../imgs/Interaction_04.png" alt=""></div>
+					<p class="text-center color-normal-gray-810">扫一扫试玩</p>
+				</div>
+				</div>
+			<div class="dialog_left_bottom">
+				<button style="margin-right:15px;" type="button" class="ui-btn ui-btn-default w-120 btn-no">关闭</button>
+			</div>
+			<!--Modal end-->
+		</div>
+	</div>
+</body>
+<script>
+	/*导出会员按钮事件*/
+    $("#export-data").click(function(){
+        var _$this = $(this),
+            dID = _$this.data("id");
+            if(!dID){
+                var guid = (new Date()).getTime();
+                _$this.data("id", guid);
+                var obj =$('#dialog1');
+                var agt = {modalTit:"砸金蛋", modalSave:"提交", modalCancel:"关闭"};
+                var myModalR = ER.ModalRight(obj,agt);
+                myModalR.callback = function(){
+                    /*提交回调函数*/
+                    //alert("确定!!");
+                }
+                myModalR.callbackCancel = function(){
+                    /*取消回掉函数*/
+                    //alert("取消");
+                }   
+            }else{
+                $('#dialog1').addClass('fadeIn');
+            }   
+    })  
+</script>
+</html>

@@ -1,0 +1,63 @@
+//从容器 左， 上， 右， 下边弹
+.position (@a) when (@a = top) {
+  top:0;
+}
+.position (@a) when (@a = left) {
+  left:0;
+}
+.position (@a) when (@a = right) {
+  right:0;
+}
+.position (@a) when (@a = bottom) {
+  bottom:0;
+}
+
+.ui-panel-sheet-position(@width; @height; @position){
+  >.ui-panel-sheet-wrap {
+    width: @width;
+    height: @height;
+    min-width: 20%;
+    .position(@position)
+  }
+}
+
+.calc-ui-panel-sheet(){
+  .ui-panel-sheet{
+//    .ui-panel-sheet-position(100%; 100%);
+    width:100%;
+    height: 100%;
+    left:0;
+    top:0;
+    position: relative;
+    overflow: hidden;
+
+    .ui-panel-sheet-wrap{
+      position: absolute;
+    }
+    &.top{
+      .ui-panel-sheet-position(100%; 64px; top);
+      >.ui-panel-sheet-wrap {
+        .calc-shadow-bottom();
+      }
+    }
+    &.right{
+      .ui-panel-sheet-position(auto; 100%; right);
+      >.ui-panel-sheet-wrap {
+        .calc-shadow-left();
+      }
+    }
+    &.bottom{
+      .ui-panel-sheet-position(100%; 64px; bottom);
+      >.ui-panel-sheet-wrap {
+        .calc-shadow-top();
+      }
+    }
+    &.left{
+      .ui-panel-sheet-position(auto; 100%; left);
+      >.ui-panel-sheet-wrap {
+        .calc-shadow-right();
+      }
+    }
+  }
+
+}

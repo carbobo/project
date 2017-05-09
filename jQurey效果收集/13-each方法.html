@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            // -------------------------------------------$.each(集合,function(index,value){})
+            
+            // 通用遍历方法，可用于遍历对象和数组。
+            // index--索引，value--索引所对应的值
+            
+            // demo1:-----------遍历数组：
+            // var arr = ['a','f','y'];
+            // $.each(arr,function(index,value){
+            //     console.log(index + '---' + value);
+            // })
+
+
+
+            // //demo2:-------------------遍历JSON
+            // // 参1：键名。   参2：值
+            // $.each({nickName:'cat',age:100},function(key,value){
+            //     console.log(key + '---' + value);
+            // });
+
+
+            // demo3:-------------------遍历DOM
+            // value:返回的是js对象
+            // $.each($("ul li"),function(index,value){
+            //     console.log(index + '---' + value.innerHTML);
+            // });
+
+
+
+
+            //--------------------------------------------$().each:遍历对象
+            // $().each(function(i){}) :  i 为索引，$(this)遍历的当前对象
+            $("ul li").each(function(i){
+                console.log($(this).html() + '-----' + i);
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>a1</li>
+        <li>a2</li>
+        <li>a3</li>
+        <li>a4</li>
+        <li>a5</li>
+    </ul>
+</body>
+</html>

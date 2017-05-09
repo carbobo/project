@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*p {
+        height: 20px;
+        background-color: yellowgreen;
+        cursor: pointer;
+    }
+    .div2 {
+        width: 500px;
+        height: 500px;
+        background-color: yellow;
+    }
+    .div3 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }*/
+
+    p { height: 30px; width: 150px; background-color: #ccf; }
+    div {height: 30px; width: 150px; background-color: #cfc; }
+    </style>
+</head>
+<body>
+<!-- <div class="div1">
+    <p>第一个p</p>
+    <p>第二个p</p>
+    <p>第三个p</p>
+    <p>第四个p</p>
+</div> -->
+<!-- <div class="div2">
+    <div class="div3"></div>
+</div> -->
+<div>
+    <p>paragraph</p>
+</div>
+    <a href="#">我是a标签</a>
+    <!-- <input type="text"> -->
+    <!-- <button id="btn">test</button> -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    $(function() {
+        // $(".div1 p").dblclick(function () {
+        //     alert($(this).text());
+        // });
+        // $(".div1 p").hover(function () {
+        //         alert($(this).text());
+        //     });
+        // $("input").on("blur",function () {
+        //     alert("blur");
+        // });
+        // click on
+        // $("#btn").click(function () {
+        //     $(".div2").html('<p id="pp">123</p>');
+        //     // text
+        // });
+        // $("#pp").click(function () {
+        //     alert("this is pp");
+        // });
+        // $(".div2").on("click","#pp",function () {
+        //     alert("this is pp");
+        // });
+        // $(".div2").delegate("#pp","click", function () {
+        //     alert("this is pp");
+        // });
+        // $(".div2").click(function (event) {
+        //     console.log(event);
+        // });
+        // $(".div3").click(function (event) {
+        //     console.log(event);
+        // });
+        $("p").click(function(event){
+            event.stopImmediatePropagation();
+            alert("自己");
+        });
+        $("p").click(function(event){
+            // This function won't be executed
+            alert("我是p");
+        });
+        $("div").click(function(event) {
+            // This function will be executed
+            alert("我是div");
+        });
+
+        $("a").click(function(e) {
+            e.preventDefault();
+        })
+    });
+    </script>
+</body>
+</html>

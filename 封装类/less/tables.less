@@ -1,0 +1,96 @@
+.cacl-striped-rows(){
+//  >table{
+
+    > tbody{
+      > tr:nth-child(odd){
+        background-color:@table-tr-odd-bg ;
+      }
+    }
+
+//  }
+}
+
+// .table-bordered {
+//   border: 1px solid @table-border-color;
+//   > thead,
+//   > tbody,
+//   > tfoot {
+//     > tr {
+//       > th,
+//       > td {
+//         border: 1px solid @table-border-color;
+//       }
+//     }
+//   }
+//   > thead > tr {
+//     > th,
+//     > td {
+//       border-bottom-width: 2px;
+//     }
+//   }
+// }
+
+.ui-table-outer{
+  .calc-shadow();
+  .padding-base;
+}
+
+.ui-table {
+//  padding:@padding-base-horizontal;
+//  .calc-shadow();
+//  > table{
+      width: 100%;
+      max-width: 100%;
+//      margin-bottom: @line-height-computed;
+      // Cells
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td {
+            height: 40px;
+            padding: @table-cell-padding;
+//            line-height: @line-height-base;
+            vertical-align: middle;
+            border-top: 1px solid @table-border-color;
+          }
+        }
+      }
+      // Bottom align for column headings
+      > thead > tr > th {
+//        vertical-align: bottom;
+        border-bottom: 2px solid @table-border-color;
+        color:@table-th-color;
+        font-weight: normal;
+      }
+      // Remove top border from thead by default
+      > caption + thead,
+      > colgroup + thead,
+      > thead:first-child {
+        > tr:first-child {
+          > th,
+          > td {
+            border-top: 0;
+          }
+        }
+      }
+      // Account for multiple tbody instances
+      > tbody + tbody {
+        border-top: 2px solid @table-border-color;
+      }
+
+      .text-center td,
+      .text-center th{
+        text-align: center;
+      }
+      // Nesting
+      .table {
+        background-color: @body-bg;
+      }
+//  }
+
+  &.ui-striped-rows{
+    .cacl-striped-rows()
+  }
+}

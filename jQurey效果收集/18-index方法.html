@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+$(function(){
+    // var w = $('li').index(document.getElementById('bar')); //1，传递一个DOM对象，返回这个对象在原先集合中的索引位置
+    // console.log(w);
+
+    // var w = $('li').index($('#baz')); //1，传递一个jQuery对象
+    // console.log(w);
+
+    // var w = $('li').index($('li:gt(0)')); //1，传递一组jQuery对象，返回这个对象中第一个元素在原先集合中的索引位置
+    // console.log(w);
+
+
+    // var w = $('#baz').index('li'); //1，传递一个选择器，返回#bar在所有li中的索引位置
+    // console.log(w);
+    
+    var w = $('#bar').index(); //1，不传递参数，返回这个元素在父元素中同辈中的索引位置。  
+    console.log(w);
+});
+</script>
+</head>
+<body>
+    
+    <ul>
+        <li>a</li>
+        <li>a</li>
+    </ul>
+
+    <ul>
+      <li id="foo">foo</li>
+      <li id="bar">bar</li>
+      <li id="baz">baz</li>
+    </ul>
+
+    <ul>
+        <li>0000</li>
+        <li>0000</li>
+        <li>0000</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-07 17:54:21
+ * @version $Id$
+ */
+
+html{height:100%;}
+body{width:7.5rem;background:url(../images/register.png) no-repeat;background-size:100% 100%;margin:0 auto;}
+/*header 样式*/
+.head img{width:2.22rem;height:2.22rem;margin-top:1.1rem;margin-left:2.5rem;margin-bottom:.2rem;} 
+ /*text 样式*/
+ .text{font-size:.32rem;text-align:center;color:#eae1d9;margin-bottom:.6rem;}
+ .text .left-line,.text .right-line{display:inline-block;height:.03rem;width:1.89rem;background-color:#9a9a9a;vertical-align:top;margin-top:.18rem;}
+ /*form 样式*/
+ form{text-align:center;border:0 none;outline:0;font-size:0;}
+ form .input1,form .input2{width:5.87rem;margin:0 auto;}
+ form .input1 input,form .input2 input{text-indent:2.17rem;line-height:.3rem;}
+ form input{width:100%;height:.95rem;margin-bottom:.22rem;border-radius:.2rem;font-size:.3rem;border:0 none;outline:0;}
+ form .input1 p,form .input2 p{position:absolute;left:0;top:.36rem;font-size:.3rem;border-right:.03rem solid #c3c3c3;line-height:.3rem;padding:0 0.28rem;}
+ form button{margin-top:.47rem;width:5.87rem;height:.95rem;border-radius:.2rem;background-color:#999999;border:0 none;outline:0;font-size:.32rem;color:#fff;}

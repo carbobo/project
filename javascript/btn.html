@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>
+</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/bootstrap.css" rel="stylesheet">
+<style>
+    .btn1{color: #fff;background-color: #5bc0de;border-color: #46b8da;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    }
+</style>
+</head>
+<body>
+<btn class=" btn1">按钮</btn>
+<script>
+    var fun1 = function(b,c,a){
+        return c + a +b
+    }
+    var fun2 = function(c,a,b){
+        return b  + c + a
+    }
+    console.log(fun1.call(fun2,"fun1","fun2",3))
+</script>
+</body>
+</html>

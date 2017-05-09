@@ -1,0 +1,352 @@
+// 字体
+// 字号
+// 颜色 色标
+// 边框
+// 阴影
+// 左浮动
+// 右浮动
+// Sizing    分级 内容顶部菜单
+// button
+
+@icon-font-path:          "../fonts/";
+@icon-font-name:          "glyphicons-halflings-regular";
+//** Element ID within SVG icon file.
+@icon-font-svg-id:        "glyphicons_halflingsregular";
+
+@white:                   #fff;
+@gray-base:               #000;
+@gray-darker:             lighten(@gray-base, 13.5%); // #222
+@gray-dark:               lighten(@gray-base, 20%);   // #333
+@gray:                    lighten(@gray-base, 33.5%); // #555
+@gray-light:              lighten(@gray-base, 46.7%); // #777
+@gray-lighter:            lighten(@gray-base, 93.5%); // #eee
+
+
+@base-width:              20px;
+
+@body-bg:                  #fff;
+@font-size-base:          14px;
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+//@line-height-base:        1.428571429; // 20/14
+@line-height-base:        1; // 20/14
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+// 圆角
+@border-radius-base:        4px;
+
+//@border-btn-radius-base:   2px;
+@padding-base-vertical:     12px;
+@padding-base-horizontal:   12px;
+
+//色标
+@brand-green: #8bc34a ;
+@brand-red: #f44336;
+//
+
+// 全局链接颜色
+//** Global textual link color.
+@link-color:            @gray-light;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 15%);
+
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-yahei :  "Microsoft Yahei";
+@font-family-base:        @font-family-yahei;
+
+//button 按钮
+@btn-font-weight:                normal;
+@btn-default-color:              @light-green-500;
+@btn-default-bg:                 #fff;
+@btn-default-border:             @light-green-500;
+
+@btn-green-color:                @white;
+@btn-green-bg:                   @brand-green;
+// @btn-green-border:               darken(@btn-green-bg, 5%);
+@btn-green-border:               @brand-green;
+
+@btn-red-color:                   @white;
+@btn-red-bg:                      @brand-red;
+// @btn-red-border:                  darken(@btn-green-bg, 5%);
+@btn-red-border:                  @brand-red;
+
+@btn-gray-color:                   #333;
+@btn-gray-bg:                      @white;
+@btn-gray-border:                 darken(@gray-dark, 5%);
+@btn-border-radius-base:          (@border-radius-base / 2);
+
+
+//表单
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+//@input-height-base:              @line-height-computed;
+
+@input-bg:                        @white;
+@input-bg-disabled:              @gray-lighter;
+
+//** Text color for `<input>`s
+@input-color:                    @gray;
+//** `<input>` border color
+@input-border:                   #ccc;
+@input-border-radius:           (@border-radius-base / 2);
+
+@cursor-disabled:                not-allowed;
+
+//** Background color for textual input addons
+@input-group-addon-bg:           @gray-lighter;
+//** Border color for textual input addons
+@input-group-addon-border-color: @input-border;
+
+@form-element-height:             40px;
+@form-element-select-padding:     6px 30px 6px 10px;
+@form-element-select--radius:     @input-border-radius;
+
+// Grid 网格
+@grid-columns:                     12;
+
+//Table 表格
+@table-border-color:            @normal-gray-310;
+@table-cell-padding:            10px;
+@table-tr-odd-bg:                @normal-gray-204;
+@table-th-color:                 @normal-gray-810;
+
+
+//panel
+@panel-bg:                                  @white;
+@panel-body-padding:                       20px;
+@panel-heading-padding:                   10px 20px;
+@panel-head-bg:                            @normal-gray-204;
+@panel-head-border-bottom-color:         @normal-gray-310;
+//@panel-footer-padding:        @panel-heading-padding;
+//@panel-border-radius:         @border-radius-base;
+@panel-footer-padding:       @panel-heading-padding;
+@panel-border-radius:       0;
+
+// warp title
+// 容器标题
+//== Pagination
+//
+//##
+
+@pagination-color:                     @link-color;
+@pagination-bg:                        #fff;
+@pagination-border:                    #ddd;
+
+@pagination-hover-color:               @link-hover-color;
+@pagination-hover-bg:                  @gray-lighter;
+@pagination-hover-border:              #ddd;
+
+@pagination-active-color:              #fff;
+@pagination-active-bg:                 @brand-green;
+@pagination-active-border:             @brand-green;
+
+@pagination-disabled-color:            @gray-light;
+@pagination-disabled-bg:               #fff;
+@pagination-disabled-border:           #ddd;
+
+@wrap-title-border-color: @gray-base;
+@wrap-title-border-width: 3px;
+
+
+//== Tabs
+@nav-tabs-border-color:                     #ddd;
+@nav-tabs-link-hover-border-color:          @gray-lighter;
+
+@nav-tabs-active-link-hover-bg:             @body-bg;
+@nav-tabs-active-link-hover-color:          @gray;
+@nav-tabs-active-link-hover-border-color:   #ddd;
+
+@nav-tabs-hover-bg:                         @normal-gray-607; 
+
+
+@nav-tabs-justified-link-border-color:            #ddd;
+@nav-tabs-justified-active-link-border-color:     @body-bg;
+
+@ui-tabs-item-padding :                       10px 15px;
+@nav-tabs-active-border-color:               @light-green-500;
+@nav-tabs-active-color:                       @light-green-500;
+
+//ui-tree
+//@ui-tree-padding-left: @padding-base-horizontal;
+@ui-tree-padding-left: 30px;
+@ui-tree-title-height: 32px;
+
+@ui-left-menu-Level1-height : 60px;
+@ui-left-menu-Level2-height :48px;
+
+//@ui-left-menu-icon-size: 20px;
+@ui-left-menu-icon-size: 16px;
+
+//菜单文字颜色
+@ui-left-menu-color:#95999d;
+@ui-left-menu-hover-color:@white;
+@ui-left-menu-hover-bg:#2b323a;
+@left-menu-right-icon-color:@light-green-500;
+
+@layout-padding-base-horizontal: 40px;
+@layout-padding-base-vertical: 20px;
+
+@layout-head-bg:                    @light-green-500;
+@layout-left-bg:                    @gray-darker;
+@layout-cot-bg:                     @normal-gray-210;
+@layout-footer-bg:                  @gray-light;
+
+
+@margin-base-vertical: 20px;
+@form-field-padding: @base-width;
+@form-field-height: @base-width*2;
+
+
+//补 color
+@light-green-500:      			#8BC34A;
+@normal-green-400:              #66BB6A;
+@normal-blue-400:               #42A5F5;
+@normal-pink-400:               #EC407A;
+@deep-purple-400:      			#7E57C2;
+@normal-indigo-410:				#47639E;
+@normal-orange-400:				#FFA726;
+@normal-brown-400:				#8D6E63;
+
+//错误提示
+@normal-red-500:       #F44336;
+@normal-gray-210:      #EFEFEF;
+@normal-gray-240:      #EEEEEE;
+@normal-gray-204:      #F9F9F9;
+@normal-gray-310:      #E6E6E6;
+
+@normal-gray-607:      #C7C7C7;
+
+
+//主要文字
+@normal-gray-910:      #333531;
+//次要文字
+@normal-gray-810:      #848583;
+//辅助文字
+@normal-gray-510:      #B6B6B6;
+//信息框背景色
+@normal-red-51:        #FFEDED;
+@normal-blue-41:       #DEEFFD;
+@normal-orange-51:     #FFF2E3;
+
+
+//button 边框
+//panel 内容默认 20px
+//用到所有颜色
+//常用 padding, margin
+//常用宽度，高度, px, %
+
+
+@square-size:12, 24, 34, 36, 40, 48, 64, 72, 120;
+//常用宽度
+@width-size: 70 70px, 80, 80px, 120 120px, 160 160px, 300 300px, p-10 10%, p-20 20%, p-30 30%, p-40 40%, p-50 50%, p-60 60%, p-70 70%, p-80 80%, p-90 90%, p-100 100%;
+//w-70
+//70px
+//百分比
+//w-p-70
+//70%
+
+//新增 color-
+@common-colors:   normal-blue-400 @normal-blue-400,
+				  light-green-500 @light-green-500,
+				  deep-purple-400 @deep-purple-400,
+				  white @white,
+				  normal-green-400 @normal-green-400,
+				  normal-gray-910 @normal-gray-910,
+				  normal-gray-810 @normal-gray-810,
+				  normal-gray-510 @normal-gray-510,
+				  normal-gray-607 @normal-gray-607,
+				  normal-red-500 @normal-red-500,
+
+                  normal-pink-400 @normal-pink-400,
+                  normal-indigo-410 @normal-indigo-410,
+                  normal-orange-400 @normal-orange-400,
+                  normal-brown-400 @normal-brown-400,
+                  normal-gray-210 @normal-gray-210,
+                  normal-gray-240 @normal-gray-240,
+				  normal-gray-204 @normal-gray-204,
+				  normal-gray-310 @normal-gray-310,
+                  normal-red-51 @normal-red-51,
+                  normal-blue-41 @normal-blue-41,
+                  normal-orange-51 @normal-orange-51;
+
+@common-bg-colors: normal-blue-400 @normal-blue-400,
+				   light-green-500 @light-green-500,
+				   deep-purple-400 @deep-purple-400,
+				   white @white,
+				   normal-green-400 @normal-green-400,
+				   normal-gray-910 @normal-gray-910,
+				   normal-gray-810 @normal-gray-810,
+				   normal-gray-510 @normal-gray-510,
+				   normal-gray-607 @normal-gray-607,
+				   normal-red-500 @normal-red-500,
+
+				  normal-pink-400 @normal-pink-400,
+				  normal-indigo-410 @normal-indigo-410,
+				  normal-orange-400 @normal-orange-400,
+				  normal-brown-400 @normal-brown-400,
+				  normal-gray-210 @normal-gray-210,
+				  normal-gray-240 @normal-gray-240,
+				  normal-gray-204 @normal-gray-204,
+				  normal-gray-310 @normal-gray-310,
+				  normal-red-51 @normal-red-51,
+				  normal-blue-41 @normal-blue-41,
+				  normal-orange-51 @normal-orange-51;
+
+//@width, @height, @before-color, @after-color, @ab-height, @ab-width, @font-size
+@switch: sm 50 18 #8bc34a #eee 18 15 10, lg 120 35 #8bc34a #eee 35 35 14;
+
+//@base-size:10;
+@ui-info-height:						40px;
+@ui-warning-color:						@normal-red-500;
+@ui-warning-bgcolor:					@normal-red-51;
+
+@ui-instructions-color:					@normal-blue-400;
+@ui-instructions-bgcolor:				@normal-blue-41;
+
+@ui-prompt-color:						@normal-orange-400;
+@ui-prompt-bgcolor:						@normal-orange-51;
+
+
+
+@operation-hover-bg-color: 				@normal-gray-240;
+
+
+
+//@light-green-8bc: #8BC34A;
+//@green-66b:#66BB6A;
+//@blue-42a:#42A5F5;
+////表格 里 灰
+//@gray-efe:#EFEFEF;
+
+
+.text-color-normal{
+  color:@normal-gray-910;
+}
+.text-color-normal-gray{
+  color:@normal-gray-810;
+}
+
+
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+//  color: @gray-910;
+  .text-color-normal;
+  font-size: @font-size-base;
+  background-color: @gray-lighter;
+}
