@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>蜜月旅拍</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" type="text/css" href="style/waterfall.css">
+    <link rel="stylesheet" type="text/css" href="style/water.css">
+    <script src='js/jquery-1.12.4.js'></script>
+    <script src='js/jquery.color.js'></script>
+    <script src='js/style.js'></script>
+    <script src='js/picslice.js'></script>
+</head>
+<body>
+<div class="waterfallTop">
+    <!--顶部导航栏-->
+
+    <!--导航栏开始-->
+    <div class="header clearfix">
+        <div class="logo">
+            <a href="#">金夫人婚摄摄影</a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="../首页/index.html" class="change">官方首页</a></li>
+                <li class="slide">
+                    <a href="../原创页面/html/detail.html" class="change">原创作品</a>
+                    <dl>
+                        <dd><a href="#" class="change">样片展示</a></dd>
+                        <dd><a href="#" class="change">独家外景</a></dd>
+                    </dl>
+                </li>
+                <li><a href="蜜月旅拍.html" class="current-col">蜜月旅拍</a></li>
+                <li><a href="#" class="change">电影制作</a></li>
+                <li class="slide">
+                    <a href="#" class="change">最新活动</a>
+                    <dl>
+                        <dd><a href="#" class="change">团购</a></dd>
+                        <dd><a href="#" class="change">历史活动</a></dd>
+                    </dl>
+                </li>
+                <li><a href="#" class="change">高端会所</a></li>
+                <li><a href="#" class="change">真实客照</a></li>
+                <li class="slide">
+                    <a href="#" class="change">关于我们</a>
+                    <dl>
+                        <dd><a href="#" class="change">品牌介绍</a></dd>
+                        <dd><a href="#" class="change">品牌礼服</a></dd>
+                        <dd><a href="#" class="change">新闻中心</a></dd>
+                        <dd><a href="#" class="change">招聘信息</a></dd>
+                    </dl>
+                </li>
+                <li><a href="../游戏/index.html" class="change">Click Me！</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--导航栏结束-->
+
+    <!--返回顶部开始-->
+    <div class="actGotop"><a href="javascript:;" title="Top"></a></div>
+    <!--返回顶部结束-->
+
+
+    <!--中间内容-->
+    <div class="main">
+        <!--左边图片-->
+        <div class="m-left fl">
+            <img src="images/lef.jpg" alt="">
+            <span>纯真主义</span>
+        </div>
+        <!--中间图片特效-->
+        <div class="m-center" id="center">
+            <div id="img"></div>
+            <div id="btns">
+
+                <a href="#" class="btnstyle">
+                    <span id="btn_explode" type="button" value="" class="btn_01">
+                        <img src="images/waterslice11.jpg" alt=""/>
+                    </span>
+                    <span class="line line-top"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-left"></span>
+                </a>
+                <a href="#" class="btnstyle">
+                    <span id="btn_tile" value="" class="btn_02"> <img src="images/waterslice12.jpg" alt=""/></span>
+                    <span class="line line-top"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-left"></span>
+                </a>
+                <a href="#" class="btnstyle">
+                    <span id="btn_bars" type="button" value="" class="btn_03">
+                        <img src="images/waterslice13.jpg" alt=""/>
+                    </span>
+                    <span class="line line-top"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-left"></span>
+                </a>
+                <a href="#" class="btnstyle">
+                    <span id="btn_cube" type="button" value="" class="btn_04">
+                        <img src="images/waterslice14.jpg" alt=""/>
+                    </span>
+                    <span class="line line-top"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-left"></span>
+                </a>
+                <a href="#" class="btnstyle" id="lasta">
+                    <span id="btn_turn" type="button" value="" class="btn_05">
+                        <img src="images/waterslice15.jpg" alt=""/>
+                    </span>
+                    <span class="line line-top"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-left"></span>
+                </a>
+            </div>
+        </div>
+        <!--右边图片-->
+        <div class="m-right fl">
+            <img src="images/rig.png" alt="">
+            <span>简约风尚</span>
+        </div>
+    </div>
+    <!--左边点击显示大图-->
+    <div class="imgbig ibig1">
+        <span>×</span>
+        <img src="images/lefbig.jpg" alt="" class="leftimg">
+    </div>
+    <!--右边点击显示大图-->
+    <div class="imgbig ibig2">
+        <span>×</span>
+        <img src="images/rigbig.png" alt="" class="rigimg">
+    </div>
+</div>
+<!--图片翻转-->
+<div class="picNav clearfix" id="content">
+    <ul>
+        <li>
+            <a href="#" target="_blank">
+                <div><img alt="" src="images/t1.jpg"/></div>
+                <div>
+                    <img alt="" src="images/t1.jpg"/>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" target="_blank">
+                <div>
+                    <img alt="" src="images/t2.jpg"/>
+                </div>
+                <div>
+                    <img alt="" src="images/t2.jpg"/>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" target="_blank">
+                <div><img alt="" src="images/t3.jpg"/></div>
+                <div>
+                    <img alt="" src="images/t3.jpg"/>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" target="_blank">
+                <div>
+                    <img alt="" src="images/t4.jpg"/>
+                </div>
+                <div>
+                    <img alt="" src="images/t4.jpg"/>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" target="_blank">
+                <div>
+                    <img alt="" src="images/t5.jpg"/>
+                </div>
+                <div>
+                    <img alt="" src="images/t5.jpg"/>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<!--瀑布流-->
+<div class="wrap clearfix:after" id='wrap'>
+    <div class="box">
+        <div class="pic">
+            <img src="images/8.jpg" alt="">
+            <div class="face">
+                <p>十年前你是谁，一年前你是谁，甚至昨天你是谁，都不重要。重要的是，今天你是谁?</p>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/1.jpg" alt="">
+
+            <div class="face">
+                <div></div>
+                <p>人生是很累的，你现在不累，以后就会更累。</p>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/2.jpg" alt="">
+            <div class="face">
+                <p>顺境中意气风发，困境是也应该坦然面对，这才是积极的人生。</p>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/3.jpg" alt="">
+
+            <div class="face">
+                <p>习惯着彼此的语言，重复万遍也不觉厌倦;等待着彼此的晚安，只因为心里那份惦念。</p>
+
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/4.jpg" alt="">
+
+            <div class="face">
+                <p>若有若无的联系，是一份随意;或深或浅的交集，是一份默契。</p>
+
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/5.jpg" alt="">
+
+            <div class="face">
+                <p>没有人陪你走一辈子，所以你要适应孤独;没有人会帮你一辈子，所以你要一直奋斗。(</p>
+
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

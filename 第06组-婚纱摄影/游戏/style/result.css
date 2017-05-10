@@ -1,0 +1,121 @@
+@keyframes rank {
+    0% {
+        visibility: visible;
+        transform: scale(10, 10) rotate(15deg);
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        transform: scale(1, 1) rotate(15deg);
+    }
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(10px) translateY(6px);
+    }
+    50% {
+        transform: translateX(-2px) translateY(-5px);
+    }
+    75% {
+        transform: translateX(-2px) translateY(-6px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+    background-color: #262626;
+}
+
+.wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 840px;
+    height: 400px;
+    margin: -200px 0 0 -420px;
+    border-radius: 8px;
+    animation-name: shake;
+    animation-duration: 0.2s;
+    animation-delay: 1.8s;
+    animation-timing-function: linear;
+}
+
+.wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.wrapper p {
+    position: absolute;
+    left: 285px;
+    font-size: 18px;
+    color: #333;
+}
+
+.wrapper .time {
+    top: 263px;
+}
+
+.wrapper .level {
+    top: 295px;
+}
+
+.wrapper .score {
+    top: 329px;
+}
+
+.wrapper .mark {
+    visibility: hidden;
+    top: 240px;
+    left: 520px;
+    width: 130px;
+    height: 130px;
+    border: 5px solid #f00;
+    color: #f00;
+    border-radius: 50%;
+    animation-name: rank;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+    animation-timing-function: ease;
+    font: 120px/140px "28 Days Later";
+    text-align: center;
+}
+
+.again {
+    position: absolute;
+    left: 50%;
+    bottom: -80px;
+    margin: 0 0 0 -100px;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font: 14px/40px "Microsoft YaHei";
+    text-align: center;
+    cursor: pointer;
+    background-color: #0063c7;
+    color: #fff;
+    text-shadow: 0 -1px 0 #0840b9;
+}
+.again:hover {
+    background-color: #0080c8;
+}
+.again:active {
+    background-color: #004ac7;
+}

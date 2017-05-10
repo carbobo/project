@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0035)http://www7.53kf.com/iframe_fav.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title></title>
+<script type="text/javascript">
+//document.domain = "53kf.com";
+
+var is_fav=parent.is_fav;
+var fav_addr = parent.fav_addr;
+var cname=parent.cname;
+var rlnk = 0;
+
+var isPopup = false;
+
+function window_beforeunload()
+{
+  if(typeof(stop_beforeunload)!='undefined'){
+	  if(stop_beforeunload === 1){
+		return false;
+	  }
+  }
+  if(is_fav==1 && rlnk==0) 
+  {
+		if(!isPopup){
+			addBookmark();
+			isPopup = true;
+		}
+  }
+}
+
+function addBookmark() 
+{
+  try
+  {
+		if(document.all){
+			window.external.addFavorite(fav_addr, cname);
+		}else if(window.sidebar){
+			window.sidebar.addPanel(cname, fav_addr,'');
+		}
+  }catch(e){}
+}
+</script>
+</head>
+<body onunload="window_beforeunload();" onbeforeunload="window_beforeunload();">
+
+</body></html>

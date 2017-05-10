@@ -97,7 +97,7 @@
 
         </ul>
     </div>
-    <div class="right-box fl">
+    <div class="right-box fl right-box1">
         <div class="item item1" id="item1">插件一</div>
         <div class="item item2" id="item2">插件二</div>
         <div class="item item3" id="item3">插件三</div>
@@ -117,7 +117,10 @@
 
             // 插件一
     // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('item1'));
+        var myChart1 = echarts.init(document.getElementById('item1'));
+        var myChart2 = echarts.init(document.getElementById('item2'));
+        var myChart3 = echarts.init(document.getElementById('item3'));
+        var myChart4 = echarts.init(document.getElementById('item4'));
 
         // 指定图表的配置项和数据
         var option = {
@@ -164,10 +167,10 @@
         };
 
         // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-        // myChart2.setOption(option);
-        // myChart3.setOption(option);
-        // myChart4.setOption(option);
+        myChart1.setOption(option);
+        myChart2.setOption(option);
+        myChart3.setOption(option);
+        myChart4.setOption(option);
 
         });
     </script>

@@ -1,0 +1,828 @@
+@charset "UTF-8";
+/*设置默认编码集*/
+
+body {
+    overflow-x: hidden;
+}
+
+/*works部分开始*/
+.works {
+    text-align: center;
+    margin-top: 47px;
+    width: 712px;
+}
+
+.works .excl {
+    display: block;
+    margin-top: 13px;
+    margin-left: 130px;
+}
+
+.works p {
+    text-align: center;
+    margin-top: 13px;
+    line-height: 1.6;
+    font-size: 1em;
+    color: #9F9F9F;
+    font-family: "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+}
+
+.works small {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 8px;
+    color: #D3D3D3;
+    text-transform: uppercase;
+    font-family: "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+}
+
+/*works部分结束*/
+
+/*our-works部分开始*/
+.our-works {
+    margin-top: 80px;
+}
+
+.our-works .sectionTitle {
+    background: url(../images/theme_title.png) 50% 50% no-repeat;
+}
+
+.our-works li {
+    float: left;
+    background-color: #fff;
+    width: 24%;
+    position: relative;
+    margin: 0 0.5% 45px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.our-works dl {
+    width: 95%;
+    margin: 2.3% auto 0;
+    overflow: hidden;
+}
+
+.our-works dt {
+    background-color: #000;
+    position: relative;
+    height: 374px;
+    overflow: hidden;
+}
+
+.our-works dt span {
+    display: block;
+    width: 140px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    margin-left: -70px;
+    top: 50%;
+    margin-top: -35px;
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+    transition: all .3s ease-in 0s;
+    -webkit-transition: all .3s ease-in 0s;
+    -moz-transition: all .3s ease-in 0s;
+    -ms-transition: all .3s ease-in 0s;
+}
+
+.our-works dt span i {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -17px;
+    top: 50%;
+    margin-top: -17px;
+    width: 34px;
+    height: 34px;
+    background: url(../images/zp-suo.png) no-repeat center center;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transition: all .3s ease-in 0s;
+    -webkit-transition: all .3s ease-in 0s;
+    -moz-transition: all .3s ease-in 0s;
+    -ms-transition: all .3s ease-in 0s;
+}
+
+.our-works dt span:before {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 0%;
+    border-top: 1px solid #fff;
+    transition: all .3s ease-in 0s;
+    -webkit-transition: all .3s ease-in 0s;
+    -moz-transition: all .3s ease-in 0s;
+    -ms-transition: all .3s ease-in 0s;
+}
+
+.our-works dt span:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    border-top: 1px solid #fff;
+    transition: all .3s ease-in 0s;
+    -webkit-transition: all .3s ease-in 0s;
+    -moz-transition: all .3s ease-in 0s;
+    -ms-transition: all .3s ease-in 0s;
+}
+
+.our-works li:hover dt span {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.our-works li:hover dt span i {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+}
+
+.our-works li:hover dt span:before {
+    width: 100%;
+}
+
+.our-works li:hover dt span:after {
+    width: 100%;
+}
+
+.our-works dd {
+    padding: 5% 0;
+    position: relative;
+}
+
+.our-works dd h5 {
+    color: #D5D5D5;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.our-works dd h4 {
+    color: #818181;
+    margin-top: 4px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.our-works dd em {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 20px;
+    height: 7px;
+    overflow: hidden;
+    background: url(../images/sj-jtpng.png) no-repeat left bottom;
+}
+
+/*our-works部分结束*/
+
+/* 公共标题开始 */
+.sectionTitle {
+    position: relative;
+    width: 1200px;
+    height: 186px;
+    text-indent: -9999px;
+    margin-bottom: 30px;
+}
+
+.sectionTitle:before {
+    position: absolute;
+    top: 0;
+    width: 1200px;
+    height: 11px;
+    content: "";
+    display: block;
+    background: url(../images/exclback.png) 50% 50% no-repeat;
+}
+
+.sectionTitle:after {
+    position: absolute;
+    bottom: 0;
+    width: 1200px;
+    height: 11px;
+    content: "";
+    display: block;
+    background: url(../images/exclback.png) 50% 50% no-repeat;
+}
+
+/* 公共标题结束 */
+
+/*手风琴开始*/
+.accordion {
+    width: 1200px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.accordion li {
+    position: relative;
+    width: 240px;
+    height: 400px;
+    float: left;
+    overflow: hidden;
+}
+
+.accordion li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: left center;
+    transition: transform 1s;
+}
+
+.accordion li:hover img {
+    transition: transform 10s;
+    transition-delay: 0.3s;
+    transition-timing-function: linear;
+    transform: scale(1.1);
+}
+
+.accordion ul {
+    width: 1220px;
+}
+
+.mask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background: #fff;
+    z-index: 10;
+}
+
+.icon {
+    position: absolute;
+    left: 120px;
+    top: 50%;
+    margin: -50px 0 0 -50px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    z-index: 20;
+}
+
+.accordion .decoration {
+    width: 352px;
+    height: 23px;
+    background: url(../images/deco-text.png) no-repeat;
+}
+
+.accordionText {
+    position: absolute;
+    width: 500px;
+    height: 265px;
+    top: 135px;
+}
+
+.accordionText p {
+    position: absolute;
+    top: 265px;
+}
+
+.accordionText.text1 {
+    left: 368px;
+}
+
+.accordionText .type {
+    width: 298px;
+    height: 32px;
+}
+
+.accordionText.text1 .type {
+    background: url(../images/1-1.png) no-repeat;
+}
+
+.accordionText.text1 .slogan {
+    width: 400px;
+    height: 51px;
+    background: url(../images/1-2.png) no-repeat;
+}
+
+.accordionText.text2 {
+    left: 390px;
+}
+
+.accordionText.text2 .type {
+    background: url(../images/2-1.png) no-repeat;
+}
+
+.accordionText.text2 .slogan {
+    width: 400px;
+    height: 51px;
+    background: url(../images/2-2.png) no-repeat;
+}
+
+.accordionText.text3 {
+    left: 325px;
+}
+
+.accordionText.text3 .type {
+    background: url(../images/3-1.png) no-repeat;
+}
+
+.accordionText.text3 .slogan {
+    width: 400px;
+    height: 51px;
+    background: url(../images/3-2.png) no-repeat;
+}
+
+.accordionText.text4 {
+    left: 400px;
+}
+
+.accordionText.text4 .type {
+    background: url(../images/4-1.png) no-repeat;
+}
+
+.accordionText.text4 .slogan {
+    width: 339px;
+    height: 51px;
+    background: url(../images/4-2.png) no-repeat;
+}
+
+.accordionText.text5 {
+    left: 280px;
+}
+
+.accordionText.text5 .type {
+    background: url(../images/5-1.png) no-repeat;
+}
+
+.accordionText.text5 .slogan {
+    width: 496px;
+    height: 51px;
+    background: url(../images/5-2.png) no-repeat;
+}
+
+/*手风琴结束*/
+
+/*结尾部分开始*/
+.footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    height: 54px;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    cursor: pointer;
+}
+
+.footer span {
+    display: block;
+    width: 100%;
+    height: 22px;
+    background: url(../images/fhdb.png) no-repeat center bottom;
+}
+
+.footer i {
+    font-style: normal;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #b7b7b7;
+    padding-top: 7px;
+}
+
+/*结尾部分结束*/
+
+/*基本样式开始*/
+
+.tripWrapper {
+    width: 100%;
+    min-width: 100%;
+    background-color: #e7e7e7;
+}
+
+.tripBox {
+    margin: 60px auto 0 auto;
+    padding: 40px 0 40px 0;
+    width: 1150px;
+    position: relative;
+    /*background-color: #EFEFEF;*/
+}
+
+.tripBox .sectionTitle {
+    position: relative;
+    width: 1200px;
+    height: 186px;
+    text-indent: -9999px;
+    margin-bottom: 20px;
+    background: url(../images/trip_title.png) 50% 50% no-repeat;
+}
+
+.tripBox .sectionTitle:before {
+    position: absolute;
+    top: 0;
+    width: 1200px;
+    height: 11px;
+    content: "";
+    display: block;
+    background: url(../images/exclback.png) 50% 50% no-repeat;
+}
+
+.tripBox .sectionTitle:after {
+    position: absolute;
+    bottom: 0;
+    width: 1200px;
+    height: 11px;
+    content: "";
+    display: block;
+    background: url(../images/exclback.png) 50% 50% no-repeat;
+}
+
+.tripBox .left {
+    height: 500px;
+    overflow: hidden;
+    width: 1150px;
+    /*background-color: red;*/
+    /*float: left;*/
+    position: absolute;
+    z-index: 3;
+}
+
+.tripMask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    transition: all 0.6s;
+    font-family: "Microsoft YaHei", sans-serif;
+    cursor: pointer;
+}
+
+.tripMask:hover {
+    opacity: 0.5;
+}
+
+.tripMask h4 {
+    margin-top: 190px;
+    font-size: 36px;
+    line-height: 2em;
+}
+
+.tripMask p {
+    letter-spacing: 5px;
+    font-size: 16px;
+}
+
+.tripBox .left2 {
+    height: 500px;
+    width: 300px;
+    /*background-color: red;*/
+    position: absolute;
+    display: none;
+}
+
+.tripBox .right {
+    height: 500px;
+    width: 800px;
+    /*background-color: yellow;*/
+    float: right;
+    /*display: none;*/
+}
+
+.tripBox .public {
+    float: left;
+    margin: 0 8px;
+    margin-bottom: 22px;
+    display: none;
+}
+
+.tripBox .public2 {
+    height: 152px;
+    width: 250px;
+    /*background-color: #ff34e4;*/
+}
+
+.tripBox .public2 .public2-top {
+    height: 85px;
+    padding-top: 15px;
+    background-color: #001D39;
+    /*opacity: 0.8;*/
+}
+
+.tripBox .public2 .type1 {
+    color: white;
+    font: 400 18px/18px 微软雅黑;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.tripBox .public2 .type2 {
+    color: white;
+    font: 700 25px/25px 微软雅黑;
+    margin-left: 10px;
+}
+
+.tripBox .public2 .type3 {
+    color: white;
+    font: 14px/35px 微软雅黑;
+    margin-left: 10px;
+}
+
+.tripBox .public2 .public2-bottom {
+    background-color: white;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    /*opacity: 0.3;*/
+}
+
+.tripBox .public2 .btn {
+    height: 30px;
+    width: 100px;
+    background-color: #001D39;
+    border-radius: 5px;
+    color: white;
+    font: 400 12px/12px 微软雅黑;
+    cursor: pointer;
+}
+
+.tripBox .public3 {
+    /*height: 500px;*/
+    /*width: 782px;*/
+    position: absolute;
+    top: 436px;
+    left: 700px;
+    background-color: red;
+    z-index: 2;
+    /*display: none;*/
+    overflow: hidden;
+}
+
+.tripBox .public3 .public3_top {
+    /*height: 380px;*/
+    /*background-color: aqua;*/
+    /*opacity: 0.9;*/
+}
+
+.tripBox .public3_top .style1 {
+    color: white;
+    font: 700 65px/65px 微软雅黑;
+    padding-top: 60px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.tripBox .public3_top .style2 {
+    color: white;
+    font: 400 50px/50px 微软雅黑;
+    /*padding-top: 50px;*/
+    padding-left: 120px;
+    margin-top: 20px;
+}
+
+.tripBox .public3_top .style3 {
+    color: white;
+    font: 35px/35px 微软雅黑;
+    padding-top: 20px;
+    padding-left: 80px;
+    /*padding-top: 50px;*/
+    /*padding-left: 100px;*/
+    /*margin-top: 20px;*/
+}
+
+.tripBox .public3_top .style4 {
+    color: white;
+    font: 25px/25px 微软雅黑;
+    padding-top: 25px;
+    padding-left: 30px;
+    /*padding-top: 50px;*/
+    /*padding-left: 100px;*/
+    /*margin-top: 20px;*/
+}
+
+.tripBox .public3_top .style5 {
+    color: white;
+    font: 30px/30px 微软雅黑;
+    font-weight: 700;
+    padding-top: 25px;
+    padding-left: 250px;
+    /*padding-top: 50px;*/
+    /*padding-left: 100px;*/
+    /*margin-top: 20px;*/
+}
+
+.tripBox .public3 .public3_bottom {
+    height: 120px;
+    background-color: white;
+    opacity: 0.9;
+    display: none;
+    text-align: center;
+}
+
+.tripBox .public3_bottom .style6 {
+    color: black;
+    font: 20px/30px 微软雅黑;
+    font-weight: 700;
+    padding-top: 8px;
+    /*padding-top: 20px;*/
+    /*padding-left: 250px;*/
+    /*padding-top: 50px;*/
+    /*padding-left: 100px;*/
+    /*margin-top: 20px;*/
+}
+
+/*翻转特效*/
+.flip-container {
+    perspective: 1000px;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 250px;
+    height: 152px;
+}
+
+.flipper {
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.test {
+    height: 500px;
+    width: 782px;
+    /*background-color: red;*/
+    background-image: url(../images/07.jpg);
+}
+
+.test .testtop {
+    height: 380px;
+    /*background-color: aqua;*/
+    opacity: 0.9;
+}
+
+.test .testbottom {
+    height: 120px;
+    background-color: black;
+    opacity: 0.8;
+    /*display: none;*/
+}
+
+.test .style1 {
+    color: white;
+    font: 700 50px/50px 微软雅黑;
+    padding-top: 50px;
+    padding-left: 30px;
+    margin-bottom: 50px;
+}
+
+.test .style2 {
+    color: white;
+    font: 400 18px/18px 微软雅黑;
+    /*padding-top: 50px;*/
+    padding-left: 100px;
+    margin-top: 20px;
+}
+
+.test .style3 {
+    color: white;
+    font: 14px/14px 微软雅黑;
+    padding-top: 20px;
+    padding-left: 10px;
+    /*padding-top: 50px;*/
+    /*padding-left: 100px;*/
+    /*margin-top: 20px;*/
+}
+
+.continueScroll {
+    width: 680px;
+    height: 186px;
+    margin: 0 auto;
+    text-indent: -9999px;
+    background: url(../images/scroll-title.png) 50% 50% no-repeat;
+}
+
+.projects-container {
+    height: 100vh;
+    width: 100vw;
+    margin-top: 20px;
+    overflow: hidden;
+    background-color: #F2F2F2;
+    position: relative;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.projects-container ul {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.cd-single-project {
+    /*���ڵ����ѱ꣬���Ϊ�ܵ�1/4*/
+    height: 100vh;
+    width: 25%;
+    float: left;
+    cursor: pointer;
+}
+
+.cd-single-project .cd-title {
+    height: 100vh;
+    width: 100%;
+    /*���������*/
+    text-align: center;
+    line-height: 100vh;
+    background-color: #e5e5e5;
+    /*background-color: #101524;*/
+}
+
+.cd-single-project .cd-title h2 {
+    /*����������ʽ*/
+    font-size: 36px;
+    font-weight: 700;
+    color: lightcoral;
+}
+
+.cd-project-info {
+    width: 100vw;
+    height: 0;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.cd-project-info p {
+    font-size: 1.4rem;
+    font-family: "Merriweather", serif;
+    font-style: italic;
+    line-height: 1.2;
+    padding: 30px 100px 50px 100px;
+    opacity: .6;
+
+}
+
+.cd-project-info span {
+    display: block;
+    padding-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #aaa;
+    cursor: default;
+}
+
+/*返回顶部开始*/
+.actGotop {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    z-index: 100;
+}
+
+.actGotop a {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: url(../images/top.png) top;
+    outline: none;
+}
+
+.actGotop a:hover {
+    width: 50px;
+    height: 50px;
+    background: url(../images/top.png) bottom;
+    outline: none;
+}
+
+/*返回顶部结束*/

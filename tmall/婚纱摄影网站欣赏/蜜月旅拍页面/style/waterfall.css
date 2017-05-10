@@ -1,0 +1,226 @@
+/*网页初始化*/
+h1, h2, h3, h4, h5, h6, em, del {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    -webkit-text-size-adjust: none;
+}
+
+ul, dl, ol {
+    list-style: none;
+}
+
+h2, h2 a {
+    margin-bottom: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    text-decoration: underline;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+body,.picNav,.wrap{
+    background-color: oldlace;
+}
+
+#content ul li {
+    margin-right: 10px;
+    width: 225px;
+    height: 132px;
+    float: left;
+}
+
+#content ul li:last-child {
+    margin-right: 0;
+}
+
+#content ul li a {
+    display: block;
+    height: 180px;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    position: relative;
+}
+
+#content ul li a > div {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+
+    -webkit-transition: .8s ease-in-out;
+    -moz-transition: .8s ease-in-out;
+    -ms-transition: .8s ease-in-out;
+
+    position: absolute;
+}
+
+#content ul li a div:first-child {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: perspective(500px) rotateY(0);
+    z-index: 2;
+}
+
+#content ul li a:hover div:first-child {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: perspective(500px) rotateY(-180deg);
+}
+
+#content ul li a div:last-child {
+    z-index: 1;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: perspective(500px) rotateY(180deg);
+}
+
+#content ul li a:hover div:last-child {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: perspective(500px) rotateY(0);
+}
+
+
+.waterfallTop {
+    height: 650px;
+}
+
+.wrap {
+    position: relative;
+}
+
+.box {
+    padding: 15px 0 0 15px;
+    float: left;
+    width: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.m-right img,.m-left img,#btns img,.picNav img, .box .pic{
+    height: auto;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    overflow: hidden;
+    position: relative;
+}
+
+.box .pic img {
+    width: 100%;
+}
+ .face {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-indent: 2em;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.face .left {
+    height: 100%;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: -300px;
+    top: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    z-index: 88;
+}
+
+.face .right {
+    height: 100%;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    right: -300px;
+    top: 0;
+    z-index: 88;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.face p {
+    margin-top: 50px;
+    text-align: left;
+    color: white;
+    width: 100%;
+    padding: 0px 15px;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+    transition: all  0.8s;
+    -webkit-transition: all  0.8s;
+    -moz-transition: all  0.8s;
+    z-index: 999999;
+    position: absolute;
+    left: 0;
+    top: -200px;
+}
+
+
+.box .pic:hover .face .left {
+    left: 0px;
+}
+
+.box .pic:hover .face p {
+    top: 0px;
+}
+
+.box .pic:hover .face .right {
+    right: 0px;
+}
+.picNav{
+    margin-bottom: 30px ;
+}
+.picNav ul {
+    margin-left: 102px;
+    /*margin: 15px auto;*/
+    margin-bottom: 15px;
+}
+
+.picNav img {
+    float: left;
+    width: 220px;
+    margin-right: 15px;
+}

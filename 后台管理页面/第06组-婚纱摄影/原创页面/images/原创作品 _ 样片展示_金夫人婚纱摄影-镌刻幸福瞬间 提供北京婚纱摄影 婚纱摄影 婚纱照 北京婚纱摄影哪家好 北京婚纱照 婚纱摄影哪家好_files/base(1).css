@@ -1,0 +1,47 @@
+/*.span-link{
+	COLOR: #0000CE;
+	cursor:pointer;
+	onmouseout: expression(onmouseout=function (){this.style.color='';this.style.textDecoration='';});
+	onmouseover: expression(onmouseover=function (){this.style.color='#f60';this.style.textDecoration='underline';});
+}
+.span-link:hover{text-decoration : underline ;color : #f60 ;}  */
+.span-link{
+	COLOR: #0000CE;
+	cursor:pointer;
+	text-decoration : underline ;
+}
+.span-link:hover{text-decoration : underline ; color : #f60 ;}
+/*浮动*/
+
+.float-l1{float:left;clear:left;}
+.float-l2{float:left;clear:right;}
+.float-l3{float:left;clear:both;}
+.float-l4{float:left;clear:none;}
+.float-r1{float:right;clear:left;}
+.float-r2{float:right;clear:right;}
+.float-r3{float:right;clear:both;}
+.float-r4{float:right;clear:none;}
+.clear-b{clear:both; }
+/*浮动*/
+/*字体　大小*/
+.f12{font-family:tahoma;font-size:12px; font-weight:normal}
+.f12t{font-family:tahoma;font-size:12px;color:#00007B;font-weight:bold;}
+.f14{font-family:tahoma;font-size:14px;font-weight:bold;}
+/*字体　大小*/
+/*内容对齐*/
+.text-l{text-align:left;}
+.text-c{text-align:center;}
+.text-r{text-align:right;}
+/*内容对齐*/
+/*常用高宽*/
+.m5 {margin:5px 0;}
+.line-h18 {line-height:18px;}
+.line-h25 {line-height:25px;}
+.line-h30 {line-height:30px;}
+/*常用高宽*/
+a:link{text-decoration : none ;color : #0000CE;}
+a:visited {text-decoration : none ;color : #0000CE ;}
+a:hover {text-decoration : underline ;color : #f60 ;}
+a:active {text-decoration : none ;color : #F90 ;} 
+
+

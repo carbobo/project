@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏滚动</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/scroll.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.easing-1.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.color.js"></script>
+    <script src="js/jquery.wheel.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!--导航栏开始-->
+<div class="header clearfix">
+    <div class="logo">
+        <a href="#">金夫人婚摄摄影</a>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#"class="current-col">官方首页</a></li>
+            <li class="slide">
+                <a href="../原创页面/html/detail.html"  class="change">原创作品</a>
+                <dl>
+                    <dd><a href="../原创页面/html/detail.html" class="change">样片展示</a></dd>
+                    <dd><a href="../原创页面/html/detail.html" class="change">独家外景</a></dd>
+                </dl>
+            </li>
+            <li><a href="../蜜月旅拍页面/蜜月旅拍.html" class="change">蜜月旅拍</a></li>
+            <li><a href="#" class="change">电影制作</a></li>
+            <li class="slide">
+                <a href="#" class="change">最新活动</a>
+                <dl>
+                    <dd><a href="#" class="change">团购</a></dd>
+                    <dd><a href="#" class="change">历史活动</a></dd>
+                </dl>
+            </li>
+            <li><a href="#" class="change">高端会所</a></li>
+            <li><a href="#" class="change">真实客照</a></li>
+            <li class="slide">
+                <a href="#" class="change">关于我们</a>
+                <dl>
+                    <dd><a href="#" class="change">品牌介绍</a></dd>
+                    <dd><a href="#" class="change">品牌礼服</a></dd>
+                    <dd><a href="#" class="change">新闻中心</a></dd>
+                    <dd><a href="#" class="change">招聘信息</a></dd>
+                </dl>
+            </li>
+            <li><a href="../游戏/index.html" class="change">Click Me！</a></li>
+        </ul>
+    </div>
+
+</div>
+<!--导航栏结束-->
+<div class="scroll-wrapper">
+    <div class="mover">
+        <!--第一屏 开始-->
+        <div class="page page1">
+            <div id="page1" class="clearfix ">
+                <div id="pics">
+                    <ul>
+                        <li><a href="#"><img src="images/p1-00.jpg" alt=""/></a></li>
+                        <li><a href="#"><img src="images/p1-01.jpg" alt=""/></a></li>
+                        <li><a href="#"><img src="images/p1-02.jpg" alt=""/></a></li>
+                        <li><a href="#"><img src="images/p1-00.jpg" alt=""/></a></li>
+                    </ul>
+                </div>
+                <div class="arraw">
+                    <div id="p1left" class="left fl">&lt;</div>
+                    <div id="p1right" class="right fr">&gt;</div>
+                </div>
+                <ol id="page1-num">
+                    <li class="current"><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ol>
+            </div>
+        </div>
+        <!--第一屏 结束-->
+        <!--第二屏 开始-->
+        <div class="page page2">
+            <!-- 左边文字部分-->
+            <div class="splider-content-text page2AnimateText">
+                <div class="splider-content-textT">
+                    <h1>EXCLUSIVE</h1>
+                    <font>EXTERIOR</font><br>
+                    <small>HERE WILL USE A NEW HEIGHT TO YOUR LOVE</small>
+                    <br>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="splider-content-textB">
+                    <h3>独家外景</h3>
+                    <p>在这里将用新的高度来定格你的爱情</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="page-center page2-center">
+                <ul class="big-pics">
+                    <li class="current">
+                        <a href="javascript:void(0);">
+                            <div class="slide-back">
+                                <img src="images/1-16052615211U13.jpg" alt="">
+                            </div>
+                            <div class="slide-text">
+                                <span>婚礼纪实</span>
+                                <i>WEDDING</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="slide-back">
+                                <img src="images/1-16052615261HQ.jpg" alt="">
+                            </div>
+                            <div class="slide-text">
+                                <span>梦幻夜景</span>
+                                <i>DREAM NIGHT</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="slide-back">
+                                <img src="images/1-160526151213940.jpg" alt="">
+                            </div>
+                            <div class="slide-text">
+                                <span>巴厘岛水上教堂</span>
+                                <i>BALI ISLAND WATER CHURCH</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="slide-back">
+                                <img src="images/1-16052615145V58.jpg" alt="">
+                            </div>
+                            <div class="slide-text">
+                                <span>电影剧情</span>
+                                <i>MOVIE PLOT</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="slide-back">
+                                <img src="images/1-160526151640209.jpg" alt="">
+                            </div>
+                            <div class="slide-text">
+                                <span>海天一色</span>
+                                <i>SEA AND SKY INTO ONE</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="slide-back">
+                                <img src="images/1-160526151JQ07.jpg" alt="">
+                            </div>
+                            <div class="slide-text">
+                                <span>花园婚礼</span>
+                                <i>GARDEN WEDDING</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="slide-back">
+                                <img src="images/1-160526152511I6.jpg" alt="">
+                            </div>
+                            <div class="slide-text">
+                                <span>美人鱼</span>
+                                <i>MERMAID</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="slide-back">
+                                <img src="images/1-160526151322325.jpg" alt="">
+                            </div>
+                            <div class="slide-text">
+                                <span>百万花海</span>
+                                <i>MILLIONS OF FLOWERS</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="slide-back">
+                                <img src="images/1-160526152G6154.jpg" alt="">
+                            </div>
+                            <div class="slide-text">
+                                <span>秘密花园</span>
+                                <i>SECRET GARDEN</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="slide-back">
+                                <img src="images/1-160526152P24A.jpg" alt="">
+                            </div>
+                            <div class="slide-text">
+                                <span>茜茜公主</span>
+                                <i>SISSI</i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="controllers">
+                    <div class="small-pics-mask">
+                        <ul class="small-pics">
+                            <li class="current"><a href="javascript:void(0)"><img src="images/1-16052615211U13.jpg"
+                                                                                  alt=""></a></li>
+                            <li><a href="javascript:void(0)"><img src="images/1-16052615261HQ.jpg" alt=""></a></li>
+                            <li><a href="javascript:void(0)"><img src="images/1-160526151213940.jpg" alt=""></a></li>
+                            <li><a href="javascript:void(0)"><img src="images/1-16052615145V58.jpg" alt=""></a></li>
+                            <li><a href="javascript:void(0)"><img src="images/1-160526151640209.jpg" alt=""></a></li>
+                            <li><a href="javascript:void(0)"><img src="images/1-160526151JQ07.jpg" alt=""></a></li>
+                            <li><a href="javascript:void(0)"><img src="images/1-160526152511I6.jpg" alt=""></a></li>
+                            <li><a href="javascript:void(0)"><img src="images/1-160526151322325.jpg" alt=""></a></li>
+                            <li><a href="javascript:void(0)"><img src="images/1-160526152G6154.jpg" alt=""></a></li>
+                            <li><a href="javascript:void(0)"><img src="images/1-160526152P24A.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="arrow-btns">
+                        <a class="to-left disabled">&lt;</a>
+                        <a class="to-right">&gt;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--第二屏 结束-->
+        <!--第三屏 开始-->
+        <!--<div class="page ">-->
+        <div class="splider page page3">
+            <!-- 左边文字部分-->
+            <div class="splider-content-text page3AnimateText">
+                <div class="splider-content-textT">
+                    <h1>show</h1>
+                    <font>case</font><br>
+                    <small>A TURNED AND DISTANCE,<br>ALL THE BEAUTY IN YOU OUT OF THE WINDOW</small>
+                    <br>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="splider-content-textB">
+                    <h3>样片展示</h3>
+                    <p>一个转身的距离，万千美景就在你的窗外。</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="splider-content">
+                <!-- 右边图片部分-->
+                <div class="splider-content-img">
+                    <div class="splider-content-img-wrap">
+                        <div class="splider-content-img-act">
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160S01FU60-L.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">时光记</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160S01F0590-L.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">简约风尚</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl current">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160R61519200-L.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">星定制</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160R6151J60-L.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">轻奢主义</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160Q01S3000-L.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">纯真主义</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160Q01K1180-L.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">城市·轻旅拍</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160Q01G2130-L.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">时空名媛</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160613162U40-L.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">唯韩新时尚</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160613162I10-L.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">寒宫蜜恋</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160620104219305.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">晨光纪实</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-160620104155N0.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">原创寒风花艺</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G42255446.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">优雅欧韩</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G43220E0.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">唯美韩艺</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G43240934.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">沙翼女王</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G4231OC.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">剧情造梦</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G42241610.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">花色演绎</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G42222415.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">浪漫守候</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G4220E13.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">红色律动</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G4214Y11.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">名媛风尚</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G4212E92.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">花海之约</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G42105914.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">轻熟时尚</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G42011C8.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">花艺婚礼</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G4202RU.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">格林公主</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G41952L2.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">甜蜜日记</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G419361U.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">光影纪实</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-1606151A10L03.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">气质王妃</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G41Z1153.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">花漾蜜语</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G41T5V1.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">火热中国</div>
+                                </a>
+                            </div>
+                            <div class="splider-content-img-li fl">
+                                <a href="#">
+                                    <div class="splider-content-img-show"><img src="images/1-16052G41R63Y.jpg"
+                                                                               alt=""/>
+                                    </div>
+                                    <div class="splider-content-img-text">粉腻轻奢</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 左边按钮-->
+                <div class="splider-content-pre">&lt;</div>
+                <!-- 右边按钮-->
+                <div class="splider-content-next">&gt;</div>
+            </div>
+        </div>
+        <!--</div>-->
+        <!--第三屏 结束-->
+        <!--第四屏 开始-->
+        <div class="splider splider4 page page4">
+            <!-- 左边文字部分-->
+            <div class="splider-content-text page2AnimateText">
+                <div class="splider-content-textT">
+                    <h1>customer</h1>
+                    <font>photo</font></br>
+                    <small>YEARS HURRIED THERE ARE WORTH LOVE</BR>BECOME ETERNAL MEMORY IN MY LIFE</small>
+                    <br/>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="splider-content-textB">
+                    <h3>最新客照</h3>
+
+                    <p>岁月匆匆</p>
+
+                    <p>总有些爱情值得成为生命中永恒的记忆</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="splider-content">
+                <!-- 右边图片部分-->
+                <div class="splider4-content-img">
+                    <div class="splider4-content-img-wrap">
+                        <div class="splider4-content-img-act">
+                            <div class="splider4-content-img-act1">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="splider4-content-img-li">
+                                                <div class="splider4-content-img-show">
+                                                    <img src="images/1-1606091140560-L.jpg" alt=""/>
+                                                </div>
+                                                <div class="splider4-content-img-text">赵涛、陈珊</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img src="images/1-160R3133G80-L.jpg"
+                                                                                        alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 王心、周娟</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-160R3134210222.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text">赵伟、陈珊</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img src="images/1-160S0152931X9.jpg"
+                                                                                        alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 孙海龙、庞娟娟</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-160S0153005235.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 李凡、王慧慧</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-160S0153025228.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 孟天夫 、杨女士</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img src="images/1-160S015310X56.jpg"
+                                                                                        alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 吴迪、陈冰浩</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img src="images/1-160R313450D94.jpg"
+                                                                                        alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 刘博雄、吴婉君</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img src="images/1-160R313454c48.jpg"
+                                                                                        alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text">刘少君、刘静</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-1606261132550-L.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 蒋洋、邢亚男</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="splider4-content-img-act2">
+                                <ul>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-160S0153151546.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 赵猛、何敏</div>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-160S0153211215.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 王俊宏、刘鸾</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-1606261134340-L.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text">王建华、颜宇彤</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-160Q0152113531.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 张强、陈女士</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img src="images/1-160Q0154G1102.jpg"
+                                                                                        alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 晏辰、高女士</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-160Q0154920632.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 霍禹东、吕明月</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-160603124202115.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 徐锴、张燕妮</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img src="images/1-160603112FEG.jpg"
+                                                                                        alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text">冯博超、何倩倩</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img src="images/1-16060311501AP.jpg"
+                                                                                        alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 周启航、吴莎</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="splider4-content-img-li">
+                                            <div class="splider4-content-img-show"><img
+                                                    src="images/1-1606031135225E.jpg"
+                                                    alt=""/>
+                                            </div>
+                                            <div class="splider4-content-img-text"> 高健、孙女士</div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 左边按钮-->
+                <div class="splider-content-pre splider-content-pre4">&lt;</div>
+                <!-- 右边按钮-->
+                <div class="splider-content-next splider-content-next4">&gt;</div>
+            </div>
+        </div>
+        <!--第四屏 结束-->
+        <!--第五屏 开始-->
+        <div class="page page5">
+            <!--左侧文字部分-->
+            <div class="splider-content-text page5AnimateText">
+                <div class="splider-content-textT">
+                    <h1>MICRO</h1>
+                    <font>FILM</font><br>
+                    <small>CUSTOM SCRIPT,<br/>INTERPRETS THS LIFEA LOVE ROMANCE</small>
+                    <br>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="splider-content-textB">
+                    <h3>微电影</h3>
+                    <p>脚本定制，<br/>诠释一生一次爱情罗曼史</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="page5-splider-content">
+                <div class="p5wrapWrapper">
+                    <div id="p5wrap">
+                        <ul id="p5pics">
+                            <li>
+                                <a href="#"><img src="images/p5-00.png" alt=""/></a>
+
+                                <p>金夫人品牌</p>
+
+                                <div class="cover"></div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p5-01.png"></a>
+
+                                <p>最美新娘-幸福大片-珍惜</p>
+
+                                <div class="cover"></div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p5-02.png"></a>
+
+                                <p>最美新娘-幸福大片-幸福</p>
+
+                                <div class="cover"></div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p5-03.png"></a>
+
+                                <p>最美新娘-幸福大片-幸福</p>
+
+                                <div class="cover"></div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p5-04.png"></a>
+
+                                <p>最美新娘-幸福大片-幸福</p>
+
+                                <div class="cover"></div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p5-05.png"></a>
+
+                                <p>最美新娘-幸福大片-幸福</p>
+
+                                <div class="cover"></div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p5-06.png"></a>
+
+                                <p>最美新娘-幸福大片-幸福</p>
+
+                                <div class="cover"></div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p5-07.png"></a>
+
+                                <p>最美新娘-幸福大片-幸福</p>
+
+                                <div class="cover"></div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p5-08.png"></a>
+
+                                <p>最美新娘-幸福大片-幸福</p>
+
+                                <div class="cover"></div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p5-09.png"></a>
+
+                                <p>最美新娘-幸福大片-幸福</p>
+
+                                <div class="cover"></div>
+                            </li>
+                        </ul>
+                        <!--<div class="arraw">-->
+                        <!--<div id="p5left" class="left fl">&lt;</div>-->
+                        <!--<div id="p5right" class="right fr">&gt;</div>-->
+                        <!--</div>-->
+                    </div>
+                    <!-- 左边按钮-->
+                    <div class="splider-content-pre page5-arrow-left">&lt;</div>
+                    <!-- 右边按钮-->
+                    <div class="splider-content-next page5-arrow-right">&gt;</div>
+                </div>
+            </div>
+            <!--<p class="copy">© copy right rseverd 2015 Golden Ladies Photo co.,Ltd. AllRights Reserved</p>-->
+        </div>
+        <!--第五屏 结束-->
+        <!--第六屏 开始-->
+        <div class="page page6 clearfix re">
+            <!--左侧文字部分-->
+            <div class="splider-content-text page6AnimateText">
+                <div class="splider-content-textT">
+                    <h1>MICRO</h1>
+                    <font>FILM</font><br>
+                    <small>CUSTOM SCRIPT,<br/>INTERPRETS THS LIFEA LOVE ROMANCE</small>
+                    <br>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="splider-content-textB">
+                    <h3>微电影</h3>
+                    <p>脚本定制，<br/>诠释一生一次爱情罗曼史</p>
+                    <span></span>
+                </div>
+            </div>
+            <!-- 右侧图片 -->
+            <div class="page6-splider-content">
+                <div class="p6wrapWrapper">
+                    <div id="p6wrap">
+                        <ul id="p6pics" class="clearfix">
+                            <li>
+                                <a href="#"><img src="images/p6--00.jpg" alt=""/></a>
+                                <p>ELIE SAAB</p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p6--01.jpg" alt=""/></a>
+                                <p>ELIE SAAB</p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p6--02.jpg" alt=""/></a>
+                                <p>VERA WANG</p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p6--03.jpg" alt=""/></a>
+                                <p>VERA WANG</p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p6--04.jpg" alt=""/></a>
+                                <p>PRONOVIOS</p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p6--05.jpg" alt=""/></a>
+                                <p>PRONOVIOS</p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p6--06.jpg" alt=""/></a>
+                                <p>兰斐</p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/p6--07.jpg" alt=""/></a>
+                                <p>兰斐</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 左边按钮-->
+                    <div class="splider-content-pre page6-arrow-left">&lt;</div>
+                    <!-- 右边按钮-->
+                    <div class="splider-content-next page6-arrow-right">&gt;</div>
+                </div>
+            </div>
+            <!--<div class="arraw">-->
+            <!--<div id="p6left" class="left fl">&lt;</div>-->
+            <!--<div id="p6right" class="right fr">&gt;</div>-->
+            <!--</div>-->
+            <!--<p class="copy">© copy right rseverd 2015 Golden Ladies Photo co.,Ltd. AllRights Reserved</p>-->
+        </div>
+        <!--第六屏 结束-->
+        <!--第七屏 开始-->
+        <div class="page page7">
+            <!--左侧文字部分-->
+            <div class="splider-content-text page7AnimateText">
+                <div class="splider-content-textT">
+                    <h1>NEWS</h1>
+                    <font>CENTER</font><br>
+                    <small>DERIVED FROM,<br/>THE BIBLE PROMISE:ALL FOR ONE CRAZY</small>
+                    <br>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="splider-content-textB">
+                    <h3>新闻中心</h3>
+                    <p>源自圣经的承诺：只为一个人疯狂</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="page7-splider-content">
+                <!-- 下面三个div是三个翻转盒子 -->
+                <div class="two-le">
+                    <div class="left_pic">
+                        <img class="pic1" src="images/1-16052G4212E92.jpg" alt=""/>
+                    </div>
+                    <div class="left-word">
+                        <div class="news-date">12.Mar.2016.08-31-2016</div>
+                        <a class="news-title" href="#">佛爷新月都大婚啦~你的婚</a>
+                        <div class="left-line">&nbsp;</div>
+                        <p class="left-p">电视剧《老九门》从播出到现
+                            在，佛爷新月俩人一直发糖不
+                            断，昨天终于启月夫妇激吻大
+                            婚！！！！ 可能最近是什么好日
+                            子，除了佛爷大婚， 北京婚纱
+                            摄......</p>
+                        <a class="more" href="#">more</a>
+                    </div>
+                </div>
+                <div class="two-le">
+                    <div class="left_pic">
+                        <img class="pic2" src="images/1-160R61519200-L.jpg" alt=""/>
+                    </div>
+                    <div class="left-word">
+                        <div class="news-date">12.Mar.2016.08-29-2016</div>
+                        <a class="news-title" href="#">北京婚纱照为你细数那些</a>
+                        <div class="left-line">&nbsp;</div>
+                        <p class="left-p">婚纱照的拍摄已不再是千人一面
+                            的背景和和造型设计了，越来越
+                            多的年轻人呢开始追求与众不
+                            同，拒绝千篇一律的婚纱照拍
+                            摄，他们喜欢用相机讲述自己
+                            的......</p>
+                        <a class="more" href="#">more</a>
+                    </div>
+                </div>
+                <div class="two-le">
+                    <div class="left_pic">
+                        <img class="pic3" src="images/1-16052G4202RU.jpg" alt=""/>
+                    </div>
+                    <div class="left-word">
+                        <div class="news-date">12.Mar.2016.08-26-2016</div>
+                        <a class="news-title" href="#">十二生肖最佳婚配</a>
+                        <div class="left-line">&nbsp;</div>
+                        <p class="left-p">属鼠的人 性格：性柔和，为个坦
+                            诚且单纯，同时具有敏悦的直
+                            观，用感觉来判断事物的能力
+                            强，属性急、急功型并且虚荣心
+                            强，但是 北京婚纱摄影排行榜......</p>
+                        <a class="more" href="#">more</a>
+                    </div>
+                </div>
+                <!-- 上面三个div是三个翻转盒子 -->
+            </div>
+        </div>
+        <!--第七屏 结束-->
+        <!--第八屏 开始-->
+        <div class="page page8">
+            <!--左侧文字部分-->
+            <div class="splider-content-text page8AnimateText">
+                <div class="splider-content-textT">
+                    <h1>CONTACT</h1>
+                    <font>US</font><br>
+                    <small>DERIVED FROM,<br/>THE BIBLE PROMISE:ALL FOR ONE CRAZY</small>
+                    <br>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="splider-content-textB">
+                    <h3>联系我们</h3>
+                    <p>源自圣经的承诺：只为一个人疯狂</p>
+                    <span></span>
+                </div>
+            </div>
+            <!--中间部分-->
+            <div class="content8-two">
+                <img src="images/index_31.jpg" alt=""/>
+            </div>
+            <!--右侧部分-->
+            <div class="content8-three">
+                <ul>
+                    <li>
+                        <img src="images/indexblogo.png" alt=""/>
+                    </li>
+                    <li>
+                        <img src="images/index_35.jpg" alt=""/>
+                        <span class="phone">电话：</span>
+                        <span class="phone-number">400-0045-611</span>
+                    </li>
+                    <li>
+                        <img src="images/index_39.jpg" alt=""/>
+                        <span class="e-mail">邮箱：</span>
+                        <span class="e-mail-number">77798130@qq.com</span>
+                    </li>
+                    <li>
+                        <img src="images/index_42.jpg" alt=""/>
+                        <span class="add">地址：</span>
+                        <span class="add-number">东单北大街3号</span>
+                    </li>
+                </ul>
+                <div class="erweima">
+                    <div class="erweima1">
+                        <img class="img1" src="images/code_03.jpg" alt=""/>
+                        <div class="weibo">官方微博</div>
+                    </div>
+                    <div class="erweima2">
+                        <img class="img1" src="images/code_03.jpg" alt=""/>
+                        <div class="weibo">官方微博</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--第八屏 结束-->
+    </div>
+    <div class="navButtons">
+        <ul>
+        </ul>
+    </div>
+</div>
+<div class="lbar">
+    <div class="lbars" id="qq"><img src="images/qq.png" alt=""/><span>QQ:6666666</span></div>
+    <div class="lbars"><img src="images/call.png" alt=""/><span>NO:18888888888</span></div>
+    <div class="lbars" style="cursor:pointer;" id="totop"><img src="images/totop.png" alt=""/><span>亲：点我带你飞！</span></div>
+</div>
+</body>
+</html>

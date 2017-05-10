@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* 全屏滚动框架 */
+body {
+    overflow: hidden;
+}
+
+.scroll-wrapper {
+    overflow: hidden;
+}
+
+.mover {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page {
+    position: relative;
+}
+
+.navButtons {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 20px;
+}
+
+.navButtons ul {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+}
+
+.navButtons li {
+    width: 14px;
+    height: 14px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navButtons li.current {
+    background-color: #e31413;
+}

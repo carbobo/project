@@ -39,6 +39,9 @@
 
     .content .item2 .item-top ul li:nth-child(1){margin-right:25px;}
     .content .item2 .item-bot{padding-left: 90px;}
+    .right-box{display:none;}
+    .right-box1{display:block;}
+
 
 .ul2{margin-top: 210px;}
 </style>
@@ -48,9 +51,9 @@
 <div class="top">
     <div class="top-in clearfix">
         <h2 class="fl">LOGO</h2>
-        <ul class="fl">
-            <li><a href="javascript:voit()" class="active">作业统计</a></li>
-            <li><a href="javascript:voit()">作业列表</a></li>
+        <ul class="fl" id="top-nav">
+            <li><a href="#" class="active">作业统计</a></li>
+            <li><a href="#">作业列表</a></li>
             <li><a href="javascript:voit()">教师管理</a></li>
             <li><a href="javascript:voit()">学生管理</a></li>
         </ul>
@@ -112,175 +115,436 @@
 
         </ul>
     </div>
-    <div class="right-box fl">
-        <div class="item item1" id="item1">
-            <div class="item-inner" style="border:1px solid transparent;padding-top: 35px;">
-                      <div class="form-group form-horizontal">
-                        <label for="inputEmail3" class="col-sm-2 control-label">关键字:</label>
-                        <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputEmail3" placeholder="请输入搜索关键字，例如：科目......">
-                        </div>
-                      </div>
-                <form class="form-inline" style="margin-left: 115px;margin-top:45px">
-                      <div class="form-group">
-                      <label for="">类别:</label>
-                        <select class="form-control" style="margin-left:22px">
-                          <option>老师名称</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
+    <div class="right-cont">
+          <div class="right-box fl right-box1">
+                <div class="item item1" id="item1"></div>
+                <div class="item item2" id="item2"></div>
+                <div class="item item3" id="item3"></div>
+                <div class="item item4" id="item4"></div>
+          </div>
+          <div class="right-box fl right-box2 bk"></div>
+          <div class="right-box fl right-box3">
+              <div class="item item1"">
+                  <div class="item-inner" style="border:1px solid transparent;padding-top: 35px;">
+                            <div class="form-group form-horizontal">
+                              <label for="inputEmail3" class="col-sm-2 control-label">关键字:</label>
+                              <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="请输入搜索关键字，例如：科目......">
+                              </div>
+                            </div>
+                      <form class="form-inline" style="margin-left: 115px;margin-top:45px">
+                            <div class="form-group">
+                            <label for="">类别:</label>
+                              <select class="form-control" style="margin-left:22px">
+                                <option>老师名称</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
 
+                            </div>
+                            <div class="form-group">
+                             <select class="form-control">
+                                <option>科目</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </div>
+                             <div class="form-group">
+                             <select class="form-control">
+                                <option>性别</option>
+                                <option>不限</option>
+                                <option>男</option>
+                                <option>女</option>
+                              </select>
+                            </div>
+                      </form>
+                      <div class="btnBox" style="text-align:center;padding-top:25px">
+                      <button type="button" class="btn btn-primary" style="margin:0 225px 0 0px; width:140px">搜索</button>
+                      <button type="button" class="btn btn-danger" style="width:140px">重置</button>
                       </div>
-                      <div class="form-group">
-                       <select class="form-control">
-                          <option>科目</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
-                       <div class="form-group">
-                       <select class="form-control">
-                          <option>性别</option>
-                          <option>不限</option>
-                          <option>男</option>
-                          <option>女</option>
-                        </select>
-                      </div>
-                </form>
-                <div class="btnBox" style="text-align:center;padding-top:25px">
-                <button type="button" class="btn btn-primary" style="margin:0 225px 0 0px; width:140px">搜索</button>
-                <button type="button" class="btn btn-danger" style="width:140px">重置</button>
+                  </div>
+              </div>
+              <div class="item item2">
+                <div class="item-top">
+                  <ul >
+                    <li><i></i>老师列表</li>
+                    <li>每页展示</li>
+                    <li><button type="submit" class="btn btn-hover">10</button></li>
+                    <li><button type="submit" class="btn">20</button></li>
+                    <li><button type="submit" class="btn">30</button></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
                 </div>
-            </div>
-        </div>
-        <div class="item item2" id="item2">
-          <div class="item-top">
-            <ul >
-              <li><i></i>老师列表</li>
-              <li>每页展示</li>
-              <li><button type="submit" class="btn btn-hover">10</button></li>
-              <li><button type="submit" class="btn">20</button></li>
-              <li><button type="submit" class="btn">30</button></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-           <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>教师名称</th>
-                  <th>工号</th>
-                  <th>性别</th>
-                  <th>科目</th>
-                  <th>手机号</th>
-                  <th>邮箱</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                  <th>化学</th>
-                  <th>t66</th>
-                  <th>男</th>
-                  <th>语文</th>
-                  <th>15685962658</th>
-                  <th>5465454@qq.cpm</th>
-                </tr>
-                <tr>
-                  <th>化学</th>
-                  <th>t66</th>
-                  <th>男</th>
-                  <th>语文</th>
-                  <th>15685962658</th>
-                  <th>5465454@qq.cpm</th>
-                </tr>
-                <tr>
-                  <th>化学</th>
-                  <th>t66</th>
-                  <th>男</th>
-                  <th>语文</th>
-                  <th>15685962658</th>
-                  <th>5465454@qq.cpm</th>
-                </tr>
-                 <tr>
-                  <th>化学</th>
-                  <th>t66</th>
-                  <th>男</th>
-                  <th>语文</th>
-                  <th>15685962658</th>
-                  <th>5465454@qq.cpm</th>
-                </tr>
-                 <tr>
-                  <th>化学</th>
-                  <th>t66</th>
-                  <th>男</th>
-                  <th>语文</th>
-                  <th>15685962658</th>
-                  <th>5465454@qq.cpm</th>
-                </tr>
-                 <tr>
-                  <th>化学</th>
-                  <th>t66</th>
-                  <th>男</th>
-                  <th>语文</th>
-                  <th>15685962658</th>
-                  <th>5465454@qq.cpm</th>
-                </tr>
-                 <tr>
-                  <th>化学</th>
-                  <th>t66</th>
-                  <th>男</th>
-                  <th>语文</th>
-                  <th>15685962658</th>
-                  <th>5465454@qq.cpm</th>
-                </tr>
-                 <tr>
-                  <th>化学</th>
-                  <th>t66</th>
-                  <th>男</th>
-                  <th>语文</th>
-                  <th>15685962658</th>
-                  <th>5465454@qq.cpm</th>
-                </tr>
-                 <tr>
-                  <th>化学</th>
-                  <th>t66</th>
-                  <th>男</th>
-                  <th>语文</th>
-                  <th>15685962658</th>
-                  <th>5465454@qq.cpm</th>
-                </tr>
-                 <tr class="table-bordered">
-                  <th>化学</th>
-                  <th>t66</th>
-                  <th>男</th>
-                  <th>语文</th>
-                  <th>15685962658</th>
-                  <th>5465454@qq.cpm</th>
-                </tr>
-              </tbody>
-          </table>
-          <div class="item-bot">
-            <ul>
-              <li><button class="btn">上一页</button></li>
-              <li><button class="btn">1</button></li>
-              <li><button class="btn">2</button></li>
-              <li><button class="btn">3</button></li>
-              <li><button class="btn">4</button></li>
-              <li><button class="btn">...</button></li>
-              <li><button class="btn">28</button></li>
-              <li><button class="btn">下一页</button></li>
-            </ul>
-          </div>
-        </div>
+                 <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>教师名称</th>
+                        <th>工号</th>
+                        <th>性别</th>
+                        <th>科目</th>
+                        <th>手机号</th>
+                        <th>邮箱</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>化学</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>语文</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                      <tr>
+                        <th>化学</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>语文</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                      <tr>
+                        <th>化学</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>语文</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                       <tr>
+                        <th>化学</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>语文</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                       <tr>
+                        <th>化学</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>语文</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                       <tr>
+                        <th>化学</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>语文</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                       <tr>
+                        <th>化学</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>语文</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                       <tr>
+                        <th>化学</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>语文</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                       <tr>
+                        <th>化学</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>语文</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                       <tr class="table-bordered">
+                        <th>化学</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>语文</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                    </tbody>
+                </table>
+                <div class="item-bot">
+                  <ul>
+                    <li><button class="btn">上一页</button></li>
+                    <li><button class="btn">1</button></li>
+                    <li><button class="btn">2</button></li>
+                    <li><button class="btn">3</button></li>
+                    <li><button class="btn">4</button></li>
+                    <li><button class="btn">...</button></li>
+                    <li><button class="btn">28</button></li>
+                    <li><button class="btn">下一页</button></li>
+                  </ul>
+                </div>
+              </div>
 
+          </div>
+          <div class="right-box fl right-box4">
+
+              <div class="item item1"">
+                  <div class="item-inner" style="border:1px solid transparent;padding-top: 35px;">
+                            <div class="form-group form-horizontal">
+                              <label for="inputEmail3" class="col-sm-2 control-label">关键字:</label>
+                              <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="请输入搜索关键字，例如：科目......">
+                              </div>
+                            </div>
+                      <form class="form-inline" style="margin-left: 115px;margin-top:45px">
+                            <div class="form-group">
+                            <label for="">类别:</label>
+                              <select class="form-control" style="margin-left:22px">
+                                <option>老师名称</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+
+                            </div>
+                            <div class="form-group">
+                             <select class="form-control">
+                                <option>科目</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </div>
+                             <div class="form-group">
+                             <select class="form-control">
+                                <option>性别</option>
+                                <option>不限</option>
+                                <option>男</option>
+                                <option>女</option>
+                              </select>
+                            </div>
+                      </form>
+                      <div class="btnBox" style="text-align:center;padding-top:25px">
+                      <button type="button" class="btn btn-primary" style="margin:0 225px 0 0px; width:140px">搜索</button>
+                      <button type="button" class="btn btn-danger" style="width:140px">重置</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="item item2">
+                <div class="item-top">
+                  <ul >
+                    <li><i></i>学生列表</li>
+                    <li>每页展示</li>
+                    <li><button type="submit" class="btn btn-hover">10</button></li>
+                    <li><button type="submit" class="btn">20</button></li>
+                    <li><button type="submit" class="btn">30</button></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+                 <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>学生名称</th>
+                        <th>学号</th>
+                        <th>性别</th>
+                        <th>年级</th>
+                        <th>班级</th>
+                        <th>手机号</th>
+                        <th>邮箱</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>化学f</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>初一</th>
+                        <th>三班</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                     <tr>
+                        <th>化学f</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>初一</th>
+                        <th>三班</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                       <tr>
+                        <th>化学f</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>初一</th>
+                        <th>三班</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                      <tr>
+                        <th>化学f</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>初一</th>
+                        <th>三班</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                        <tr>
+                        <th>化学f</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>初一</th>
+                        <th>三班</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                        <tr>
+                        <th>化学f</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>初一</th>
+                        <th>三班</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                        <tr>
+                        <th>化学f</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>初一</th>
+                        <th>三班</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                         <tr>
+                        <th>化学f</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>初一</th>
+                        <th>三班</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                        <tr>
+                        <th>化学f</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>初一</th>
+                        <th>三班</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                      <tr class="table-bordered">
+                        <th>化学f</th>
+                        <th>t66</th>
+                        <th>男</th>
+                        <th>初一</th>
+                        <th>三班</th>
+                        <th>15685962658</th>
+                        <th>5465454@qq.cpm</th>
+                      </tr>
+                    </tbody>
+                </table>
+                <div class="item-bot">
+                  <ul>
+                    <li><button class="btn">上一页</button></li>
+                    <li><button class="btn">1</button></li>
+                    <li><button class="btn">2</button></li>
+                    <li><button class="btn">3</button></li>
+                    <li><button class="btn">4</button></li>
+                    <li><button class="btn">...</button></li>
+                    <li><button class="btn">28</button></li>
+                    <li><button class="btn">下一页</button></li>
+                  </ul>
+                </div>
+              </div>
+          </div>
     </div>
 </div>
 </div>
 <script src="js/jquery.js"></script>
 <script src="js/common.js"></script>
+<script src="js/echarts.js"></script>
+<script>
+ $("#top-nav li a").click(function(){
+      var index = $(this).parent().index();
+      // alert(index)
+      $(this).addClass('active').parent().siblings().children().removeClass("active");
+      $(".right-cont .right-box").eq(index).show().siblings().hide();
+
+
+ })
+</script>
+<script>
+        $(function(){
+            // 选项卡1
+
+
+            // 插件一
+    // 基于准备好的dom，初始化echarts实例
+        var myChart1 = echarts.init(document.getElementById('item1'));
+        var myChart2 = echarts.init(document.getElementById('item2'));
+        var myChart3 = echarts.init(document.getElementById('item3'));
+        var myChart4 = echarts.init(document.getElementById('item4'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            color:['#1f67df'],
+            // default:[ false ],
+            title: {
+               show:true,
+               left:'50%',
+               backgroundColor:'transparent',//标题的背景颜色
+               text: '作业量',
+
+            },
+            grid:{
+                show:true,
+                left:'10%',
+                containLabel:true,
+                backgroundColor:'#f1f1f1'
+            },
+            tooltip: {},
+            legend: {
+
+            },
+                 xAxis : [
+                {
+                    splitLine:{show: true},//去除网格线
+                    type : 'category',
+                    data: ["五班","八班","十六班","","","","","","","","","",""],
+                    splitArea : {show : true}//保留网格区域
+                }
+            ],
+             yAxis : [
+                {
+                    splitLine:{show: true},//去除网格线
+                    type : 'value',
+                    splitArea : {show : true}//保留网格区域
+                }
+            ],
+            series: [{
+                name: '作业量',
+                type: 'bar',
+                barWidth:"30%",
+                data: [5, 20, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option);
+        myChart2.setOption(option);
+        myChart3.setOption(option);
+        myChart4.setOption(option);
+
+        });
+    </script>
 </body>
 </html>

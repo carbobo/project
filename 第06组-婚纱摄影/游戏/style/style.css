@@ -1,0 +1,230 @@
+@keyframes comboAndMiss {
+    0% {
+        transform: scale(1.5) rotateZ(25deg);
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotateZ(25deg);
+        opacity: 0;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hide {
+    display: none;
+}
+
+dl {
+    list-style: none;
+}
+
+body {
+    font-family: "Microsoft YaHei", SimSun;
+    background: url(../images/bg.jpg) top center no-repeat;
+}
+
+.wrapper {
+    position: relative;
+    width: 840px;
+    margin: 20px auto 0 auto;
+}
+
+.wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+h1 {
+    margin-bottom: 10px;
+    width: 840px;
+    height: 135px;
+    text-align: center;
+    background: url(../images/title_c.png) center no-repeat;
+}
+
+.stageBox {
+    width: 840px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.stage {
+    position: relative;
+}
+
+.tunnel {
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+.tunnel:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tunnel:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.info {
+    margin: 20px auto 0 auto;
+    width: 120px;
+    height: 40px;
+    padding-left: 80px;
+    border-radius: 5px;
+    text-align: center;
+    font: 20px/40px "Microsoft YaHei";
+    color: #fff;
+}
+
+.score {
+    float: left;
+    background: rgba(0, 0, 0, 0.5) url(../images/score.jpg) left top no-repeat;
+}
+
+.score.plus {
+    background: rgba(255, 49, 49, 0.5) url(../images/score.jpg) left top no-repeat;
+}
+
+.score.minus {
+    background: rgba(6, 209, 111, 0.5) url(../images/score.jpg) left top no-repeat;
+}
+
+.combo {
+    display: none;
+    position: absolute;
+    right: -55px;
+    top: 120px;
+    transform: rotateZ(25deg);
+    color: #ffea00;
+    font: 48px "Impact";
+    text-shadow: 0 0 20px #f00;
+}
+
+.miss {
+    display: none;
+    position: absolute;
+    right: -55px;
+    top: 195px;
+    transform: rotateZ(25deg);
+    color: #ececec;
+    font: 48px "Impact";
+    text-shadow: 0 0 20px #5e5e5e;
+}
+
+.comboAndMissAnimation {
+    animation-name: comboAndMiss;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    animation-play-state: running;
+}
+
+.timer {
+    float: right;
+    background: rgba(0, 0, 0, 0.5) url(../images/timer.jpg) left top no-repeat;
+}
+
+.timer.urgent {
+    background: rgba(255, 37, 37, 1) url(../images/timer.jpg) left top no-repeat;
+}
+
+.ship {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    height: 40px;
+    /*background-color: #5cdaff;*/
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.inputting {
+    background-color: #ff252c !important;
+}
+
+.textWrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    font: 0/40px "方正兰亭纤黑_GBK";
+    letter-spacing: 1px;
+    word-spacing: 0;
+    text-align: center;
+}
+
+.textWrapper span {
+    color: #fff;
+    font-size: 24px;
+    word-spacing: normal;
+}
+
+.inputting .textWrapper span {
+    color: #fff;
+}
+
+.textWrapper span.pass {
+    color: #ff8969;
+}
+
+.inputting .textWrapper span.pass {
+    color: #6f1d08;
+    font-weight: bold;
+}
+
+.intro {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+}
+
+.intro dd {
+    float: left;
+    width: 280px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.intro dd:hover {
+    opacity: 0.9;
+}
+
+.intro dd:active {
+    opacity: 0.7;
+}
+
+.normal {
+    background-image: url(../images/level-normal.jpg);
+}
+
+.adventure {
+    background-image: url(../images/level-adventure.jpg);
+}
+
+.master {
+    background-image: url(../images/level-master.jpg);
+}
+
+.levelDesc {
+    margin-top: 20px;
+    padding: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.levelDesc span {
+    color: #ff252c;
+}
